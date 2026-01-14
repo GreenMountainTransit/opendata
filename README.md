@@ -21,7 +21,7 @@ For each route and month, the following metrics are provided:
  
 Fare transactions trends can be visualized in the [Fare Tracker Dashboard](https://GreenMountainTransit.github.io/opendata/fare_tracker.html). Raw data files are available in the [`/data/fares/`](./data/fares/) directory.
 
-Fare data is provided by month at two levels of summarization:  
+Fare data are summarized monthly and reported at two levels of detail:  
 
 - **Fare group**: A high-level categorization representing the rider’s payment tier or funding source (for example, regular fare, discount fare, or sponsored programs).  
 - **Fare type**: The specific product classification within each fare group.
@@ -39,3 +39,18 @@ As a result:
 - Boarding estimates by stop will not sum to published ridership totals.
 - Stop-level data should not be aggregated to produce route-level ridership.
 - Route-level ridership analysis should rely on the ridership datasets described above.
+
+## Data Limitations, Appropriate Use, and Terms of Use
+
+These data are provided for informational and analytical purposes and are made available to the public without warranty. Green Mountain Transit makes no guarantees regarding completeness, accuracy, or fitness for a particular purpose. GMT shall not be held liable for any errors in this data. This includes errors of omission, commission, errors concerning the content of the data, and relative and positional accuracy of the data. This data cannot be construed to be a legal document. Primary sources from which this data was compiled must be consulted for verification of information contained in this data. Users are responsible for ensuring appropriate interpretation and application of the data.
+
+GMT reserves the right to revise past datasets. Revisions will be logged in our [`CHANGELOG`](.CHANGELOG.md)
+
+These datasets are intended to support high-level analysis, transparency, and exploratory research. They may not be suitable for all analytical or reporting purposes. Please reach out to **planning@ridegmt.com** if you have questions.
+
+## Contact and Feedback
+
+Questions, feedback, or issue reports related to these datasets may be submitted via this repository or by contacting **planning@ridegmt.com**.
+
+We welcome feedback that helps improve data quality, documentation, and usability.
+
