@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <title>Boarding Estimates by Stop</title>
+
+  <!-- Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet"/>
+
+  <style>
+    body { 
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    #map { position: absolute; top: 0px; bottom: 0; width: 100%; }
+
+    #controls {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      max-width: 500px;
+      background: white;
+      padding: 20px;
+      border-radius: 4px;
+      font-family: "Roboto", sans-serif;
+      z-index: 1;
+      border: 1px solid #333;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #controls h1 {
+      font-size: 24px;
+      margin: 0em 0em 0.75em 0em;
+    }
+
+    #controls select {
+      font-size: 18px;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .mapboxgl-popup-content {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .mapboxgl-popup-content h3 {
+      font-size: 16px;
+      line-height: 1.2;
+      margin: 0em 0em 0.25em 0em;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="controls">
+  <h1>Boarding Estimates by Stop</h1>
+  <p>
+    <a href="https://ridegmt.com/" target="_blank">Green Mountain Transit</a>
+    boarding estimates by stop.
+  </p>
+
+  <label for="monthSelect">Month:</label>
+  <select id="monthSelect"></select>
+  <br/>
+  <label for="routeSelect">Route:&nbsp;</label>
+  <select id="routeSelect"></select>
+</div>
+
+<div id="map"></div>
+
+<script>
+  const numberFormatter = new Intl.NumberFormat('en-US');
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2JsYXRjaGx5IiwiYSI6ImNtajJ5bmNyODEwYzEzZHEwNzRxMzU0d2gifQ.bZfm4FAW5_r9k1lQnjfnxg';
+
+  // --- Month configuration (matches filenames) ---
+  const MONTH_CONFIG = [
+    { value: "september", label: "September 2025" },
+    { value: "october",   label: "October 2025" },
+    { value: "november",  label: "November 2025" },
+  ];
+
+  // Hardcoded default for now (as requested)
+  const DEFAULT_MONTH = "november";
+
+  // Build file path from month value
+  function stopsGeoJsonPath(monthValue) {
+    return `../data/stops/fy26_boardings_by_stop_${monthValue}.geojson`;
+  }
+
+  // --- Route configuration ---
+  const ROUTE_CONFIG = [
+    { value: 1, label: '1: Williston', color: 'rgb(255, 61, 33)' },
+    { value: 2, label: '2: Essex Junction', color: 'rgb(58, 86, 206)' },
+    { value: 4, label: '4: Essex Center', color: 'rgb(204, 108, 0)' },
+    { value: 5, label: '5: Pine Street', color: 'rgb(4, 185, 92)' },
+    { value: 6, label: '6: Shelburne Road', color: 'rgb(45, 150, 211)' },
+    { value: 7, label: '7: North Avenue', color: 'rgb(240, 81, 114)' },
+    { value: 8, label: '8: City Loop', color: 'rgb(255, 205, 2)' },
+    { value: 9, label: '9: Winooski', color: 'rgb(17, 139, 85)' },
+    { value: 11, label: '11: City Connector', color: 'rgb(192, 105, 209)' },
+    { value: 21, label: '21: School Trippers', color: 'rgb(0, 190, 253)' },
+    { value: 86, label: '86: Montpelier LINK Express', color: 'rgb(171, 171, 171)' },
+    { value: 96, label: '96: Franklin County Commuter', color: 'rgb(107, 153, 104)' },
+    { value: 756, label: '756: South End Circulator', color: 'rgb(35, 176, 4)' },
+    { value: 778, label: '778: North End Circulator', color: 'rgb(12, 84, 166)' },
+  ];
+
+  // --- DOM selects ---
+  const monthSelect = document.getElementById('monthSelect');
+  const routeSelect = document.getElementById('routeSelect');
+
+  // Populate month dropdown
+  MONTH_CONFIG.forEach(month => {
+    const option = document.createElement('option');
+    option.value = month.value;
+    option.textContent = month.label;
+    monthSelect.appendChild(option);
+  });
+  monthSelect.value = DEFAULT_MONTH;
+
+  // Populate route dropdown
+  ROUTE_CONFIG.forEach(route => {
+    const option = document.createElement('option');
+    option.value = route.value;
+    option.textContent = route.label;
+    routeSelect.appendChild(option);
+  });
+  routeSelect.value = "1"; // default route
+
+  // Apply route filters to layers
+  function applyRouteFilter() {
+    const route = parseFloat(routeSelect.value);
+    map.setFilter('stops-layer', ['==', ['get', 'route'], route]);
+    map.setFilter('routes-layer', ['==', ['get', 'route_short_name'], route]);
+  }
+
+  // Initialize map
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v11',
+    center: [-73.2121, 44.4759],
+    zoom: 12
+  });
+
+  map.on('load', () => {
+
+    // Stops source (month-specific)
+    map.addSource('stops', {
+      type: 'geojson',
+      data: stopsGeoJsonPath(DEFAULT_MONTH)
+    });
+
+    // Routes source (static)
+    map.addSource('routes', {
+      type: 'geojson',
+      data: '../data/stops/gmt_route_lines.geojson'
+    });
+
+    // Routes layer
+    map.addLayer({
+      id: 'routes-layer',
+      type: 'line',
+      source: 'routes',
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round'
+      },
+      paint: {
+        'line-width': 2,
+        'line-color': [
+          'match',
+          ['get', 'route_short_name'],
+
+          1,   'rgb(255, 61, 33)',
+          2,   'rgb(58, 86, 206)',
+          4,   'rgb(204, 108, 0)',
+          5,   'rgb(4, 185, 92)',
+          6,   'rgb(45, 150, 211)',
+          7,   'rgb(240, 81, 114)',
+          8,   'rgb(255, 205, 2)',
+          9,   'rgb(17, 139, 85)',
+          11,  'rgb(192, 105, 209)',
+          21,  'rgb(0, 190, 253)',
+          86,  'rgb(171, 171, 171)',
+          96,  'rgb(107, 153, 104)',
+          756, 'rgb(35, 176, 4)',
+          778, 'rgb(12, 84, 166)',
+
+          '#666666'
+        ],
+        'line-opacity': 0.5
+      }
+    });
+
+    // Stops layer
+    map.addLayer({
+      id: 'stops-layer',
+      type: 'circle',
+      source: 'stops',
+      paint: {
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['get', 'total_boardings'],
+          0, 3,
+          50, 5,
+          2500, 10,
+          5000, 20,
+          10000, 40
+        ],
+        'circle-color': [
+          'match',
+          ['get', 'route'],
+
+          1, 'rgb(255, 61, 33)',
+          2, 'rgb(58, 86, 206)',
+          4, 'rgb(204, 108, 0)',
+          5, 'rgb(4, 185, 92)',
+          6, 'rgb(45, 150, 211)',
+          7, 'rgb(240, 81, 114)',
+          8, 'rgb(255, 205, 2)',
+          9, 'rgb(17, 139, 85)',
+          11,'rgb(192, 105, 209)',
+          21,'rgb(0, 190, 253)',
+          86,'rgb(171, 171, 171)',
+          96,'rgb(107, 153, 104)',
+          756,'rgb(35, 176, 4)',
+          778,'rgb(12, 84, 166)',
+
+          '#999999'
+        ],
+        'circle-opacity': 0.75,
+        'circle-stroke-color': '#000',
+        'circle-stroke-width': 1,
+      }
+    });
+
+    // Apply default route filter once layers exist
+    applyRouteFilter();
+  });
+
+  // Month change: swap GeoJSON file and reapply route filter
+  monthSelect.addEventListener('change', (e) => {
+    const monthValue = e.target.value;
+    const stopsSource = map.getSource('stops');
+
+    stopsSource.setData(stopsGeoJsonPath(monthValue));
+    applyRouteFilter();
+  });
+
+  // Route change: apply filters
+  routeSelect.addEventListener('change', () => {
+    applyRouteFilter();
+  });
+
+  // Popup on click
+  map.on('click', 'stops-layer', (e) => {
+    const props = e.features[0].properties;
+
+    new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML(`
+        <h3>${props.stop_name}</h3>
+        Route ${props.route} | ${props.month} ${props.year}<br/>
+        Boardings estimate: ${numberFormatter.format(props.total_boardings)}
+      `)
+      .addTo(map);
+  });
+
+  // Cursor feedback
+  map.on('mouseenter', 'stops-layer', () => {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+
+  map.on('mouseleave', 'stops-layer', () => {
+    map.getCanvas().style.cursor = '';
+  });
+</script>
+
+</body>
+</html>
+
