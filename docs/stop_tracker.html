@@ -98,7 +98,7 @@
 
   // Build file path from month value
   function stopsGeoJsonPath(monthValue) {
-    return `./data/stops/fy26_boardings_by_stop_${monthValue}.geojson`;
+    return `./data/fy26_boardings_by_stop_${monthValue}.geojson`;
   }
 
   // --- Route configuration ---
@@ -167,7 +167,7 @@
     // Routes source (static)
     map.addSource('routes', {
       type: 'geojson',
-      data: './data/stops/gmt_route_lines.geojson'
+      data: './data/gmt_route_lines.geojson'
     });
 
     // Routes layer
