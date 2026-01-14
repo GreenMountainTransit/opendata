@@ -40,13 +40,17 @@ As a result:
 - Stop-level data should not be aggregated to produce route-level ridership.
 - Route-level ridership analysis should rely on the ridership datasets described above.
 
-## Data Limitations, Appropriate Use, and Terms of Use
+## Data Limitations and Terms of Use
 
-These data are provided for informational and analytical purposes and are made available to the public without warranty. Green Mountain Transit makes no guarantees regarding completeness, accuracy, or fitness for a particular purpose. GMT shall not be held liable for any errors in this data. This includes errors of omission, commission, errors concerning the content of the data, and relative and positional accuracy of the data. This data cannot be construed to be a legal document. Primary sources from which this data was compiled must be consulted for verification of information contained in this data. Users are responsible for ensuring appropriate interpretation and application of the data.
+These data are provided for informational and analytical purposes only and are made available to the public without warranty. Green Mountain Transit makes no guarantees regarding completeness, accuracy, or fitness for any particular purpose and shall not be held liable for errors or omissions in the data, including content, positional accuracy, or interpretation. These data should not be construed as legal documents. Users should consult primary source materials where verification is required.
 
-GMT reserves the right to revise past datasets. Revisions will be logged in our [`CHANGELOG`](CHANGELOG.md)
+These datasets are intended to support high-level analysis, transparency, and exploratory research. They may not be suitable for detailed operational, financial, or regulatory reporting without additional validation.
 
-These datasets are intended to support high-level analysis, transparency, and exploratory research. They may not be suitable for all analytical or reporting purposes. Please reach out to **planning@ridegmt.com** if you have questions.
+Stop-level boarding estimates and other inferred values are subject to methodological limitations, as described above, and should be interpreted with care.
+
+GMT reserves the right to revise previously published datasets. Substantive revisions will be documented in the CHANGELOG.
+
+Questions regarding appropriate use or interpretation may be directed to planning@ridegmt.com.
 
 ## Contact and Feedback
 
