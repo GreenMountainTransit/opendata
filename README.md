@@ -44,15 +44,11 @@ As a result:
 
 These data are provided for informational and analytical purposes only and are made available to the public without warranty. Green Mountain Transit makes no guarantees regarding completeness, accuracy, or fitness for any particular purpose and shall not be held liable for errors or omissions in the data, including content, positional accuracy, or interpretation. These data should not be construed as legal documents. Users should consult primary source materials where verification is required.
 
-These datasets are intended to support high-level analysis, transparency, and exploratory research. They may not be suitable for detailed operational, financial, or regulatory reporting without additional validation.
-
-Stop-level boarding estimates and other inferred values are subject to methodological limitations, as described above, and should be interpreted with care.
+These datasets are intended to support high-level analysis, transparency, and exploratory research. They may not be suitable for detailed operational, financial, or regulatory reporting without additional validation. Stop-level boarding estimates and other inferred values are subject to methodological limitations, as described above, and should be interpreted with care.
 
 GMT reserves the right to revise previously published datasets. Substantive revisions will be documented in the CHANGELOG.
 
 To ensure data quality and accuracy, datasets are published within one month after the close of each reporting period (for example, January data will be available by March 1).
-
-Questions regarding appropriate use or interpretation may be directed to planning@ridegmt.com.
 
 ## Contact and Feedback
 
