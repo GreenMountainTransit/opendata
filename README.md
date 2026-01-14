@@ -4,7 +4,7 @@ This repository provides publicly available data on ridership, fares, and stop-l
 
 ## Ridership  
 
-Ridership performance can be readily visualized in the [Ridership Tracker Dashboard](https://GreenMountainTransit.github.io/opendata/ridership_tracker.html). Raw data files are available in the [`/data/ridership/`](./data/ridership/) directory.
+Ridership performance can be readily visualized in the <a href="https://GreenMountainTransit.github.io/opendata/ridership_tracker.html" target="_blank">Ridership Tracker Dashboard</a>. Raw data files are available in the [`/data/ridership/`](./data/ridership/) directory.
 
 For each route and month, the following metrics are provided:
 
@@ -19,7 +19,7 @@ For each route and month, the following metrics are provided:
 
 ## Fares  
  
-Fare transactions trends can be visualized in the [Fare Tracker Dashboard](https://GreenMountainTransit.github.io/opendata/fare_tracker.html). Raw data files are available in the [`/data/fares/`](./data/fares/) directory.
+Fare transactions trends can be visualized in the <a href="https://GreenMountainTransit.github.io/opendata/fare_tracker.html" target="_blank">Fare Tracker Dashboard</a>. Raw data files are available in the [`/data/fares/`](./data/fares/) directory.
 
 Fare data are summarized monthly and reported at two levels of detail:  
 
@@ -30,7 +30,7 @@ Fare data represent completed transactions and may not directly correspond one-t
 
 ## Boarding Estimates by Stop
 
-Boarding estimates can be visualized in the [Stops Dashboard](https://GreenMountainTransit.github.io/opendata/stop_tracker.html). Raw data files are available in the [`/data/stops/`](./data/stops/) directory.
+Boarding estimates can be visualized in the <a href="https://GreenMountainTransit.github.io/opendata/stop_tracker.html" target="_blank">Boarding Estimates by Stop Dashboard</a>. Raw data files are available in the [`/data/stops/`](./data/stops/) directory.
 
 Stop-level boarding estimates are derived by associating fare transaction timestamps with vehicle GPS locations and then matching each transaction to the nearest stop along the corresponding route. Because this methodology relies on spatial and temporal inference, stop-level boarding counts are subject to error and should be interpreted as approximate.
 
