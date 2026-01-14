@@ -19,6 +19,7 @@
       padding: 0;
       font-size: 16px;
       font-family: "Roboto", sans-serif;
+      line-height: 1.4;
     }
 
     #map { position: absolute; top: 0px; bottom: 0; width: 100%; }
@@ -68,8 +69,15 @@
 <div id="controls">
   <h1>Boarding Estimates by Stop</h1>
   <p>
-    <a href="https://ridegmt.com/" target="_blank">Green Mountain Transit</a>
-    boarding estimates by stop.
+    Stop-level boarding estimates for
+    <a href="https://ridegmt.com/" target="_blank" rel="noopener">Green Mountain Transit</a>.
+    Download data and review methodology 
+    <a href="https://github.com/GreenMountainTransit/opendata" target="_blank" rel="noopener">here</a>.
+  </p>
+
+  <p><em>
+    Note: Boarding counts are estimated using fare transactions and vehicle location data and
+    may not sum to route-level ridership totals.</em>
   </p>
 
   <label for="monthSelect">Month:</label>
