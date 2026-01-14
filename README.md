@@ -44,7 +44,7 @@ As a result:
 
 These data are provided for informational and analytical purposes and are made available to the public without warranty. Green Mountain Transit makes no guarantees regarding completeness, accuracy, or fitness for a particular purpose. GMT shall not be held liable for any errors in this data. This includes errors of omission, commission, errors concerning the content of the data, and relative and positional accuracy of the data. This data cannot be construed to be a legal document. Primary sources from which this data was compiled must be consulted for verification of information contained in this data. Users are responsible for ensuring appropriate interpretation and application of the data.
 
-GMT reserves the right to revise past datasets. Revisions will be logged in our [`CHANGELOG`](.CHANGELOG.md)
+GMT reserves the right to revise past datasets. Revisions will be logged in our [`CHANGELOG`](CHANGELOG.md)
 
 These datasets are intended to support high-level analysis, transparency, and exploratory research. They may not be suitable for all analytical or reporting purposes. Please reach out to **planning@ridegmt.com** if you have questions.
 
