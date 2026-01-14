@@ -1,6 +1,6 @@
 # Green Mountain Transit Open Data  
 
-This repository provides publicly available data on ridership, fares, and stop-level boardings for Green Mountain Transit’s urban service area. To ensure data quality and accuracy, datasets are published within one month after the close of each reporting period (for example, January data will be available by March 1).
+This repository provides publicly available data on ridership, fares, and stop-level boardings for Green Mountain Transit’s urban service area.
 
 ## Ridership  
 
@@ -49,6 +49,8 @@ These datasets are intended to support high-level analysis, transparency, and ex
 Stop-level boarding estimates and other inferred values are subject to methodological limitations, as described above, and should be interpreted with care.
 
 GMT reserves the right to revise previously published datasets. Substantive revisions will be documented in the CHANGELOG.
+
+To ensure data quality and accuracy, datasets are published within one month after the close of each reporting period (for example, January data will be available by March 1).
 
 Questions regarding appropriate use or interpretation may be directed to planning@ridegmt.com.
 
