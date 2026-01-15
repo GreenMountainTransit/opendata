@@ -25,7 +25,7 @@
     "href": "index.html#fare-transactions",
     "title": "Green Mountain Transit Open Data",
     "section": "Fare Transactions",
-    "text": "Fare Transactions\nTrends in fare usage can be explored in the Fare Tracker Dashboard.\nFare data are summarized monthly and reported by:\n\nFare group – high-level payment categories (e.g., regular, discounted, sponsored)\nFare type – specific products within each fare group\n\nFare transactions represent completed payments and may not correspond one-to-one with passenger boardings.\n\nFare Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY26 Fare group totals by month\nCSV\n\n\nFY26 Fare type totals by month\nCSV"
+    "text": "Fare Transactions\nTrends in fare usage can be explored in the Fare Tracker Dashboard.\nFare data are summarized monthly and reported by:\n\nFare group – high-level payment categories (e.g., regular, discounted, sponsored)\nFare type – specific products within each fare group\n\nFare transactions represent completed payments and may not correspond one-to-one with passenger boardings.\n\nFare Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY26 Fare group totals by month\nCSV\n\n\nFY26 Fare group totals by month and route\nCSV\n\n\nFY26 Fare type totals by month\nCSV\n\n\n\n Note: The pct column represents the share of fare transactions within each month. For datasets that include route detail, percentages are calculated within each month and route. For datasets without route detail, percentages are calculated within each month across all routes."
   },
   {
     "objectID": "index.html#boarding-estimates-by-stop",

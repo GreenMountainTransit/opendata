@@ -49,9 +49,14 @@ Fare transactions represent completed payments and may not correspond one-to-one
 
 | Dataset | Download |
 |---|---|
-| FY26 Fare group totals by month | [CSV](data/fares/fy26_fare_grouping_monthly_totals.csv) |
+| FY26 Fare group totals by month | [CSV](data/fares/fy26_fare_group_monthly_totals.csv) |
+| FY26 Fare group totals by month and route | [CSV](data/fares/fy26_fare_group_monthly_totals_by_route.csv) |
 | FY26 Fare type totals by month | [CSV](data/fares/fy26_fare_type_monthly_totals.csv) |
-
+  
+<br/>
+Note: The `pct` column represents the share of fare transactions within each month. 
+For datasets that include route detail, percentages are calculated within each month and route. 
+For datasets without route detail, percentages are calculated within each month across all routes.
 
 ## Boarding Estimates by Stop
 
