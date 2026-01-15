@@ -8,7 +8,7 @@ Please consult the **[Green Mountain Transit Open Data site](https://greenmounta
 
 This repository includes monthly datasets covering:
 
-- **Ridership** – Route-level passenger boardings and revenue vehicle hours  
+- **Ridership** – Route-level passenger boardings and vehicle hours  
 - **Fare Transactions** – Monthly summaries by fare group and fare type  
 - **Boarding Estimates by Stop** – Approximate stop-level boarding estimates derived from fare transactions and vehicle GPS data  
 
