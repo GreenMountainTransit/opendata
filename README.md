@@ -2,43 +2,27 @@
 
 This repository provides publicly available data on ridership, fares, and stop-level boardings for Green Mountain Transit’s urban service area.
 
-## Ridership  
+Please consult the **[Green Mountain Transit Open Data site](https://greenmountaintransit.github.io/opendata/site/)** for detailed documentation, methodology notes, data limitations, and download links.
+
+## Data Overview
+
+This repository includes monthly datasets covering:
+
+- **Ridership** – Route-level passenger boardings and revenue vehicle hours  
+- **Fare Transactions** – Monthly summaries by fare group and fare type  
+- **Boarding Estimates by Stop** – Approximate stop-level boarding estimates derived from fare transactions and vehicle GPS data  
+
+### Ridership  
 
 Ridership performance can be readily visualized in the <a href="https://GreenMountainTransit.github.io/opendata/ridership_tracker.html" target="_blank">Ridership Tracker Dashboard</a>. Raw data files are available in the [`/data/ridership/`](./data/ridership/) directory.
 
-For each route and month, the following metrics are provided:
-
-- **Total Ridership**: Total passenger boardings during the month.  
-- **Total Vehicle Hours**: Total hours vehicles operated in revenue service during the month.  
-- **Weekday Ridership**: Passenger boardings during weekday service.  
-- **Weekday Vehicle Hours**: Revenue service hours operated on weekdays.  
-- **Saturday Ridership**: Passenger boardings during Saturday service.  
-- **Saturday Vehicle Hours**: Revenue service hours operated on Saturdays.  
-- **Sunday Ridership**: Passenger boardings during Sunday service.  
-- **Sunday Vehicle Hours**: Revenue service hours operated on Sundays.
-
-## Fares  
+### Fares  
  
 Fare transactions trends can be visualized in the <a href="https://GreenMountainTransit.github.io/opendata/fare_tracker.html" target="_blank">Fare Tracker Dashboard</a>. Raw data files are available in the [`/data/fares/`](./data/fares/) directory.
 
-Fare data are summarized monthly and reported at two levels of detail:  
-
-- **Fare group**: A high-level categorization representing the rider’s payment tier or funding source (for example, regular fare, discount fare, or sponsored programs).  
-- **Fare type**: The specific product classification within each fare group.
-
-Fare data represent completed transactions and may not directly correspond one-to-one with passenger boardings.
-
-## Boarding Estimates by Stop
+### Boarding Estimates by Stop
 
 Boarding estimates can be visualized in the <a href="https://GreenMountainTransit.github.io/opendata/stop_tracker.html" target="_blank">Boarding Estimates by Stop Dashboard</a>. Raw data files are available in the [`/data/stops/`](./data/stops/) directory.
-
-Stop-level boarding estimates are derived by associating fare transaction timestamps with vehicle GPS locations and then matching each transaction to the nearest stop along the corresponding route. Because this methodology relies on spatial and temporal inference, stop-level boarding counts are subject to error and should be interpreted as approximate.
-
-As a result:
-
-- Boarding estimates by stop will not sum to published ridership totals.
-- Stop-level data should not be aggregated to produce route-level ridership.
-- Route-level ridership analysis should rely on the ridership datasets described above.
 
 ## Data Limitations and Terms of Use
 
