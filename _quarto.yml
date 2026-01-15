@@ -8,7 +8,7 @@ project:
     - "*.qmd"
 
 website:
-  title: "Green Mountain Transit Open Data"
+  title: "GMT Open Data"
   favicon: "images/favicon.jpg"
   search: false
   navbar:

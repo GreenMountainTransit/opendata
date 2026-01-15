@@ -1,5 +1,6 @@
 ---
 title: "Green Mountain Transit Open Data"
+pagetitle: "GMT Open Data"
 ---
 
 ## Overview
@@ -12,7 +13,7 @@ All datasets are updated on a monthly schedule and are freely available for info
 
 ## Ridership Data
 
-Monthly ridership performance by route can be explored in the **<a href="../ridership_tracker.html" target="_blank">Ridership Tracker Dashboard</a>**.
+Monthly ridership performance by route can be explored in the **<a href="../ridership_tracker.html" >Ridership Tracker Dashboard</a>**.
 
 Reported metrics include:
 
@@ -32,7 +33,7 @@ Reported metrics include:
 
 ## Fare Transactions
 
-Trends in fare usage can be explored in the **<a href="../fare_tracker.html" target="_blank">Fare Tracker Dashboard</a>**.
+Trends in fare usage can be explored in the **<a href="../fare_tracker.html">Fare Tracker Dashboard</a>**.
 
 Fare data are summarized monthly and reported by:
 
@@ -56,7 +57,7 @@ For datasets without route detail, percentages are calculated within each month 
 
 ## Boarding Estimates by Stop
 
-Estimated boardings by stop can be explored in the **<a href="../stop_tracker.html" target="_blank">Boarding Estimates by Stop Dashboard</a>**.
+Estimated boardings by stop can be explored in the **<a href="../stop_tracker.html" >Boarding Estimates by Stop Dashboard</a>**.
 
 Stop-level boarding estimates are produced by matching fare transaction timestamps with 
 vehicle GPS locations and associating each transaction with the nearest stop along a 
