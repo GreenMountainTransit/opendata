@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Green Mountain Transit Open Data",
+    "section": "",
+    "text": "Green Mountain Transit (GMT) publishes open datasets to support transparency, analysis, and public understanding of transit performance in our urban service area. This site provides access to ridership, fare transaction, and stop-level boarding estimates, along with dashboards for exploring trends over time.\nAll datasets are updated on a monthly schedule and are freely available for informational and analytical use."
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Green Mountain Transit Open Data",
+    "section": "",
+    "text": "Green Mountain Transit (GMT) publishes open datasets to support transparency, analysis, and public understanding of transit performance in our urban service area. This site provides access to ridership, fare transaction, and stop-level boarding estimates, along with dashboards for exploring trends over time.\nAll datasets are updated on a monthly schedule and are freely available for informational and analytical use."
+  },
+  {
+    "objectID": "index.html#ridership-data",
+    "href": "index.html#ridership-data",
+    "title": "Green Mountain Transit Open Data",
+    "section": "Ridership Data",
+    "text": "Ridership Data\nMonthly ridership performance by route can be explored in the Ridership Tracker Dashboard.\nReported metrics include:\n\nTotal ridership (passenger boardings)\nTotal vehicle hours in revenue service\nWeekday ridership and vehicle hours\nSaturday ridership and vehicle hours\nSunday ridership and vehicle hours\n\n\nRidership Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY25 Route totals by month\nCSV\n\n\nFY26 Route totals by month\nCSV"
+  },
+  {
+    "objectID": "index.html#fare-transactions",
+    "href": "index.html#fare-transactions",
+    "title": "Green Mountain Transit Open Data",
+    "section": "Fare Transactions",
+    "text": "Fare Transactions\nTrends in fare usage can be explored in the Fare Tracker Dashboard.\nFare data are summarized monthly and reported by:\n\nFare group – high-level payment categories (e.g., regular, discounted, sponsored)\nFare type – specific products within each fare group\n\nFare transactions represent completed payments and may not correspond one-to-one with passenger boardings.\n\nFare Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY26 Fare group totals by month\nCSV\n\n\nFY26 Fare type totals by month\nCSV"
+  },
+  {
+    "objectID": "index.html#boarding-estimates-by-stop",
+    "href": "index.html#boarding-estimates-by-stop",
+    "title": "Green Mountain Transit Open Data",
+    "section": "Boarding Estimates by Stop",
+    "text": "Boarding Estimates by Stop\nEstimated boardings by stop can be explored in the Boarding Estimates by Stop Dashboard.\nStop-level boarding estimates are produced by matching fare transaction timestamps with vehicle GPS locations and associating each transaction with the nearest stop along a route. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.\nImportant considerations:\n\nStop-level estimates will not sum to published ridership totals\n\nStop-level data should not be aggregated to the route level\n\nRoute-level analysis should use the ridership datasets above\n\n\nStop Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY26 September boarding estimates by stop\nCSV\n\n\nFY26 October boarding estimates by stop\nCSV\n\n\nFY26 November boarding estimates by stop\nCSV"
+  },
+  {
+    "objectID": "index.html#data-limitations-and-use",
+    "href": "index.html#data-limitations-and-use",
+    "title": "Green Mountain Transit Open Data",
+    "section": "Data Limitations and Use",
+    "text": "Data Limitations and Use\nThese datasets are provided for informational and analytical purposes only and are released without warranty. GMT makes no guarantees regarding completeness, accuracy, or fitness for any particular purpose.\nStop-level boarding estimates and other inferred values are subject to methodological limitations and should be interpreted with care. The data may not be suitable for detailed operational, financial, or regulatory reporting without additional validation.\nDatasets are typically published within one month of the close of each reporting period. Substantive revisions to previously published data will be documented in the project changelog."
+  },
+  {
+    "objectID": "index.html#contact-and-feedback",
+    "href": "index.html#contact-and-feedback",
+    "title": "Green Mountain Transit Open Data",
+    "section": "Contact and Feedback",
+    "text": "Contact and Feedback\nQuestions, feedback, or issue reports are welcome and may be submitted through this repository or by contacting planning@ridegmt.com.\nPublic feedback helps improve data quality, documentation, and usability."
+  }
+]

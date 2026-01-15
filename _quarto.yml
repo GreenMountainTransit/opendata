@@ -1,18 +1,31 @@
 project:
   type: website
-  output-dir: docs/quarto
+  resources:
+    - data/**
+  output-dir: docs/site
   # Render only Quarto sources (does not touch existing handwritten HTML in docs/)
   render:
     - "*.qmd"
 
 website:
   title: "Green Mountain Transit Open Data"
+  search: false
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: ../ridership_tracker.html
-        text: Ridership Tracker
+        text: Ridership Dashboard
+        target: _blank
+        rel: noopener
+      - href: ../fare_tracker.html
+        text: Fares Dashboard
+        target: _blank
+        rel: noopener
+      - href: ../stop_tracker.html
+        text: Stop-level Boardings Dashboard
+        target: _blank
+        rel: noopener
 
 format:
   html:

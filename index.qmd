@@ -2,6 +2,90 @@
 title: "Home"
 ---
 
-Welcome.
+---
+title: "Green Mountain Transit Open Data"
+---
 
-- [Ridership Tracker](../ridership_tracker.html)
+## Overview
+
+Green Mountain Transit (GMT) publishes open datasets to support transparency, analysis, and public understanding 
+of transit performance in our urban service area. This site provides access to ridership, fare transaction, 
+and stop-level boarding estimates, along with dashboards for exploring trends over time.
+
+All datasets are updated on a monthly schedule and are freely available for informational and analytical use.
+
+## Ridership Data
+
+Monthly ridership performance by route can be explored in the **<a href="../ridership_tracker.html" target="_blank">Ridership Tracker Dashboard</a>**.
+
+Reported metrics include:
+
+- Total ridership (passenger boardings)
+- Total vehicle hours in revenue service
+- Weekday ridership and vehicle hours
+- Saturday ridership and vehicle hours
+- Sunday ridership and vehicle hours
+
+### Ridership Data Downloads
+
+| Dataset | Download |
+|---|---|
+| FY25 Route totals by month | [CSV](data/ridership/fy25_urban_ridership.csv) |
+| FY26 Route totals by month | [CSV](data/ridership/fy26_urban_ridership.csv) |
+
+
+## Fare Transactions
+
+Trends in fare usage can be explored in the **<a href="../fare_tracker.html" target="_blank">Fare Tracker Dashboard</a>**.
+
+Fare data are summarized monthly and reported by:
+
+- **Fare group** – high-level payment categories (e.g., regular, discounted, sponsored)
+- **Fare type** – specific products within each fare group
+
+Fare transactions represent completed payments and may not correspond one-to-one with passenger boardings.
+
+### Fare Data Downloads
+
+| Dataset | Download |
+|---|---|
+| FY26 Fare group totals by month | [CSV](data/fares/fy26_fare_grouping_monthly_totals.csv) |
+| FY26 Fare type totals by month | [CSV](data/fares/fy26_fare_type_monthly_totals.csv) |
+
+
+## Boarding Estimates by Stop
+
+Estimated boardings by stop can be explored in the **<a href="../stop_tracker.html" target="_blank">Boarding Estimates by Stop Dashboard</a>**.
+
+Stop-level boarding estimates are produced by matching fare transaction timestamps with 
+vehicle GPS locations and associating each transaction with the nearest stop along a 
+route. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.
+
+Important considerations:
+
+- Stop-level estimates will not sum to published ridership totals  
+- Stop-level data should not be aggregated to the route level  
+- Route-level analysis should use the ridership datasets above  
+
+### Stop Data Downloads
+
+| Dataset | Download |
+|---|---|
+| FY26 September boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_september.csv) |
+| FY26 October boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_october.csv) |
+| FY26 November boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_november.csv) |
+
+## Data Limitations and Use
+
+These datasets are provided for informational and analytical purposes only and are released without warranty. GMT makes no guarantees regarding completeness, accuracy, or fitness for any particular purpose.
+
+Stop-level boarding estimates and other inferred values are subject to methodological limitations and should be interpreted with care. The data may not be suitable for detailed operational, financial, or regulatory reporting without additional validation.
+
+Datasets are typically published within one month of the close of each reporting period. Substantive revisions to previously published data will be documented in the project changelog.
+
+## Contact and Feedback
+
+Questions, feedback, or issue reports are welcome and may be submitted through this repository or by contacting **planning@ridegmt.com**.
+
+Public feedback helps improve data quality, documentation, and usability.
+
