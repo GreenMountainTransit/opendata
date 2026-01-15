@@ -18,7 +18,7 @@ Monthly ridership performance by route can be explored in the **<a href="../ride
 Reported metrics include:
 
 - Total ridership (passenger boardings)
-- Total vehicle hours in revenue service
+- Total vehicle hours in operation
 - Weekday ridership and vehicle hours
 - Saturday ridership and vehicle hours
 - Sunday ridership and vehicle hours

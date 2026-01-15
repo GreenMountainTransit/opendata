@@ -18,7 +18,7 @@
     "href": "index.html#ridership-data",
     "title": "Green Mountain Transit Open Data",
     "section": "Ridership Data",
-    "text": "Ridership Data\nMonthly ridership performance by route can be explored in the Ridership Tracker Dashboard.\nReported metrics include:\n\nTotal ridership (passenger boardings)\nTotal vehicle hours in revenue service\nWeekday ridership and vehicle hours\nSaturday ridership and vehicle hours\nSunday ridership and vehicle hours\n\n\nRidership Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY25 Route totals by month\nCSV\n\n\nFY26 Route totals by month\nCSV"
+    "text": "Ridership Data\nMonthly ridership performance by route can be explored in the Ridership Tracker Dashboard.\nReported metrics include:\n\nTotal ridership (passenger boardings)\nTotal vehicle hours in operation\nWeekday ridership and vehicle hours\nSaturday ridership and vehicle hours\nSunday ridership and vehicle hours\n\n\nRidership Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY25 Route totals by month\nCSV\n\n\nFY26 Route totals by month\nCSV"
   },
   {
     "objectID": "index.html#fare-transactions",
