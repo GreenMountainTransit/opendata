@@ -9,6 +9,7 @@ project:
 
 website:
   title: "Green Mountain Transit Open Data"
+  favicon: "images/favicon.jpg"
   search: false
   navbar:
     left:
