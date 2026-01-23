@@ -1,0 +1,633 @@
+year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
+2025,December,1,2530427,Williston Road at Mills Avenue,59,44.46454655929074,-73.1600798058771
+2025,December,1,2562322,Downtown Transit Center,6671,44.479731,-73.214298
+2025,December,1,4255578,South Burlington City Center,572,44.465916,-73.178304
+2025,December,1,4255600,Market Street at Garden Street,478,44.464424,-73.175618
+2025,December,1,4255601,Market Street at Hinesburg Road,104,44.46339,-73.172066
+2025,December,1,4255702,Hinesburg Road at Williston Road,148,44.465742,-73.171047
+2025,December,1,805484,S. Winooski Avenue at Bank Street,1198,44.478387,-73.211225
+2025,December,1,805485,Main Street at S. Winooski,830,44.475929,-73.21056
+2025,December,1,805486,Main Street at S. Union Street,586,44.47603,-73.20863
+2025,December,1,805487,Main Street at S. Willard Street,482,44.476129,-73.205639
+2025,December,1,805488,Main Street at S. Prospect Street,214,44.476288,-73.200853
+2025,December,1,805490,University Heights,2358,44.47443,-73.19472
+2025,December,1,805491,Dorset Street at Williston Road,36,44.46822,-73.18168
+2025,December,1,805492,Dorset Street at Peoples United Bank,126,44.46717,-73.18152
+2025,December,1,805493,University Mall,2089,44.46386,-73.183538
+2025,December,1,805500,Williston Road at Heath Street,15,44.46633,-73.1689
+2025,December,1,805501,Williston Road at Davis Parkway,13,44.46617,-73.16793
+2025,December,1,805502,Williston Road at Hayden Parkway,19,44.46578,-73.16625
+2025,December,1,805503,Williston Road at Elsom Parkway,13,44.46537,-73.16438
+2025,December,1,805504,Williston Road at Victoria Drive,13,44.46483,-73.16207
+2025,December,1,805505,Williston Road at Mills Avenue,26,44.46438,-73.16013
+2025,December,1,805516,Hinesburg Road at Williston Road,369,44.46578,-73.17117
+2025,December,1,805517,Hinesburg Road at Village Green Drive,174,44.46477,-73.17097
+2025,December,1,805529,Dorset Street at Barnes & Noble,1846,44.466905,-73.181203
+2025,December,1,805530,Williston Road at Sheraton Hotel,184,44.471703,-73.188163
+2025,December,1,805531,University Heights,1309,44.474604,-73.194513
+2025,December,1,805533,Main Street at S. Willard Street,52,44.47623,-73.205
+2025,December,1,805534,Main Street at S Union Street,35,44.47612,-73.20933
+2025,December,1,805535,Main Street at Church Street,13,44.47602,-73.21237
+2025,December,1,805536,Main Street at Pine Street,10,44.47588,-73.2159
+2025,December,1,805537,Battery Street at College Street,35,44.4766,-73.21867
+2025,December,1,805538,Battery Street at Cherry Street,3,44.47899973630009,-73.21883190406265
+2025,December,1,805867,Main Street at Summit Street,272,44.4762026495925,-73.2025125186516
+2025,December,1,805870,Main Street at Opposite Edmunds School,20,44.476195,-73.207487
+2025,December,1,805875,Main Street at Opposite Summit Street,112,44.47635535963188,-73.20248690152883
+2025,December,1,805895,Marshall Avenue at Harvest Lane,32,44.445714,-73.117377
+2025,December,1,805896,Williston Road at N. Brownell Road,162,44.45493,-73.12297
+2025,December,1,805904,Williston Road at S. Brownell Road,54,44.455,-73.12343
+2025,December,1,805943,University Mall at Stop sign at Hannafords,508,44.463252,-73.183412
+2025,December,1,805946,Williston Road at Staples Plaza,193,44.471708,-73.188722
+2025,December,1,805947,Dorset Street at Blue Mall,690,44.46448,-73.18078
+2025,December,1,805960,Williston Road at Kennedy Drive,82,44.46303,-73.15443
+2025,December,1,805964,Marshall Avenue at Trader Lane,223,44.44518,-73.1158
+2025,December,1,805973,Marshall Avenue at Hannafords,95,44.445047,-73.114986
+2025,December,1,805974,Walmart,1539,44.442322707648174,-73.12123792821498
+2025,December,1,805975,Williston Road at HoHum Motel,132,44.464255,-73.158906
+2025,December,1,805976,Williston Road at Thrifty,303,44.46355,-73.1558
+2025,December,1,805977,Williston Road at Victory Drive,60,44.465096,-73.162601
+2025,December,1,805978,Williston Road at Pillsbury Manor,59,44.465579,-73.164727
+2025,December,1,805996,Williston Road at Helena Drive,483,44.45038,-73.11262
+2025,December,1,805997,Williston Road at Blair Park Road,292,44.45255,-73.11755
+2025,December,1,806011,Cherry Street at Opposite 3 Cathedral Square,2,44.479106,-73.217703
+2025,December,1,806043,Marshall Avenue at Gardeners Supply,12,44.44588,-73.11962
+2025,December,1,806044,Harvest Lane at Marshall Avenue,1,44.44467,-73.12133
+2025,December,1,806045,Williston Road at Williston Liquidation Center,85,44.45728,-73.12797
+2025,December,1,806064,Williston Road at Aviation Avenue,80,44.46058,-73.14902
+2025,December,1,806069,University Mall at Sears,566,44.463197,-73.18201
+2025,December,1,806078,Williston Road at VT Tire,10,44.462,-73.15225
+2025,December,1,806079,Williston Road at Ace Hardware,15,44.46055,-73.1492
+2025,December,1,806080,Williston Road at Talent Skate Park,15,44.45882,-73.14568
+2025,December,1,806081,Williston Road at Shunpike Road,17,44.45842,-73.1429
+2025,December,1,806082,Williston Road at Engineers Drive,14,44.4582,-73.1327
+2025,December,1,806083,Williston Road at Commerce Street,28,44.45337,-73.11968
+2025,December,1,806084,Williston Road at Harvest Lane,52,44.4521,-73.11688
+2025,December,1,806085,Williston Road at VT 2A,62,44.45023,-73.11262
+2025,December,1,806086,VT 2A at Key Bank,17,44.44872,-73.11095
+2025,December,1,806087,VT 2A at Wright Avenue,79,44.44722,-73.11105
+2025,December,1,806088,VT 2A at Marshall Avenue (Ponderosa),56,44.444733,-73.112287
+2025,December,1,806096,VT 2A at Connor Way,865,44.446816,-73.110949
+2025,December,1,806112,Williston Road at Miller Lane,101,44.45833,-73.13283
+2025,December,1,806113,Williston Rd. at Valley Rd,77,44.45853,-73.142534
+2025,December,1,806114,Williston Road at Contact Communication,51,44.45962,-73.14707
+2025,December,1,806115,Williston Road at Kennedy Drive,56,44.46202,-73.15193
+2025,December,1,806116,Williston Road at Stone House Commons,44,44.466486,-73.168721
+2025,December,2,2562322,Downtown Transit Center,5953,44.479731,-73.214298
+2025,December,2,4209790,E Allen Street at Hillside Park,133,44.4930287162322,-73.1758636133916
+2025,December,2,805595,Shelburne Road at Farrell Street,219,44.450421,-73.208905
+2025,December,2,805752,Pearl Street at Hungerford Terrace,763,44.480581,-73.207105
+2025,December,2,805753,Pearl Street at S. Willard Street,310,44.480612,-73.205833
+2025,December,2,805754,Pearl Street at S Prospect Street (UHC),424,44.480731,-73.201381
+2025,December,2,805755,Colchester Avenue at Mansfield House,364,44.480579,-73.198914
+2025,December,2,805756,Colchester Avenue at Fleming Museum,275,44.4805912625953,-73.1968665240963
+2025,December,2,805757,UVM Medical Center,3807,44.4786566641105,-73.1939696441803
+2025,December,2,805758,Colchester Avenue at Latham Court,67,44.482512,-73.191938
+2025,December,2,805759,Colchester Avenue at Thibault Parkway,46,44.483129,-73.190514
+2025,December,2,805760,Colchester Avenue at 339,46,44.484018,-73.188415
+2025,December,2,805761,Colchester Avenue at Chase Street,16,44.486436,-73.186976
+2025,December,2,805762,Colchester Avenue at Barrett Street,55,44.487802,-73.186696
+2025,December,2,805763,Winooski Falls/Champlain Mill,382,44.49022,-73.18437
+2025,December,2,805765,College Parkway at Opposite Florida Avenue,23,44.493226,-73.170992
+2025,December,2,805766,Saint Michael's College,58,44.49297301724816,-73.16772697628687
+2025,December,2,805767,College Parkway at Lime Kiln Road,50,44.492695,-73.163626
+2025,December,2,805768,College Parkway at Fanny Allen Hospital,172,44.497364,-73.158333
+2025,December,2,805769,Ethan Allen Avenue at University Lane,64,44.502994,-73.151287
+2025,December,2,805770,Ethan Allen Avenue at Catamount Lane,58,44.503845,-73.150689
+2025,December,2,805771,Ethan Allen Avenue at VT Public TV,69,44.50475,-73.149892
+2025,December,2,805775,Ethan Allen Avenue at Opposite Green Mt. Nursing,63,44.506784,-73.145364
+2025,December,2,805776,Ethan Allen Avenue at Essex Avenue (Bld. #310),54,44.50543,-73.143241
+2025,December,2,805777,Pearl Street at West Street Extension,85,44.49952282479167,-73.13062824322117
+2025,December,2,805778,Pearl Street at Opposite Complex 159,29,44.497858,-73.127775
+2025,December,2,805779,Pearl Street at Opposite Willey's Court,3,44.4968059911076,-73.1254138552707
+2025,December,2,805780,Pearl Street at KFC,9,44.496383,-73.124482
+2025,December,2,805781,Pearl Street at Capital Lincoln,44,44.495081,-73.121634
+2025,December,2,805782,Pearl Street at Roscoe Court (Shopping Center),45,44.494046,-73.119419
+2025,December,2,805783,Pearl Street at Merchants Bank,32,44.492685,-73.11657
+2025,December,2,805792,Amtrak,1620,44.4924,-73.11022
+2025,December,2,805793,Lincoln Street at Brownell Library,448,44.49122,-73.11107
+2025,December,2,805794,Pearl Street at Summit Street,30,44.492274,-73.1155
+2025,December,2,805795,Pearl Street at Hillcrest Road (Jiffy Lube),89,44.493225,-73.117389
+2025,December,2,805796,Pearl Street at Essex Junction Shopping Center.,427,44.494521,-73.120046
+2025,December,2,805797,Pearl Street at Gate A Fairgrounds,401,44.4956,-73.122406
+2025,December,2,805798,Pearl Street at Willey's Court,130,44.49691,-73.125335
+2025,December,2,805799,Pearl Street at Complex 159,41,44.497953,-73.127588
+2025,December,2,805800,Pearl Street at West Street (U-Turn),70,44.499922,-73.130796
+2025,December,2,805801,Pearl Street at 197 Pearl Inc.,45,44.50076,-73.132168
+2025,December,2,805802,Pearl Street at Contois Music,51,44.501798,-73.133839
+2025,December,2,805803,Pearl Street at 241 Pearl Apartments,90,44.502877,-73.135618
+2025,December,2,805804,Pearl Street at Susie Wilson Road,374,44.504157,-73.139286
+2025,December,2,805805,Ethan Allen Avenue at Laurette Drive,178,44.504828,-73.142164
+2025,December,2,805806,Ethan Allen Avenue at Green Mtn. Nursing,125,44.506969,-73.145567
+2025,December,2,805808,Ethan Allen Avenue at Sloane Hall,87,44.50465687088816,-73.15017664095814
+2025,December,2,805809,Ethan Allen Avenue at Catamount Lane,189,44.503856,-73.150807
+2025,December,2,805810,Ethan Allen Avenue at Barnes Avenue,328,44.502712,-73.15154
+2025,December,2,805811,College Parkway at Cumberland Farms,177,44.497571,-73.158398
+2025,December,2,805812,College Parkway at Johnson Avenue,114,44.496917,-73.15976
+2025,December,2,805813,College Parkway at Campus Rd. (Saint Mikes East Entrance),86,44.4948981253552,-73.1618200255496
+2025,December,2,805814,Saint Michael's College,64,44.49346454402722,-73.16288269076387
+2025,December,2,805815,College Parkway at Campus Rd. (Saint Mikes West Entrance),337,44.493114,-73.166998
+2025,December,2,805816,College Parkway at Florida Avenue,122,44.493376,-73.171038
+2025,December,2,805817,E Allen Street at Dion Street,389,44.4932242751315,-73.1756392046093
+2025,December,2,805819,Spinner Place/ Champlain Mill,2081,44.4903075657594,-73.1848931831459
+2025,December,2,805820,Colchester Avenue at Barrett Street,412,44.48766,-73.186825
+2025,December,2,805821,Colchester Avenue at Opposite Chase Street,370,44.486574,-73.187045
+2025,December,2,805822,Colchester Avenue at Nash Place,116,44.483724,-73.189341
+2025,December,2,805823,Colchester Avenue at UVM Trinty Campus,194,44.482849,-73.191372
+2025,December,2,805824,Colchester Avenue at Mansfield Avenue,326,44.480697,-73.198467
+2025,December,2,805825,Pearl Street at N. Prospect Street,294,44.480722,-73.200124
+2025,December,2,805826,Pearl Street at N. Williams Street,67,44.480754,-73.203485
+2025,December,2,805827,Pearl Street at N. Willard Street,57,44.480709,-73.205423
+2025,December,2,805828,Pearl Street at Greene Street,29,44.480637,-73.207642
+2025,December,2,805829,Pearl Street at N Union Street,18,44.480617,-73.209172
+2025,December,2,805886,Pearl Street at Hillcrest Road,29,44.49273,-73.116386
+2025,December,2,805954,Pearl Street at N Winooski Avenue,1367,44.48046,-73.21053
+2025,December,2,805957,Global Foundries,74,44.4786702168911,-73.1009221958775
+2025,December,2,806001,Colchester Avenue at VAS Clinic,235,44.480738,-73.197324
+2025,December,2,806013,College Parkway at Camp Johnson,144,44.49880348515874,-73.1559835326247
+2025,December,2,806027,Fort Ethan Allen/Elly-Long Music Building,179,44.505446,-73.149362
+2025,December,2,806031,Abenaki Way at CCV,301,44.4914,-73.18188
+2025,December,2,806048,Ethan Allen Avenue at Winooski Road (#310),85,44.5056706154035,-73.143589963389
+2025,December,2,806067,E Allen Street at Gadues Dry Cleaning,395,44.492057,-73.180731
+2025,December,2,806068,Abenaki Way at Opposite CCV,164,44.49057554288402,-73.18206826541565
+2025,December,2,806130,Ethan Allen Avenue at Rt. 15,142,44.504827,-73.142277000000007
+2025,December,4,805792,Amtrak,262,44.4924,-73.11022
+2025,December,4,805830,Main Street at Densmore Drive,5,44.49475,-73.10395
+2025,December,4,805831,Main Street at #141,1,44.49757,-73.09973
+2025,December,4,805832,Main Street at Fairview Drive,2,44.49922,-73.09823
+2025,December,4,805835,Essex Way at Post Office,14,44.507432,-73.078932
+2025,December,4,805836,Center Road at Essex Way,4,44.510195,-73.078172
+2025,December,4,805837,Route 15 at Saybrook Road,2,44.510361,-73.074694
+2025,December,4,805839,Route 15 at Opposite Essex Square,13,44.51078,-73.06588
+2025,December,4,805840,Essex Center,4,44.51147,-73.06085
+2025,December,4,805841,Route 15 at Essex Town Public Works,6,44.51088,-73.05813
+2025,December,4,805842,Sand Hill Road at Opposite Champlain Farms,8,44.50812,-73.05488
+2025,December,4,805843,Sand Hill Road at Essex Town Park,3,44.50738,-73.05433
+2025,December,4,805844,Sand Hill Road at Cemetery Road,6,44.506594,-73.05374
+2025,December,4,805845,Sand Hill Road at Foster Road,21,44.504439,-73.052051
+2025,December,4,805846,Sand Hill Road at Founders Road,17,44.5021,-73.05018
+2025,December,4,805847,Sand Hill Road at Opposite Maple Lawn Drive,9,44.50037,-73.04912
+2025,December,4,805848,Sand Hill Road at Lasalle Road,3,44.49745,-73.04948
+2025,December,4,805850,Sand Hill Road at Allen Martin Parkway,1,44.49185,-73.0501
+2025,December,4,805851,Sand Hill Road at Opposite Offset House,2,44.4912,-73.05018
+2025,December,4,805852,Sand Hill Road at Oak Park,7,44.48924603059581,-73.05032915099912
+2025,December,4,805855,River Road at #195,6,44.47912,-73.05692
+2025,December,4,805856,River Road at Greenfield Road,11,44.47912,-73.0587
+2025,December,4,805857,River Road at #157,2,44.47962,-73.0638
+2025,December,4,805858,River Road at Pinewood Drive,1,44.48332,-73.07422
+2025,December,4,805859,River Road at 83 River Road Apartments,1,44.48335291971945,-73.076046147429
+2025,December,4,805860,River Road at Valleyview Drive,2,44.483526,-73.079358
+2025,December,4,805861,Maple Street at Rivendell Drive,6,44.484747,-73.096712
+2025,December,4,805862,Maple Street at Lawton School,2,44.48602,-73.0998
+2025,December,4,805863,Maple Street at Mansfield Avenue,7,44.48803,-73.10397
+2025,December,4,805865,Maple Street at East Street,1,44.489608,-73.107468
+2025,December,4,805913,Educational Drive at Main Street,61,44.494117,-73.106157
+2025,December,4,805914,Essex Experience at McDonalds,69,44.5076267390293,-73.0860646551367
+2025,December,4,805915,Sand Hill Road at Tanglewood Road,11,44.5057,-73.053
+2025,December,4,805916,River Road at Pinewood Plaza,1,44.48340130629136,-73.08151838214587
+2025,December,4,805917,Maple Street at Maplewood Lane,4,44.4867,-73.10147
+2025,December,4,806006,Essex Experience,41,44.507,-73.08072
+2025,December,4,806012,River Road at Citgo,7,44.483426,-73.084564
+2025,December,4,806037,Main Street at Brickyard Road,1,44.495989,-73.102014
+2025,December,4,806038,River Road at Maple Street,5,44.48417,-73.09515
+2025,December,4,806070,River Road at Opposite #30,10,44.48357,-73.08663
+2025,December,5,2562322,Downtown Transit Center,2284,44.479731,-73.214298
+2025,December,5,2573649,194 St Paul Street (Eagles Landing),56,44.474220989280326,-73.21381420717712
+2025,December,5,4251888,Champlain Parkway at Home Ave,328,44.45162405,-73.217689578
+2025,December,5,4251889,Champlain Parkway at Flynn Ave,222,44.455390433,-73.217056133
+2025,December,5,4251891,Pine Street at Kilburn Street,73,44.470969443,-73.21518026
+2025,December,5,4254428,Pearl Street at Opposite North Champlain Street,1,44.480227,-73.218169
+2025,December,5,805484,S. Winooski Avenue at Bank Street,241,44.478387,-73.211225
+2025,December,5,805536,Main Street at Pine Street,9,44.47588,-73.2159
+2025,December,5,805537,Battery Street at College Street,15,44.4766,-73.21867
+2025,December,5,805538,Battery Street at Cherry Street,2,44.47899973630009,-73.21883190406265
+2025,December,5,805665,Maple Street at St Paul Street,105,44.473688,-73.213657
+2025,December,5,805724,Opposite 230 St Paul Street,109,44.4725758663786,-73.21387942650665
+2025,December,5,805726,Pine Street Opposite Pine Place (Old Greyhound),32,44.469792,-73.215209
+2025,December,5,805727,Pine Street at Opposite Howard Street,28,44.46707,-73.215043
+2025,December,5,805728,Pine Street at Burlington Electric Dept.,57,44.463529,-73.214778
+2025,December,5,805729,Pine Street at Opposite Birchcliff Parkway,31,44.459138,-73.214493
+2025,December,5,805730,Pine Street at Long Trail Phys. Therapy,38,44.457489,-73.214395
+2025,December,5,805731,Howard Center,86,44.45587805178482,-73.21433236507835
+2025,December,5,805732,Pine Street at Lyman Avenue,75,44.453353,-73.214448
+2025,December,5,805733,Pine Street at Home Avenue,131,44.451123,-73.214484
+2025,December,5,805734,Green Mountain Transit Office,2,44.450385,-73.219485
+2025,December,5,805738,Opposite Howard Center,151,44.456046,-73.214158
+2025,December,5,805739,Champlain School (Pine Street),125,44.45695374427129,-73.21422196016476
+2025,December,5,805740,Pine Street at Birchcliff Parkway,104,44.459553,-73.214401
+2025,December,5,805745,Pine Street at Locust Street,351,44.462799,-73.214615
+2025,December,5,805746,Pine Street at Howard Street,134,44.467066,-73.214898
+2025,December,5,805747,230 St Paul Street,190,44.472639,-73.213734
+2025,December,5,805906,S. Winooski Avenue at King Street,81,44.475317956005064,-73.21098945119671
+2025,December,5,805918,Pine Street at Lakeside Avenue (Cumberland Farms),75,44.460789,-73.214604
+2025,December,6,2562322,Downtown Transit Center,5350,44.479731,-73.214298
+2025,December,6,4209791,Shelburne Road at Harrington Ave,228,44.38334592099598,-73.22639409692734
+2025,December,6,4254393,Shelburne Road at Opposite Prospect Parkway,21,44.457375999999996,-73.20848
+2025,December,6,4254428,Pearl Street at Opposite North Champlain Street,3,44.480227,-73.218169
+2025,December,6,805484,S. Winooski Avenue at Bank Street,754,44.478387,-73.211225
+2025,December,6,805534,Main Street at S Union Street,27,44.47612,-73.20933
+2025,December,6,805535,Main Street at Church Street,9,44.47602,-73.21237
+2025,December,6,805536,Main Street at Pine Street,3,44.47588,-73.2159
+2025,December,6,805537,Battery Street at College Street,12,44.4766,-73.21867
+2025,December,6,805538,Battery Street at Cherry Street,3,44.47899973630009,-73.21883190406265
+2025,December,6,805539,S Union Street at Adams Street,57,44.47232,-73.20881
+2025,December,6,805540,S Union Street at Spruce Street,74,44.470663162357646,-73.20874371616048
+2025,December,6,805541,S Union Street at Howard Street,80,44.467451748434605,-73.20807407799322
+2025,December,6,805542,S Union Street at St Paul Street,60,44.465256,-73.207703
+2025,December,6,805544,Shelburne Road at Opposite Hoover Street,69,44.46058,-73.20817
+2025,December,6,805545,Shelburne Road at Birchcliff Parkway,55,44.45862,-73.208362
+2025,December,6,805546,Shelburne Road at Burlington Subaru,17,44.456321,-73.20858
+2025,December,6,805547,Shelburne Road at Ferguson Avenue,19,44.453955,-73.208797
+2025,December,6,805548,Shelburne Road at Lyman Avenue,16,44.45298,-73.20883
+2025,December,6,805549,Shelburne Road at Scarff Avenue,62,44.451904,-73.208988
+2025,December,6,805550,Shelburne Road at Home Avenue,585,44.450357,-73.209121
+2025,December,6,805551,Shelburne Road at Queen City Parkway,40,44.445006,-73.209668
+2025,December,6,805552,Shelburne Road at Opposite Brewer Parkway,157,44.44257,-73.20993
+2025,December,6,805553,Shelburne Road at Fayette Road,132,44.436915,-73.210534
+2025,December,6,805554,Shelburne Road at Holmes Road,16,44.43293,-73.211
+2025,December,6,805555,Shelburne Road at Bartlett Bay Road,11,44.42803,-73.21152
+2025,December,6,805556,Shelburne Road at Harbor View Road,30,44.42382,-73.21195
+2025,December,6,805557,Shelburne Road at Opposite Allen Road,31,44.42202,-73.21215
+2025,December,6,805558,Shelburne Road at Pine Haven Shores Road,18,44.4188,-73.2127
+2025,December,6,805559,Shelburne Road at Opposite Martindale,13,44.4167,-73.2134
+2025,December,6,805560,Shelburne Road at Palmer Court,12,44.41318,-73.21455
+2025,December,6,805561,Shelburne Road at Lakeview Drive,52,44.41193,-73.21497
+2025,December,6,805563,Shelburne Road at Bay Road,47,44.4057,-73.21698
+2025,December,6,805564,Shelburne Road at Green Mountain Kenworth,12,44.40277,-73.2179
+2025,December,6,805565,Shelburne Road at Tenneybrook Square,7,44.40097,-73.21848
+2025,December,6,805566,Shelburne Road at Opposite Longmeadow Drive (The Commons),46,44.3959070841938,-73.2201433163049
+2025,December,6,805568,Shelburne Road at Town Office,56,44.37908,-73.22825
+2025,December,6,805569,Shelburne Museum,70,44.37672,-73.22913
+2025,December,6,805570,Shelburne Road at Museum Main Gate,50,44.37188,-73.23092
+2025,December,6,805571,Marsett Road at Green Hills Drive,75,44.36972,-73.22888
+2025,December,6,805572,Marsett Road at Maplewood Drive,42,44.36992,-73.22743
+2025,December,6,805573,Marsett Road at Falls Roadd,23,44.370314,-73.224723
+2025,December,6,805574,Falls Road at Shelburne Shopping Park,174,44.37948,-73.22692
+2025,December,6,805576,Shelburne Road at Webster Road,50,44.38762,-73.22465
+2025,December,6,805577,Shelburne Road at Dutch Mill,210,44.3937,-73.22055
+2025,December,6,805578,Shelburne Road at Longmeadow Drive,153,44.39648,-73.21962
+2025,December,6,805579,Shelburne Road at Opposite Tenneybrook,28,44.40157,-73.218
+2025,December,6,805580,Shelburne Road at Opposite Shed Sales Antiques,49,44.40338,-73.21745
+2025,December,6,805581,Shelburne Road at Executive Drive,243,44.40637,-73.2165
+2025,December,6,805583,Shelburne Road at Hullcrest Road,200,44.41257684917089,-73.21445643594137
+2025,December,6,805584,Shelburne Road at Juniper Ridge,91,44.41375,-73.21407
+2025,December,6,805585,Shelburne Road at Martindale Road,148,44.41737,-73.21288
+2025,December,6,805586,Shelburne Road at Locust Hill,136,44.41945,-73.21218
+2025,December,6,805587,Shelburne Road at Allen Road,365,44.4227,-73.21175
+2025,December,6,805588,Shelburne Road at Green Mtn. Drive,168,44.42875,-73.21112
+2025,December,6,805589,Shelburne Road at IDX Drive,143,44.43377,-73.21058
+2025,December,6,805590,Shelburne Road at Sleepquarters,61,44.4351,-73.21048
+2025,December,6,805591,Shelburne Road at MacIntosh Drive,247,44.43715,-73.21028
+2025,December,6,805592,Shelburne Road at Baldwin Avenue,323,44.438626,-73.210108
+2025,December,6,805593,Shelburne Road at Laurel Hill Drive,279,44.441249,-73.20983
+2025,December,6,805594,Shelburne Road at Lindenwood Drive,435,44.444169,-73.209501
+2025,December,6,805595,Shelburne Road at Farrell Street,1763,44.450421,-73.208905
+2025,December,6,805596,Shelburne Road at Hadley Road,267,44.452346,-73.208731
+2025,December,6,805597,Shelburne Road at Proctor Avenue,178,44.4549625141176,-73.2084395754862
+2025,December,6,805598,Shelburne Road at Kinney Drugs,127,44.456778,-73.208325
+2025,December,6,805599,Shelburne Road at Clymer Street,92,44.458365,-73.208201
+2025,December,6,805600,Shelburne Road at Adams Court,187,44.4615,-73.20788
+2025,December,6,805601,South Union Street at Opposite Saint Paul Street,103,44.465356,-73.207568
+2025,December,6,805602,S Union Street at Howard Street,71,44.4672,-73.20783
+2025,December,6,805603,S Union Street at Bayview Court,54,44.46843,-73.20813
+2025,December,6,805604,S Union Street at Spruce Street,29,44.470452,-73.208604
+2025,December,6,805605,S Union Street at Maple Street,17,44.47378,-73.2088
+2025,December,6,805606,S Union Street at Opposite King Street,10,44.47498,-73.20885
+2025,December,6,805871,Shelburne Road at Flynn Avenue,33,44.455267466135794,-73.20861765878698
+2025,December,6,805872,Shelburne Road at Hannaford Drive (Olive Garden),87,44.440723,-73.210134
+2025,December,6,805873,Shelburne Road at Opposite Baldwin Avenue,54,44.438538,-73.210366
+2025,December,6,805876,S Union Street at Opposite Bayview Street,60,44.4685615194674,-73.2083037554183
+2025,December,6,805889,Falls Road at LaPlatte Circle,97,44.3722,-73.22502
+2025,December,6,805906,S. Winooski Avenue at King Street,335,44.475317956005064,-73.21098945119671
+2025,December,6,805907,Shelburne Road at Harbor Road,18,44.380805,-73.227544
+2025,December,6,805908,Maple Street at Union Street,496,44.47377,-73.20912
+2025,December,6,805911,Shelburne Road at Alfred Street,203,44.459642,-73.20808
+2025,December,6,805912,Vermont Teddy Bear Factory,8,44.36152,-73.23055
+2025,December,6,806011,Cherry Street at Opposite 3 Cathedral Square,1,44.479106,-73.217703
+2025,December,6,806025,Shelburne Road at Bostwick Road,66,44.36995,-73.23162
+2025,December,6,806028,Shelburne Road at Opposite Webster Road (Office Park),15,44.38795,-73.22467
+2025,December,6,806041,5224 Shelburne Road,46,44.381457,-73.227305
+2025,December,6,820638,Shelburne Road at Locust Street,70,44.463741453424014,-73.2078657103599
+2025,December,7,2530430,Northgate,188,44.52018353173355,-73.26474424075396
+2025,December,7,2562322,Downtown Transit Center,4707,44.479731,-73.214298
+2025,December,7,2734696,Downtown BHS,753,44.47913639404151,-73.21644467263202
+2025,December,7,805607,Pearl Street at Elmwood Avenue,44,44.480451,-73.213722
+2025,December,7,805610,North Street at Elmwood Avenue,236,44.48478,-73.21363
+2025,December,7,805669,North Street at Opposite Murray Street,223,44.48468,-73.21585
+2025,December,7,805670,North Street at N. Champlain Street,242,44.48464,-73.21755
+2025,December,7,805671,North Street at Blodgett Street,236,44.48448,-73.22113
+2025,December,7,805672,North Avenue at Strong Street,124,44.48555,-73.22318
+2025,December,7,805673,North Avenue at Washington Street,150,44.48783,-73.22497
+2025,December,7,805675,North Ave at Opposite Cambrian Rise,147,44.490374789966715,-73.22694498290925
+2025,December,7,805676,North Avenue at Opposite Lakeview Cem.,44,44.49305,-73.22907
+2025,December,7,805677,Opposite Burlington High School,35,44.49637,-73.23165
+2025,December,7,805678,North Avenue at Beltline,20,44.50003,-73.23538
+2025,December,7,805679,North Avenue at Saratoga Avenue,14,44.502521,-73.238743
+2025,December,7,805680,North Avenue at Village Green,35,44.503302,-73.239826
+2025,December,7,805681,North Avenue at Rite Aid,87,44.50468,-73.24163
+2025,December,7,805682,Opposite Ethan Allen Shopping Center,452,44.50669307103158,-73.24436667857378
+2025,December,7,805683,North Avenue at Poirier Place,179,44.508373,-73.2467
+2025,December,7,805684,North Avenue at Heineberg Road,135,44.509442,-73.248161
+2025,December,7,805685,North Avenue at Gosse Court,177,44.51062,-73.24977
+2025,December,7,805686,North Avenue at Bessery Market,479,44.51227,-73.25198
+2025,December,7,805687,North Avenue at Edgemoor Drive,166,44.51292,-73.25287
+2025,December,7,805688,North Avenue at Cayuga Court,149,44.51372,-73.25393
+2025,December,7,805689,North Avenue at Birch Court,226,44.51433,-73.25475
+2025,December,7,805690,North Avenue at Franklin Sq.,522,44.515150248912775,-73.25586414915972
+2025,December,7,805692,North Avenue at Morgan Street,71,44.52015,-73.26265
+2025,December,7,805693,North Avenue at Forest Street,9,44.52082,-73.26357
+2025,December,7,805695,North Avenue at Northgate Road,971,44.52059866074774,-73.26343139125463
+2025,December,7,805696,North Avenue at Opposite Algird Street,336,44.51935,-73.26173
+2025,December,7,805697,North Avenue at Browe Court,159,44.51855,-73.26067
+2025,December,7,805698,North Avenue at Starr Farm Road,368,44.5172,-73.25882
+2025,December,7,805699,North Avenue at Loaldo Drive,185,44.51486646173666,-73.25575626842328
+2025,December,7,805700,North Avenue at Cross Parkway,93,44.51327591364524,-73.2535893886282
+2025,December,7,805701,North Avenue at Staniford Road,115,44.512482637184064,-73.25249088947282
+2025,December,7,805702,North Avenue at Woodbury Road,184,44.51177,-73.2515
+2025,December,7,805703,North Avenue at Dodds Court,164,44.510541541785194,-73.24989447764318
+2025,December,7,805704,North Avenue at Shore Road,208,44.509482,-73.248476
+2025,December,7,805705,North Avenue at Dept. Motor Vehicles,327,44.508268,-73.246789
+2025,December,7,805706,Ethan Allen Shopping Center,745,44.506523,-73.244415
+2025,December,7,805707,North Avenue at Lakewood Parkway,325,44.504869,-73.242206
+2025,December,7,805708,North Avenue at Killarney Drive,149,44.503349,-73.240156
+2025,December,7,805709,North Avenue at Oppostie Saratoga Ave. (Elk's Lodge),89,44.50261,-73.239132
+2025,December,7,805710,North Avenue at Route 127,43,44.501077,-73.237206
+2025,December,7,805711,Burlington High School,77,44.49689546757881,-73.23235497415936
+2025,December,7,805713,North Ave at Cambrian Rise,377,44.48977976148372,-73.22669459131767
+2025,December,7,805715,North Avenue at Berry Street,127,44.487623,-73.224958
+2025,December,7,805716,North Avenue at Opposite Ward Street,55,44.486342,-73.223938
+2025,December,7,805717,North Avenue at Canfield Street,80,44.48527,-73.2231
+2025,December,7,805718,North Street at Front Street,76,44.484442,-73.220842
+2025,December,7,805719,North Street at N. Champlain Street,51,44.4845449143604,-73.21810361126342
+2025,December,7,805720,North Street at Murray Street,60,44.48462,-73.216134
+2025,December,7,805721,North Street at Elmwood Avenue,35,44.484724,-73.213421
+2025,December,7,805722,No. Winooski Avenue at Grant Street,20,44.48238,-73.21138
+2025,December,7,805879,North Avenue at Algird Street,81,44.51945,-73.26172
+2025,December,7,805880,North Avenue at Green Acres Drive,111,44.51383554132112,-73.25433910719357
+2025,December,7,805881,North Street at N. Winooski Avenue,44,44.484763,-73.21159
+2025,December,7,805949,N Union Street at Pearl Street,334,44.48083,-73.2093
+2025,December,7,805950,N Union Street at Loomis Street,150,44.48292,-73.20945
+2025,December,7,805951,N Union Street at North Street,58,44.48458,-73.20957
+2025,December,7,805952,North Street at N Winooski Avenue,102,44.48485,-73.21115
+2025,December,7,805953,North Avenue at Barley Road,165,44.51807,-73.25985
+2025,December,7,805954,Pearl Street at N Winooski Avenue,242,44.48046,-73.21053
+2025,December,7,805955,Burlington High School Circle,19,44.4973299,-73.233234
+2025,December,7,805956,North Avenue at Tracy Drive,402,44.5159084205904,-73.25714573796444
+2025,December,7,805993,North Avenue at Lakeview Cemetery,68,44.492721535987414,-73.22897998070101
+2025,December,7,805994,North Street at Park Street,47,44.484472,-73.21905
+2025,December,7,806009,Heineberg Housing,85,44.5107483,-73.246847
+2025,December,7,806071,North Avenue at N of Institute Road,31,44.4988638777257,-73.23408881833916
+2025,December,8,2556011,N Champlain Street and Peru Street,13,44.48262463352549,-73.21751852446796
+2025,December,8,2562322,Downtown Transit Center,594,44.479731,-73.214298
+2025,December,8,805537,Battery Street at College Street,3,44.4766,-73.21867
+2025,December,8,805538,Battery Street at Cherry Street,2,44.47899973630009,-73.21883190406265
+2025,December,8,805647,Pearl Street at N. Champlain Street,27,44.4804,-73.21682
+2025,December,8,805648,N Union Street at N Winooski Avenue,76,44.4861,-73.20968
+2025,December,8,805649,N Winooski Avenue at Archibald Street,117,44.48767,-73.2081
+2025,December,8,805650,Archibald Street at N Willard Street,99,44.488026,-73.206167
+2025,December,8,805651,Archibald Street at N Prospect Street,16,44.4877,-73.20227
+2025,December,8,805652,N Prospect Street at Colonial Square,13,44.48697,-73.20195
+2025,December,8,805653,N Prospect Street at Pearl Street,47,44.48102,-73.20082
+2025,December,8,805654,UHC Main Lobby,53,44.4793798194986,-73.2006045824597
+2025,December,8,805655,UVM Waterman Building,95,44.478071432337174,-73.20062330888942
+2025,December,8,805656,S Prospect Street at Maple Street,70,44.47423,-73.200632
+2025,December,8,805660,Maple Street at South Willard Street,25,44.474047415860184,-73.20512136998575
+2025,December,8,805662,Maple Street at S. Union Street,20,44.473884,-73.20868
+2025,December,8,805663,Maple Street at S. Winooski Avenue,15,44.47383,-73.210641
+2025,December,8,805664,Maple Street at Church Street,12,44.473771,-73.212224
+2025,December,8,805665,Maple Street at St Paul Street,27,44.473688,-73.213657
+2025,December,8,805666,Maple Street at Pine Street,33,44.473622,-73.21523
+2025,December,8,805667,Maple Street at Battery St,76,44.473558,-73.217914
+2025,December,8,805668,Battery Street at King Street,8,44.474485,-73.218508
+2025,December,8,805720,North Street at Murray Street,106,44.48462,-73.216134
+2025,December,8,805721,North Street at Elmwood Avenue,50,44.484724,-73.213421
+2025,December,8,805877,North Street at North Union Street,45,44.484805,-73.209904
+2025,December,8,805878,Battery Street at Main Street,1,44.47538,-73.21857
+2025,December,8,805881,North Street at N. Winooski Avenue,40,44.484763,-73.21159
+2025,December,8,805920,N Prospect Street at Loomis Street,20,44.483159711608565,-73.20123838453912
+2025,December,8,805999,N Prospect Street at North Street,37,44.485126,-73.201598
+2025,December,8,806005,N Prospect Street at Henry Street,31,44.484314,-73.201458
+2025,December,8,806029,Fern Hill,82,44.48710922696219,-73.20080938773157
+2025,December,8,806030,McAuley Square,158,44.48485932111906,-73.197974635582
+2025,December,9,2535799,Pine St at Hickock St,88,44.497364,-73.196294
+2025,December,9,2562322,Downtown Transit Center,3764,44.479731,-73.214298
+2025,December,9,2734696,Downtown BHS,339,44.47913639404151,-73.21644467263202
+2025,December,9,805607,Pearl Street at Elmwood Avenue,12,44.480451,-73.213722
+2025,December,9,805608,Elmwood Avenue at Elmwood Center,49,44.48132,-73.21352
+2025,December,9,805609,Elmwood Avenue at Opposite Peru Street,87,44.48258,-73.21362
+2025,December,9,805611,Elmwood Avenue at Spring Street,49,44.487349,-73.214014
+2025,December,9,805612,Archibald Street at Walnut Street,34,44.4877,-73.21333
+2025,December,9,805613,Archibald Street at Intervale Avenue,43,44.48778,-73.21147
+2025,December,9,805614,Intervale Avenue at Opposite Willow Street,51,44.48863,-73.21042
+2025,December,9,805615,Intervale Avenue at Riverside Avenue,61,44.4893,-73.20985
+2025,December,9,805616,Riverside Avenue at Bright Street,80,44.48947,-73.20833
+2025,December,9,805617,Community Health Center,158,44.489602490295084,-73.20611120741472
+2025,December,9,805618,Riverside Avenue at N. Prospect Street,27,44.48868651,-73.20182517
+2025,December,9,805619,Riverside Avenue at Koffee Kup Bakery,14,44.488130016524465,-73.19872632257795
+2025,December,9,805620,Riverside Avenue at Salmon Run,73,44.48641,-73.191726
+2025,December,9,805623,Main Street at La Fountain Street,53,44.49665,-73.18508
+2025,December,9,805624,E Spring Street at Spring Garden,98,44.4946270837024,-73.1851116254566
+2025,December,9,805625,Main Street at Burling Street,107,44.49802,-73.18438
+2025,December,9,805627,Main Street at Normand Street,333,44.50062909,-73.18312749
+2025,December,9,805628,Weaver Street at Tigan Street,148,44.50142,-73.18435
+2025,December,9,805629,Weaver Street at St. Francis Xavier Cemetery,42,44.4985967050366,-73.1858917531653
+2025,December,9,805630,W. Spring Street at Our Lady of Providence,33,44.49518,-73.18847
+2025,December,9,805631,W. Spring Street at North Street,46,44.49518873002957,-73.18957765953223
+2025,December,9,805632,Hickok Street at Elm Street,149,44.495502,-73.194925
+2025,December,9,805633,West Lane at Malletts Bay Avenue,184,44.49343,-73.19125
+2025,December,9,805634,Mallets Bay Avenue at O'Brien Center,210,44.4922537130923,-73.1899693138969
+2025,December,9,805635,Riverside Avenue at Dunkin Donuts,47,44.48860661486667,-73.20076828347567
+2025,December,9,805636,Riverside Avenue at Intervale Road,40,44.48903838562042,-73.20218804339953
+2025,December,9,805637,Community Health Center,335,44.489674,-73.206354
+2025,December,9,805638,Riverside Avenue at Intervale Avenue,91,44.489485,-73.209628
+2025,December,9,805639,Intervale Avenue at Willow Street,117,44.488718,-73.210544
+2025,December,9,805640,Archibald Street at Walnut Street,53,44.487786,-73.213167
+2025,December,9,805641,Elmwood Avenue at Spring Street,39,44.48738,-73.21415
+2025,December,9,805642,Elmwood Avenue at Cedar Street,56,44.48595,-73.21402
+2025,December,9,805643,Elmwood Avenue at North Street,34,44.484847,-73.213943
+2025,December,9,805644,Elmwood Avenue at Allen Street,6,44.48379158717764,-73.213883867883
+2025,December,9,805645,Grant Street at Clarke Street,7,44.4822,-73.21252
+2025,December,9,805763,Winooski Falls/Champlain Mill,135,44.49022,-73.18437
+2025,December,9,805819,Spinner Place/ Champlain Mill,919,44.4903075657594,-73.1848931831459
+2025,December,9,805874,Riverside Avenue at Hillside Terrace,21,44.48778622,-73.19634542
+2025,December,9,805958,Elmwood Avenue at Cedar Street,70,44.48587,-73.21387
+2025,December,9,805987,Riverside Avenue at Opposite Barrett Street,101,44.487832,-73.187295
+2025,December,9,805988,Intervale Avenue at Archibald,65,44.487946,-73.211161
+2025,December,9,805989,Courtyard,94,44.4927114,-73.181172
+2025,December,9,805990,Weaver Street at St. Peter Street,27,44.4963640829017,-73.1870715173599
+2025,December,9,805991,Mallets Bay Avenue at St. Peter Street,89,44.49613,-73.19353
+2025,December,9,805992,Elmwood Avenue at North Street,183,44.48458,-73.2138
+2025,December,9,806000,Riverside Avenue at Opposite #236,351,44.48669,-73.192724
+2025,December,9,806004,Riverside Avenue at Hillside Terrace,284,44.48790773,-73.19620594
+2025,December,9,806015,83 Barlow Street,144,44.4928496500632,-73.18398111017882
+2025,December,9,806016,Riverside Avenue at Opposite Bright Street,291,44.489529,-73.208705
+2025,December,9,806068,Abenaki Way at Opposite CCV,4,44.49057554288402,-73.18206826541565
+2025,December,9,806150,Hickock St at River Street (Chick's Market),120,44.493262,-73.192766
+2025,December,11,2562322,Downtown Transit Center,2064,44.479731,-73.214298
+2025,December,11,4255578,South Burlington City Center,787,44.465916,-73.178304
+2025,December,11,4255597,Hinesburg Road at Wright Court,63,44.459664,-73.169867
+2025,December,11,4255599,Hinesburg Road at Opposite Iby Street,131,44.462676,-73.170423
+2025,December,11,4255600,Market Street at Garden Street,37,44.464424,-73.175618
+2025,December,11,4255601,Market Street at Hinesburg Road,20,44.46339,-73.172066
+2025,December,11,4255703,620 Hinesburg Rd,93,44.454911,-73.165713
+2025,December,11,805484,S. Winooski Avenue at Bank Street,385,44.478387,-73.211225
+2025,December,11,805485,Main Street at S. Winooski,285,44.475929,-73.21056
+2025,December,11,805486,Main Street at S. Union Street,354,44.47603,-73.20863
+2025,December,11,805487,Main Street at S. Willard Street,122,44.476129,-73.205639
+2025,December,11,805488,Main Street at S. Prospect Street,59,44.476288,-73.200853
+2025,December,11,805490,University Heights,914,44.47443,-73.19472
+2025,December,11,805492,Dorset Street at Peoples United Bank,61,44.46717,-73.18152
+2025,December,11,805495,Dorset Street at The Pines,64,44.45763328319927,-73.17979274009679
+2025,December,11,805496,Dorset Street at Fire Station,150,44.45469289237221,-73.1792998938364
+2025,December,11,805497,Kennedy Drive at Dorset Street,15,44.452867,-73.177547
+2025,December,11,805498,Kennedy Drive at Twin Oaks Terrace,13,44.453148026331554,-73.17394642816953
+2025,December,11,805499,Kennedy Drive at Timber Lane,390,44.4539160687908,-73.1667206708602
+2025,December,11,805529,Dorset Street at Barnes & Noble,865,44.466905,-73.181203
+2025,December,11,805530,Williston Road at Sheraton Hotel,65,44.471703,-73.188163
+2025,December,11,805531,University Heights,554,44.474604,-73.194513
+2025,December,11,805532,Main Street at S. Prospect Street,20,44.476386,-73.201075
+2025,December,11,805533,Main Street at S. Willard Street,26,44.47623,-73.205
+2025,December,11,805534,Main Street at S Union Street,28,44.47612,-73.20933
+2025,December,11,805535,Main Street at Church Street,13,44.47602,-73.21237
+2025,December,11,805536,Main Street at Pine Street,5,44.47588,-73.2159
+2025,December,11,805537,Battery Street at College Street,16,44.4766,-73.21867
+2025,December,11,805538,Battery Street at Cherry Street,2,44.47899973630009,-73.21883190406265
+2025,December,11,805867,Main Street at Summit Street,64,44.4762026495925,-73.2025125186516
+2025,December,11,805869,Dorset Street at Town Square Drive,58,44.4567666731695,-73.17965702131
+2025,December,11,805925,College Street at S Winooski Avenue,35,44.477089,-73.211186
+2025,December,11,805946,Williston Road at Staples Plaza,45,44.471708,-73.188722
+2025,December,11,806011,Cherry Street at Opposite 3 Cathedral Square,1,44.479106,-73.217703
+2025,December,11,806178,Dorset Street at Opposite Garden Street,75,44.463505,-73.180857
+2025,December,16,805495,Dorset Street at The Pines,78,44.45763328319927,-73.17979274009679
+2025,December,16,805948,Country Park,49,44.45328351802228,-73.16309350586386
+2025,December,19,805670,North Street at N. Champlain Street,17,44.48464,-73.21755
+2025,December,19,805747,230 St Paul Street,38,44.472639,-73.213734
+2025,December,19,806003,College Street at Pine Street,51,44.4769269935033,-73.2158524026283
+2025,December,19,806009,Heineberg Housing,1,44.5107483,-73.246847
+2025,December,19,806065,3 Cathedral Square,34,44.4794974,-73.217846
+2025,December,19,815361,Thayer Housing,13,44.50758618365032,-73.24724612576023
+2025,December,20,805624,E Spring Street at Spring Garden,7,44.4946270837024,-73.1851116254566
+2025,December,20,805989,Courtyard,45,44.4927114,-73.181172
+2025,December,20,806015,83 Barlow Street,25,44.4928496500632,-73.18398111017882
+2025,December,20,806029,Fern Hill,36,44.48710922696219,-73.20080938773157
+2025,December,20,806030,McAuley Square,30,44.48485932111906,-73.197974635582
+2025,December,86,2387294,Waterbury State Complex,54,44.331774,-72.754829
+2025,December,86,2562322,Downtown Transit Center,345,44.479731,-73.214298
+2025,December,86,2574444,Montpelier Transit Center,428,44.2600159183554,-72.5796957353113
+2025,December,86,4212452,Williston Park & Ride,46,44.4382869455902,-73.1176662802925
+2025,December,86,805530,Williston Road at Sheraton Hotel,2,44.471703,-73.188163
+2025,December,86,805550,Shelburne Road at Home Avenue,37,44.450357,-73.209121
+2025,December,86,805595,Shelburne Road at Farrell Street,8,44.450421,-73.208905
+2025,December,86,805727,Pine Street at Opposite Howard Street,2,44.46707,-73.215043
+2025,December,86,805728,Pine Street at Burlington Electric Dept.,1,44.463529,-73.214778
+2025,December,86,805752,Pearl Street at Hungerford Terrace,1,44.480581,-73.207105
+2025,December,86,805754,Pearl Street at S Prospect Street (UHC),16,44.480731,-73.201381
+2025,December,86,805757,UVM Medical Center,457,44.4786566641105,-73.1939696441803
+2025,December,86,805825,Pearl Street at N. Prospect Street,7,44.480722,-73.200124
+2025,December,86,805829,Pearl Street at N Union Street,2,44.480617,-73.209172
+2025,December,86,805918,Pine Street at Lakeside Avenue (Cumberland Farms),1,44.460789,-73.214604
+2025,December,86,805946,Williston Road at Staples Plaza,18,44.471708,-73.188722
+2025,December,86,806003,College Street at Pine Street,2,44.4769269935033,-73.2158524026283
+2025,December,86,806020,National Life,197,44.255657,-72.584187
+2025,December,86,806021,Richmond Park and Ride,225,44.42328,-73.008347
+2025,December,86,806022,Waterbury Park and Ride,128,44.345122,-72.74333
+2025,December,86,806049,Department of Labor Park and Ride,135,44.259345,-72.590836
+2025,December,86,806179,Pine Street at Maple Street,5,44.473686,-73.215509
+2025,December,86,806180,Flynn Avenue at Richardson Street,8,44.455277,-73.212695
+2025,December,86,814364,Pine Street at Maple Street,1,44.4734362210473,-73.2153521626964
+2025,December,96,2562322,Downtown Transit Center,229,44.479731,-73.214298
+2025,December,96,4255696,Saint Albans Park and Ride,162,44.804924,-73.069639
+2025,December,96,4256754,Creek Farm Plaza,16,44.551831,-73.163725
+2025,December,96,4256766,River Street Park,9,44.637401,-73.1137
+2025,December,96,4256767,River Street at Opposite Villemaire Lane,1,44.627308,-73.1170779
+2025,December,96,4256770,Fairfield Street at Northwestern Medical Center,37,44.80638,-73.072262
+2025,December,96,4256771,Fairfield Street at opposite Northwestern Medical Center,80,44.806265,-73.072225
+2025,December,96,805621,Main Street at Platt Street,10,44.493943,-73.186434
+2025,December,96,805757,UVM Medical Center,184,44.4786566641105,-73.1939696441803
+2025,December,96,805763,Winooski Falls/Champlain Mill,30,44.49022,-73.18437
+2025,December,96,806052,Chimney Corners Park & Ride,25,44.595,-73.16538
+2025,December,96,806053,Georgia Park & Ride,17,44.6988434,-73.1056939
+2025,December,96,806120,US 7 at Centre Drive,5,44.62244061006584,-73.12203743064549
+2025,December,96,806127,Milton Town Office Park & Ride,122,44.618487707147665,-73.12487808119201
+2025,December,96,806165,Severance Corners,5,44.5282694,-73.1747521
+2025,December,96,806169,Water Tower Hill/Albany College of Pharmacy and Health Sciences,13,44.509066,-73.185039
+2025,December,96,847926,Birchwood Park,65,44.633361,-73.150694
+2025,December,108,806420,Commodores Inn,1,44.45532,-72.69455
+2025,December,756,2562322,Downtown Transit Center,81,44.479731,-73.214298
+2025,December,756,4254390,Shelburne Road at Opposite Marion St,5,44.464545793,-73.207594827
+2025,December,756,4254458,Queen City Park Rd. at 733 Queen City Park Rd.,3,44.4450849725083,-73.21206249941329
+2025,December,756,805484,S. Winooski Avenue at Bank Street,3,44.478387,-73.211225
+2025,December,756,805534,Main Street at S Union Street,2,44.47612,-73.20933
+2025,December,756,805595,Shelburne Road at Farrell Street,47,44.450421,-73.208905
+2025,December,756,805596,Shelburne Road at Hadley Road,6,44.452346,-73.208731
+2025,December,756,805597,Shelburne Road at Proctor Avenue,2,44.4549625141176,-73.2084395754862
+2025,December,756,805599,Shelburne Road at Clymer Street,3,44.458365,-73.208201
+2025,December,756,805600,Shelburne Road at Adams Court,3,44.4615,-73.20788
+2025,December,756,805664,Maple Street at Church Street,1,44.473771,-73.212224
+2025,December,756,805665,Maple Street at St Paul Street,4,44.473688,-73.213657
+2025,December,756,805724,Opposite 230 St Paul Street,3,44.4725758663786,-73.21387942650665
+2025,December,756,805725,Kilburn Street at Pine Street,1,44.471083,-73.215057
+2025,December,756,805727,Pine Street at Opposite Howard Street,4,44.46707,-73.215043
+2025,December,756,805729,Pine Street at Opposite Birchcliff Parkway,1,44.459138,-73.214493
+2025,December,756,805730,Pine Street at Long Trail Phys. Therapy,2,44.457489,-73.214395
+2025,December,756,805731,Howard Center,3,44.45587805178482,-73.21433236507835
+2025,December,756,805734,Green Mountain Transit Office,1,44.450385,-73.219485
+2025,December,756,805735,Queen City Park Road at Central Avenue,6,44.44637458441318,-73.21958828776178
+2025,December,756,805906,S. Winooski Avenue at King Street,3,44.475317956005064,-73.21098945119671
+2025,December,756,805911,Shelburne Road at Alfred Street,7,44.459642,-73.20808
+2025,December,756,805918,Pine Street at Lakeside Avenue (Cumberland Farms),1,44.460789,-73.214604
+2025,December,778,2530430,Northgate,4,44.52018353173355,-73.26474424075396
+2025,December,778,2556011,N Champlain Street and Peru Street,9,44.48262463352549,-73.21751852446796
+2025,December,778,2562322,Downtown Transit Center,146,44.479731,-73.214298
+2025,December,778,4254459,North Ave at Burlington Police Department,3,44.48285293336719,-73.2212151129874
+2025,December,778,805648,N Union Street at N Winooski Avenue,2,44.4861,-73.20968
+2025,December,778,805649,N Winooski Avenue at Archibald Street,2,44.48767,-73.2081
+2025,December,778,805650,Archibald Street at N Willard Street,7,44.488026,-73.206167
+2025,December,778,805651,Archibald Street at N Prospect Street,1,44.4877,-73.20227
+2025,December,778,805653,N Prospect Street at Pearl Street,3,44.48102,-73.20082
+2025,December,778,805671,North Street at Blodgett Street,3,44.48448,-73.22113
+2025,December,778,805672,North Avenue at Strong Street,4,44.48555,-73.22318
+2025,December,778,805673,North Avenue at Washington Street,2,44.48783,-73.22497
+2025,December,778,805675,North Ave at Opposite Cambrian Rise,3,44.490374789966715,-73.22694498290925
+2025,December,778,805676,North Avenue at Opposite Lakeview Cem.,1,44.49305,-73.22907
+2025,December,778,805680,North Avenue at Village Green,2,44.503302,-73.239826
+2025,December,778,805681,North Avenue at Rite Aid,1,44.50468,-73.24163
+2025,December,778,805682,Opposite Ethan Allen Shopping Center,15,44.50669307103158,-73.24436667857378
+2025,December,778,805683,North Avenue at Poirier Place,4,44.508373,-73.2467
+2025,December,778,805684,North Avenue at Heineberg Road,6,44.509442,-73.248161
+2025,December,778,805685,North Avenue at Gosse Court,1,44.51062,-73.24977
+2025,December,778,805686,North Avenue at Bessery Market,6,44.51227,-73.25198
+2025,December,778,805687,North Avenue at Edgemoor Drive,3,44.51292,-73.25287
+2025,December,778,805688,North Avenue at Cayuga Court,2,44.51372,-73.25393
+2025,December,778,805689,North Avenue at Birch Court,4,44.51433,-73.25475
+2025,December,778,805690,North Avenue at Franklin Sq.,8,44.515150248912775,-73.25586414915972
+2025,December,778,805695,North Avenue at Northgate Road,34,44.52059866074774,-73.26343139125463
+2025,December,778,805696,North Avenue at Opposite Algird Street,16,44.51935,-73.26173
+2025,December,778,805697,North Avenue at Browe Court,5,44.51855,-73.26067
+2025,December,778,805698,North Avenue at Starr Farm Road,7,44.5172,-73.25882
+2025,December,778,805699,North Avenue at Loaldo Drive,3,44.51486646173666,-73.25575626842328
+2025,December,778,805700,North Avenue at Cross Parkway,2,44.51327591364524,-73.2535893886282
+2025,December,778,805701,North Avenue at Staniford Road,5,44.512482637184064,-73.25249088947282
+2025,December,778,805702,North Avenue at Woodbury Road,5,44.51177,-73.2515
+2025,December,778,805703,North Avenue at Dodds Court,1,44.510541541785194,-73.24989447764318
+2025,December,778,805704,North Avenue at Shore Road,3,44.509482,-73.248476
+2025,December,778,805705,North Avenue at Dept. Motor Vehicles,7,44.508268,-73.246789
+2025,December,778,805706,Ethan Allen Shopping Center,14,44.506523,-73.244415
+2025,December,778,805707,North Avenue at Lakewood Parkway,9,44.504869,-73.242206
+2025,December,778,805708,North Avenue at Killarney Drive,3,44.503349,-73.240156
+2025,December,778,805709,North Avenue at Oppostie Saratoga Ave. (Elk's Lodge),2,44.50261,-73.239132
+2025,December,778,805710,North Avenue at Route 127,1,44.501077,-73.237206
+2025,December,778,805713,North Ave at Cambrian Rise,17,44.48977976148372,-73.22669459131767
+2025,December,778,805715,North Avenue at Berry Street,2,44.487623,-73.224958
+2025,December,778,805716,North Avenue at Opposite Ward Street,1,44.486342,-73.223938
+2025,December,778,805879,North Avenue at Algird Street,1,44.51945,-73.26172
+2025,December,778,805880,North Avenue at Green Acres Drive,2,44.51383554132112,-73.25433910719357
+2025,December,778,805949,N Union Street at Pearl Street,1,44.48083,-73.2093
+2025,December,778,805953,North Avenue at Barley Road,2,44.51807,-73.25985
+2025,December,778,805956,North Avenue at Tracy Drive,8,44.5159084205904,-73.25714573796444
+2025,December,778,805993,North Avenue at Lakeview Cemetery,1,44.492721535987414,-73.22897998070101
+2025,December,778,806029,Fern Hill,8,44.48710922696219,-73.20080938773157
+2025,December,778,806030,McAuley Square,1,44.48485932111906,-73.197974635582
+2025,December,778,806071,North Avenue at N of Institute Road,2,44.4988638777257,-73.23408881833916
+2025,December,778,809080,Wilson Street at Mansfield Avenue,3,44.48424930916993,-73.19957470484405
+2025,December,778,809081,Fern Hill (Main Road),2,44.486947130695434,-73.2018151365321
