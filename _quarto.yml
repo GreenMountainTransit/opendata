@@ -23,7 +23,7 @@ website:
         text: Fares Dashboard
         target: _blank
         rel: noopener
-      - href: ../stop_tracker.html
+      - href: https://gmtransit.maps.arcgis.com/apps/dashboards/fc3c35ea519d419b9cf635de40047de1
         text: Stop-level Boardings Dashboard
         target: _blank
         rel: noopener

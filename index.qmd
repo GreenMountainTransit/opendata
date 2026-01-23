@@ -57,7 +57,7 @@ For datasets without route detail, percentages are calculated within each month 
 
 ## Boarding Estimates by Stop
 
-Estimated boardings by stop can be explored in the **<a href="../stop_tracker.html" >Boarding Estimates by Stop Dashboard</a>**.
+Estimated boardings by stop can be explored in the **<a href="https://gmtransit.maps.arcgis.com/apps/dashboards/fc3c35ea519d419b9cf635de40047de1" >Boarding Estimates by Stop Dashboard</a>**.
 
 Stop-level boarding estimates are produced by matching fare transaction timestamps with 
 vehicle GPS locations and associating each transaction with the nearest stop along a 
