@@ -1,1115 +1,173 @@
-route,month,stat,value,service_days
-1,July,Weekday Ridership,26045,22
-1,July,Saturday Ridership,3642,4
-1,July,Sunday Ridership,1536,4
-1,July,Total Ridership,31223,30
-1,July,Total Vehicle Hours,1837.7,30
-1,July,Weekday Vehicle Hours,1568.2333333333333,22
-1,July,Saturday Vehicle Hours,178.13333333333335,4
-1,July,Sunday Vehicle Hours,91.33333333333333,4
-2,July,Weekday Ridership,23997,22
-2,July,Saturday Ridership,2694,4
-2,July,Sunday Ridership,1366,4
-2,July,Total Ridership,28057,30
-2,July,Total Vehicle Hours,1779.8000000000002,30
-2,July,Weekday Vehicle Hours,1541.466666666667,22
-2,July,Saturday Vehicle Hours,156,4
-2,July,Sunday Vehicle Hours,82.33333333333333,4
-3,July,Weekday Ridership,76,22
-3,July,Total Ridership,76,22
-3,July,Total Vehicle Hours,12.833333333333332,22
-3,July,Weekday Vehicle Hours,12.833333333333332,22
-5,July,Weekday Ridership,4347,22
-5,July,Saturday Ridership,415,4
-5,July,Sunday Ridership,178,4
-5,July,Total Ridership,4940,30
-5,July,Total Vehicle Hours,557,30
-5,July,Weekday Vehicle Hours,451,22
-5,July,Saturday Vehicle Hours,77.66666666666667,4
-5,July,Sunday Vehicle Hours,28.333333333333332,4
-6,July,Weekday Ridership,17680,22
-6,July,Saturday Ridership,2462,4
-6,July,Sunday Ridership,409,4
-6,July,Total Ridership,20551,30
-6,July,Total Vehicle Hours,1170.8666666666668,30
-6,July,Weekday Vehicle Hours,1016.4000000000001,22
-6,July,Saturday Vehicle Hours,124.8,4
-6,July,Sunday Vehicle Hours,29.666666666666668,4
-7,July,Weekday Ridership,13097,22
-7,July,Saturday Ridership,1898,4
-7,July,Sunday Ridership,664,4
-7,July,Total Ridership,15659,30
-7,July,Total Vehicle Hours,903.6666666666666,30
-7,July,Weekday Vehicle Hours,764.1333333333332,22
-7,July,Saturday Vehicle Hours,103.2,4
-7,July,Sunday Vehicle Hours,36.333333333333336,4
-8,July,Weekday Ridership,3398,22
-8,July,Saturday Ridership,485,4
-8,July,Sunday Ridership,117,4
-8,July,Total Ridership,4000,30
-8,July,Total Vehicle Hours,444.03333333333336,30
-8,July,Weekday Vehicle Hours,356.03333333333336,22
-8,July,Saturday Vehicle Hours,59.800000000000004,4
-8,July,Sunday Vehicle Hours,28.2,4
-9,July,Weekday Ridership,10267,22
-9,July,Saturday Ridership,1017,4
-9,July,Total Ridership,11284,26
-9,July,Total Vehicle Hours,729.8333333333333,26
-9,July,Weekday Vehicle Hours,663.3,22
-9,July,Saturday Vehicle Hours,66.53333333333333,4
-10,July,Weekday Ridership,1483,22
-10,July,Saturday Ridership,180,4
-10,July,Total Ridership,1663,26
-10,July,Total Vehicle Hours,349.8666666666667,26
-10,July,Weekday Vehicle Hours,297,22
-10,July,Saturday Vehicle Hours,52.86666666666667,4
-11,July,Weekday Ridership,8278,22
-11,July,Saturday Ridership,1130,4
-11,July,Sunday Ridership,569,4
-11,July,Total Ridership,9977,30
-11,July,Total Vehicle Hours,868.6666666666666,30
-11,July,Weekday Vehicle Hours,703.2666666666667,22
-11,July,Saturday Vehicle Hours,120.6,4
-11,July,Sunday Vehicle Hours,44.8,4
-36,July,Weekday Ridership,588,22
-36,July,Total Ridership,588,22
-36,July,Total Vehicle Hours,209.36666666666667,22
-36,July,Weekday Vehicle Hours,209.36666666666667,22
-46,July,Weekday Ridership,271,22
-46,July,Total Ridership,271,22
-46,July,Total Vehicle Hours,93.5,22
-46,July,Weekday Vehicle Hours,93.5,22
-56,July,Weekday Ridership,946,22
-56,July,Total Ridership,946,22
-56,July,Total Vehicle Hours,224.76666666666668,22
-56,July,Weekday Vehicle Hours,224.76666666666668,22
-Urban 86,July,Weekday Ridership,2000,22
-Urban 86,July,Total Ridership,2000,22
-Urban 86,July,Total Vehicle Hours,296.7,22
-Urban 86,July,Weekday Vehicle Hours,296.7,22
-Rural 86,July,Weekday Ridership,1849,22
-Rural 86,July,Total Ridership,1849,22
-Rural 86,July,Total Vehicle Hours,274.75,22
-Rural 86,July,Weekday Vehicle Hours,274.75,22
-96,July,Weekday Ridership,744,22
-96,July,Total Ridership,744,22
-96,July,Total Vehicle Hours,190.66666666666669,22
-96,July,Weekday Vehicle Hours,190.66666666666669,22
-1,August,Weekday Ridership,34412,22
-1,August,Saturday Ridership,9041,5
-1,August,Sunday Ridership,2409,4
-1,August,Total Ridership,45862,31
-1,August,Total Vehicle Hours,1882.2333333333331,31
-1,August,Weekday Vehicle Hours,1568.2333333333331,22
-1,August,Saturday Vehicle Hours,222.66666666666669,5
-1,August,Sunday Vehicle Hours,91.33333333333333,4
-2,August,Weekday Ridership,29197,22
-2,August,Saturday Ridership,3907,5
-2,August,Sunday Ridership,1362,4
-2,August,Total Ridership,34466,31
-2,August,Total Vehicle Hours,1818.8,31
-2,August,Weekday Vehicle Hours,1541.4666666666667,22
-2,August,Saturday Vehicle Hours,195,5
-2,August,Sunday Vehicle Hours,82.33333333333333,4
-3,August,Weekday Ridership,69,22
-3,August,Total Ridership,69,22
-3,August,Total Vehicle Hours,12.833333333333332,22
-3,August,Weekday Vehicle Hours,12.833333333333332,22
-5,August,Weekday Ridership,4415,22
-5,August,Saturday Ridership,597,5
-5,August,Sunday Ridership,201,4
-5,August,Total Ridership,5213,31
-5,August,Total Vehicle Hours,576.4166666666667,31
-5,August,Weekday Vehicle Hours,451,22
-5,August,Saturday Vehicle Hours,97.08333333333334,5
-5,August,Sunday Vehicle Hours,28.333333333333332,4
-6,August,Weekday Ridership,17645,22
-6,August,Saturday Ridership,3199,5
-6,August,Sunday Ridership,409,4
-6,August,Total Ridership,21253,31
-6,August,Total Vehicle Hours,1202.0666666666668,31
-6,August,Weekday Vehicle Hours,1016.4000000000001,22
-6,August,Saturday Vehicle Hours,156,5
-6,August,Sunday Vehicle Hours,29.666666666666668,4
-7,August,Weekday Ridership,15965,22
-7,August,Saturday Ridership,2456,5
-7,August,Sunday Ridership,700,4
-7,August,Total Ridership,19121,31
-7,August,Total Vehicle Hours,950.55,31
-7,August,Weekday Vehicle Hours,785.2166666666666,22
-7,August,Saturday Vehicle Hours,129,5
-7,August,Sunday Vehicle Hours,36.333333333333336,4
-8,August,Weekday Ridership,4146,22
-8,August,Saturday Ridership,772,5
-8,August,Sunday Ridership,212,4
-8,August,Total Ridership,5130,31
-8,August,Total Vehicle Hours,458.98333333333335,31
-8,August,Weekday Vehicle Hours,356.03333333333336,22
-8,August,Saturday Vehicle Hours,74.75,5
-8,August,Sunday Vehicle Hours,28.2,4
-9,August,Weekday Ridership,10716,22
-9,August,Saturday Ridership,1308,5
-9,August,Total Ridership,12024,27
-9,August,Total Vehicle Hours,750.6333333333332,27
-9,August,Weekday Vehicle Hours,667.4666666666666,22
-9,August,Saturday Vehicle Hours,83.16666666666666,5
-10,August,Weekday Ridership,1565,22
-10,August,Saturday Ridership,205,5
-10,August,Total Ridership,1770,27
-10,August,Total Vehicle Hours,363.0833333333333,27
-10,August,Weekday Vehicle Hours,297,22
-10,August,Saturday Vehicle Hours,66.08333333333333,5
-11,August,Weekday Ridership,9777,22
-11,August,Saturday Ridership,2089,5
-11,August,Sunday Ridership,727,4
-11,August,Total Ridership,12593,31
-11,August,Total Vehicle Hours,898.8166666666666,31
-11,August,Weekday Vehicle Hours,703.2666666666667,22
-11,August,Saturday Vehicle Hours,150.75,5
-11,August,Sunday Vehicle Hours,44.8,4
-21,August,Weekday Ridership,1243,22
-21,August,Total Ridership,1243,22
-21,August,Total Vehicle Hours,61.25,22
-21,August,Weekday Vehicle Hours,61.25,22
-36,August,Weekday Ridership,693,22
-36,August,Total Ridership,693,22
-36,August,Total Vehicle Hours,211.8666666666667,22
-36,August,Weekday Vehicle Hours,211.8666666666667,22
-46,August,Weekday Ridership,398,22
-46,August,Total Ridership,398,22
-46,August,Total Vehicle Hours,93.5,22
-46,August,Weekday Vehicle Hours,93.5,22
-56,August,Weekday Ridership,1029,22
-56,August,Total Ridership,1029,22
-56,August,Total Vehicle Hours,224.76666666666668,22
-56,August,Weekday Vehicle Hours,224.76666666666668,22
-Urban 86,August,Weekday Ridership,1921,22
-Urban 86,August,Total Ridership,1921,22
-Urban 86,August,Total Vehicle Hours,302.35,22
-Urban 86,August,Weekday Vehicle Hours,302.35,22
-Rural 86,August,Weekday Ridership,1688,22
-Rural 86,August,Total Ridership,1688,22
-Rural 86,August,Total Vehicle Hours,287.83333333333337,22
-Rural 86,August,Weekday Vehicle Hours,287.83333333333337,22
-96,August,Weekday Ridership,863,22
-96,August,Total Ridership,863,22
-96,August,Total Vehicle Hours,190.66666666666669,22
-96,August,Weekday Vehicle Hours,190.66666666666669,22
-1,September,Weekday Ridership,45026,20
-1,September,Saturday Ridership,9803,4
-1,September,Sunday Ridership,7069,5
-1,September,Total Ridership,61898,29
-1,September,Total Vehicle Hours,1717.9666666666667,29
-1,September,Weekday Vehicle Hours,1425.6666666666665,20
-1,September,Saturday Vehicle Hours,178.13333333333335,4
-1,September,Sunday Vehicle Hours,114.16666666666666,5
-2,September,Weekday Ridership,39815,20
-2,September,Saturday Ridership,3910,4
-2,September,Sunday Ridership,3172,5
-2,September,Total Ridership,46897,29
-2,September,Total Vehicle Hours,1660.2500000000002,29
-2,September,Weekday Vehicle Hours,1401.3333333333335,20
-2,September,Saturday Vehicle Hours,156,4
-2,September,Sunday Vehicle Hours,102.91666666666666,5
-3,September,Weekday Ridership,41,20
-3,September,Total Ridership,41,20
-3,September,Total Vehicle Hours,11.666666666666664,20
-3,September,Weekday Vehicle Hours,11.666666666666664,20
-5,September,Weekday Ridership,5515,20
-5,September,Saturday Ridership,878,4
-5,September,Sunday Ridership,490,5
-5,September,Total Ridership,6883,29
-5,September,Total Vehicle Hours,523.0833333333334,29
-5,September,Weekday Vehicle Hours,410,20
-5,September,Saturday Vehicle Hours,77.66666666666667,4
-5,September,Sunday Vehicle Hours,35.416666666666664,5
-6,September,Weekday Ridership,17744,20
-6,September,Saturday Ridership,2775,4
-6,September,Sunday Ridership,608,5
-6,September,Total Ridership,21127,29
-6,September,Total Vehicle Hours,1085.8833333333332,29
-6,September,Weekday Vehicle Hours,924,20
-6,September,Saturday Vehicle Hours,124.8,4
-6,September,Sunday Vehicle Hours,37.083333333333336,5
-7,September,Weekday Ridership,24585,20
-7,September,Saturday Ridership,2363,4
-7,September,Sunday Ridership,1938,5
-7,September,Total Ridership,28886,29
-7,September,Total Vehicle Hours,927.6166666666667,29
-7,September,Weekday Vehicle Hours,779,20
-7,September,Saturday Vehicle Hours,103.2,4
-7,September,Sunday Vehicle Hours,45.41666666666667,5
-8,September,Weekday Ridership,5963,20
-8,September,Saturday Ridership,824,4
-8,September,Sunday Ridership,716,5
-8,September,Total Ridership,7503,29
-8,September,Total Vehicle Hours,418.7166666666667,29
-8,September,Weekday Vehicle Hours,323.6666666666667,20
-8,September,Saturday Vehicle Hours,59.800000000000004,4
-8,September,Sunday Vehicle Hours,35.25,5
-9,September,Weekday Ridership,12120,20
-9,September,Saturday Ridership,1162,4
-9,September,Total Ridership,13282,24
-9,September,Total Vehicle Hours,686.1999999999999,24
-9,September,Weekday Vehicle Hours,619.6666666666666,20
-9,September,Saturday Vehicle Hours,66.53333333333333,4
-10,September,Weekday Ridership,2045,20
-10,September,Saturday Ridership,194,4
-10,September,Total Ridership,2239,24
-10,September,Total Vehicle Hours,322.8666666666667,24
-10,September,Weekday Vehicle Hours,270,20
-10,September,Saturday Vehicle Hours,52.86666666666667,4
-11,September,Weekday Ridership,11810,20
-11,September,Saturday Ridership,2371,4
-11,September,Sunday Ridership,1606,5
-11,September,Total Ridership,15787,29
-11,September,Total Vehicle Hours,815.9333333333333,29
-11,September,Weekday Vehicle Hours,639.3333333333333,20
-11,September,Saturday Vehicle Hours,120.6,4
-11,September,Sunday Vehicle Hours,56,5
-21,September,Weekday Ridership,5668,20
-21,September,Total Ridership,5668,20
-21,September,Total Vehicle Hours,245,20
-21,September,Weekday Vehicle Hours,245,20
-36,September,Weekday Ridership,643,20
-36,September,Total Ridership,643,20
-36,September,Total Vehicle Hours,200.33333333333334,20
-36,September,Weekday Vehicle Hours,200.33333333333334,20
-46,September,Weekday Ridership,309,20
-46,September,Total Ridership,309,20
-46,September,Total Vehicle Hours,85,20
-46,September,Weekday Vehicle Hours,85,20
-56,September,Weekday Ridership,1005,20
-56,September,Total Ridership,1005,20
-56,September,Total Vehicle Hours,204.33333333333334,20
-56,September,Weekday Vehicle Hours,204.33333333333334,20
-Urban 86,September,Weekday Ridership,2037,20
-Urban 86,September,Total Ridership,2037,20
-Urban 86,September,Total Vehicle Hours,271,20
-Urban 86,September,Weekday Vehicle Hours,271,20
-Rural 86,September,Weekday Ridership,1729,20
-Rural 86,September,Total Ridership,1729,20
-Rural 86,September,Total Vehicle Hours,261.6666666666667,20
-Rural 86,September,Weekday Vehicle Hours,261.6666666666667,20
-96,September,Weekday Ridership,934,20
-96,September,Total Ridership,934,20
-96,September,Total Vehicle Hours,173.33333333333337,20
-96,September,Weekday Vehicle Hours,173.33333333333337,20
-1,October,Weekday Ridership,50907,23
-1,October,Saturday Ridership,8585,4
-1,October,Sunday Ridership,4341,4
-1,October,Total Ridership,63833,31
-1,October,Total Vehicle Hours,1908.9833333333333,31
-1,October,Weekday Vehicle Hours,1639.5166666666667,23
-1,October,Saturday Vehicle Hours,178.13333333333335,4
-1,October,Sunday Vehicle Hours,91.33333333333333,4
-2,October,Weekday Ridership,45169,23
-2,October,Saturday Ridership,3337,4
-2,October,Sunday Ridership,1995,4
-2,October,Total Ridership,50501,31
-2,October,Total Vehicle Hours,1849.8666666666668,31
-2,October,Weekday Vehicle Hours,1611.5333333333335,23
-2,October,Saturday Vehicle Hours,156,4
-2,October,Sunday Vehicle Hours,82.33333333333333,4
-3,October,Weekday Ridership,40,23
-3,October,Total Ridership,40,23
-3,October,Total Vehicle Hours,13.416666666666664,23
-3,October,Weekday Vehicle Hours,13.416666666666664,23
-5,October,Weekday Ridership,6420,23
-5,October,Saturday Ridership,559,4
-5,October,Sunday Ridership,236,4
-5,October,Total Ridership,7215,31
-5,October,Total Vehicle Hours,577.5,31
-5,October,Weekday Vehicle Hours,471.5,23
-5,October,Saturday Vehicle Hours,77.66666666666667,4
-5,October,Sunday Vehicle Hours,28.333333333333332,4
-6,October,Weekday Ridership,19809,23
-6,October,Saturday Ridership,2696,4
-6,October,Sunday Ridership,289,4
-6,October,Total Ridership,22794,31
-6,October,Total Vehicle Hours,1217.0666666666668,31
-6,October,Weekday Vehicle Hours,1062.6000000000001,23
-6,October,Saturday Vehicle Hours,124.8,4
-6,October,Sunday Vehicle Hours,29.666666666666668,4
-7,October,Weekday Ridership,26110,23
-7,October,Saturday Ridership,2085,4
-7,October,Sunday Ridership,737,4
-7,October,Total Ridership,28932,31
-7,October,Total Vehicle Hours,1035.3833333333334,31
-7,October,Weekday Vehicle Hours,895.85,23
-7,October,Saturday Vehicle Hours,103.2,4
-7,October,Sunday Vehicle Hours,36.333333333333336,4
-8,October,Weekday Ridership,7363,23
-8,October,Saturday Ridership,587,4
-8,October,Sunday Ridership,263,4
-8,October,Total Ridership,8213,31
-8,October,Total Vehicle Hours,460.2166666666667,31
-8,October,Weekday Vehicle Hours,372.2166666666667,23
-8,October,Saturday Vehicle Hours,59.800000000000004,4
-8,October,Sunday Vehicle Hours,28.2,4
-9,October,Weekday Ridership,13977,23
-9,October,Saturday Ridership,1172,4
-9,October,Total Ridership,15149,27
-9,October,Total Vehicle Hours,779.1499999999999,27
-9,October,Weekday Vehicle Hours,712.6166666666666,23
-9,October,Saturday Vehicle Hours,66.53333333333333,4
-10,October,Weekday Ridership,2214,23
-10,October,Saturday Ridership,213,4
-10,October,Total Ridership,2427,27
-10,October,Total Vehicle Hours,363.3666666666667,27
-10,October,Weekday Vehicle Hours,310.5,23
-10,October,Saturday Vehicle Hours,52.86666666666667,4
-11,October,Weekday Ridership,14044,23
-11,October,Saturday Ridership,2054,4
-11,October,Sunday Ridership,845,4
-11,October,Total Ridership,16943,31
-11,October,Total Vehicle Hours,900.6333333333333,31
-11,October,Weekday Vehicle Hours,735.2333333333333,23
-11,October,Saturday Vehicle Hours,120.6,4
-11,October,Sunday Vehicle Hours,44.8,4
-21,October,Weekday Ridership,7178,23
-21,October,Total Ridership,7178,23
-21,October,Total Vehicle Hours,257.25,23
-21,October,Weekday Vehicle Hours,257.25,23
-36,October,Weekday Ridership,793,23
-36,October,Total Ridership,793,23
-36,October,Total Vehicle Hours,230.38333333333335,23
-36,October,Weekday Vehicle Hours,230.38333333333335,23
-46,October,Weekday Ridership,75,23
-46,October,Total Ridership,75,23
-46,October,Total Vehicle Hours,17,23
-46,October,Weekday Vehicle Hours,17,23
-56,October,Weekday Ridership,1091,23
-56,October,Total Ridership,1091,23
-56,October,Total Vehicle Hours,234.98333333333335,23
-56,October,Weekday Vehicle Hours,234.98333333333335,23
-Urban 86,October,Weekday Ridership,2561,23
-Urban 86,October,Total Ridership,2561,23
-Urban 86,October,Total Vehicle Hours,311.65000000000003,23
-Urban 86,October,Weekday Vehicle Hours,311.65000000000003,23
-Rural 86,October,Weekday Ridership,1923,23
-Rural 86,October,Total Ridership,1923,23
-Rural 86,October,Total Vehicle Hours,300.9166666666667,23
-Rural 86,October,Weekday Vehicle Hours,300.9166666666667,23
-96,October,Weekday Ridership,974,23
-96,October,Total Ridership,974,23
-96,October,Total Vehicle Hours,199.33333333333337,23
-96,October,Weekday Vehicle Hours,199.33333333333337,23
-1,November,Weekday Ridership,37195,20
-1,November,Saturday Ridership,7942,5
-1,November,Sunday Ridership,3991,4
-1,November,Total Ridership,49128,29
-1,November,Total Vehicle Hours,1739.6666666666665,29
-1,November,Weekday Vehicle Hours,1425.6666666666665,20
-1,November,Saturday Vehicle Hours,222.66666666666669,5
-1,November,Sunday Vehicle Hours,91.33333333333333,4
-2,November,Weekday Ridership,35049,20
-2,November,Saturday Ridership,3833,5
-2,November,Sunday Ridership,1957,4
-2,November,Total Ridership,40839,29
-2,November,Total Vehicle Hours,1678.6666666666667,29
-2,November,Weekday Vehicle Hours,1401.3333333333335,20
-2,November,Saturday Vehicle Hours,195,5
-2,November,Sunday Vehicle Hours,82.33333333333333,4
-3,November,Weekday Ridership,166,20
-3,November,Total Ridership,166,20
-3,November,Total Vehicle Hours,11.666666666666664,20
-3,November,Weekday Vehicle Hours,11.666666666666664,20
-5,November,Weekday Ridership,4779,20
-5,November,Saturday Ridership,737,5
-5,November,Sunday Ridership,248,4
-5,November,Total Ridership,5764,29
-5,November,Total Vehicle Hours,535.4166666666667,29
-5,November,Weekday Vehicle Hours,410,20
-5,November,Saturday Vehicle Hours,97.08333333333334,5
-5,November,Sunday Vehicle Hours,28.333333333333332,4
-6,November,Weekday Ridership,16402,20
-6,November,Saturday Ridership,2811,5
-6,November,Sunday Ridership,289,4
-6,November,Total Ridership,19502,29
-6,November,Total Vehicle Hours,1109.6666666666667,29
-6,November,Weekday Vehicle Hours,924,20
-6,November,Saturday Vehicle Hours,156,5
-6,November,Sunday Vehicle Hours,29.666666666666668,4
-7,November,Weekday Ridership,20310,20
-7,November,Saturday Ridership,2576,5
-7,November,Sunday Ridership,806,4
-7,November,Total Ridership,23692,29
-7,November,Total Vehicle Hours,944.3333333333334,29
-7,November,Weekday Vehicle Hours,779,20
-7,November,Saturday Vehicle Hours,129,5
-7,November,Sunday Vehicle Hours,36.333333333333336,4
-8,November,Weekday Ridership,5515,20
-8,November,Saturday Ridership,471,5
-8,November,Sunday Ridership,205,4
-8,November,Total Ridership,6191,29
-8,November,Total Vehicle Hours,426.6166666666667,29
-8,November,Weekday Vehicle Hours,323.6666666666667,20
-8,November,Saturday Vehicle Hours,74.75,5
-8,November,Sunday Vehicle Hours,28.2,4
-9,November,Weekday Ridership,10729,20
-9,November,Saturday Ridership,1194,5
-9,November,Total Ridership,11923,25
-9,November,Total Vehicle Hours,702.8333333333333,25
-9,November,Weekday Vehicle Hours,619.6666666666666,20
-9,November,Saturday Vehicle Hours,83.16666666666666,5
-10,November,Weekday Ridership,1566,20
-10,November,Saturday Ridership,179,5
-10,November,Total Ridership,1745,25
-10,November,Total Vehicle Hours,336.0833333333333,25
-10,November,Weekday Vehicle Hours,270,20
-10,November,Saturday Vehicle Hours,66.08333333333333,5
-11,November,Weekday Ridership,10159,20
-11,November,Saturday Ridership,2125,5
-11,November,Sunday Ridership,669,4
-11,November,Total Ridership,12953,29
-11,November,Total Vehicle Hours,834.8833333333332,29
-11,November,Weekday Vehicle Hours,639.3333333333333,20
-11,November,Saturday Vehicle Hours,150.75,5
-11,November,Sunday Vehicle Hours,44.8,4
-21,November,Weekday Ridership,5720,20
-21,November,Total Ridership,5720,20
-21,November,Total Vehicle Hours,183.75,20
-21,November,Weekday Vehicle Hours,183.75,20
-36,November,Weekday Ridership,575,20
-36,November,Total Ridership,575,20
-36,November,Total Vehicle Hours,200.33333333333334,20
-36,November,Weekday Vehicle Hours,200.33333333333334,20
-56,November,Weekday Ridership,853,20
-56,November,Total Ridership,853,20
-56,November,Total Vehicle Hours,204.33333333333334,20
-56,November,Weekday Vehicle Hours,204.33333333333334,20
-Urban 86,November,Weekday Ridership,2017,20
-Urban 86,November,Total Ridership,2017,20
-Urban 86,November,Total Vehicle Hours,271,20
-Urban 86,November,Weekday Vehicle Hours,271,20
-Rural 86,November,Weekday Ridership,1457,20
-Rural 86,November,Total Ridership,1457,20
-Rural 86,November,Total Vehicle Hours,261.6666666666667,20
-Rural 86,November,Weekday Vehicle Hours,261.6666666666667,20
-96,November,Weekday Ridership,774,20
-96,November,Total Ridership,774,20
-96,November,Total Vehicle Hours,173.33333333333337,20
-96,November,Weekday Vehicle Hours,173.33333333333337,20
-1,December,Weekday Ridership,28378,21
-1,December,Saturday Ridership,4123,4
-1,December,Sunday Ridership,2422,5
-1,December,Total Ridership,34923,30
-1,December,Total Vehicle Hours,1774.1124031007753,30
-1,December,Weekday Vehicle Hours,1476.4790697674418,21
-1,December,Saturday Vehicle Hours,183.4666666666667,4
-1,December,Sunday Vehicle Hours,114.16666666666666,5
-2,December,Weekday Ridership,27745,21
-2,December,Saturday Ridership,2474,4
-2,December,Sunday Ridership,1540,5
-2,December,Total Ridership,31759,30
-2,December,Total Vehicle Hours,1736.7585271317832,30
-2,December,Weekday Vehicle Hours,1477.1751937984498,21
-2,December,Saturday Vehicle Hours,156.66666666666666,4
-2,December,Sunday Vehicle Hours,102.91666666666666,5
-5,December,Weekday Ridership,5237,21
-5,December,Saturday Ridership,345,4
-5,December,Sunday Ridership,272,5
-5,December,Total Ridership,5854,30
-5,December,Total Vehicle Hours,480.54824561403507,30
-5,December,Weekday Vehicle Hours,411.79824561403507,21
-5,December,Saturday Vehicle Hours,33.333333333333336,4
-5,December,Sunday Vehicle Hours,35.416666666666664,5
-6,December,Weekday Ridership,16633,21
-6,December,Saturday Ridership,1788,4
-6,December,Sunday Ridership,387,5
-6,December,Total Ridership,18808,30
-6,December,Total Vehicle Hours,1113.0050925925925,30
-6,December,Weekday Vehicle Hours,965.5217592592592,21
-6,December,Saturday Vehicle Hours,110.39999999999999,4
-6,December,Sunday Vehicle Hours,37.083333333333336,5
-7,December,Weekday Ridership,19286,21
-7,December,Saturday Ridership,1727,4
-7,December,Sunday Ridership,848,5
-7,December,Total Ridership,21861,30
-7,December,Total Vehicle Hours,957.04918699187,30
-7,December,Weekday Vehicle Hours,821.89918699187,21
-7,December,Saturday Vehicle Hours,89.73333333333333,4
-7,December,Sunday Vehicle Hours,45.41666666666667,5
-8,December,Weekday Ridership,3956,21
-8,December,Saturday Ridership,204,4
-8,December,Sunday Ridership,165,5
-8,December,Total Ridership,4325,30
-8,December,Total Vehicle Hours,394.8306666666667,30
-8,December,Weekday Vehicle Hours,324.314,21
-8,December,Saturday Vehicle Hours,35.26666666666666,4
-8,December,Sunday Vehicle Hours,35.25,5
-9,December,Weekday Ridership,9930,21
-9,December,Saturday Ridership,727,4
-9,December,Total Ridership,10657,25
-9,December,Total Vehicle Hours,694.4623655913979,25
-9,December,Weekday Vehicle Hours,650.8623655913979,21
-9,December,Saturday Vehicle Hours,43.6,4
-10,December,Weekday Ridership,1651,21
-10,December,Total Ridership,1651,21
-10,December,Total Vehicle Hours,283.5,21
-10,December,Weekday Vehicle Hours,283.5,21
-11,December,Weekday Ridership,8165,21
-11,December,Saturday Ridership,827,4
-11,December,Sunday Ridership,617,5
-11,December,Total Ridership,9609,30
-11,December,Total Vehicle Hours,766.9015151515151,30
-11,December,Weekday Vehicle Hours,664.0348484848485,21
-11,December,Saturday Vehicle Hours,91.86666666666667,4
-11,December,Sunday Vehicle Hours,10.999999999999998,5
-21,December,Weekday Ridership,5912,21
-21,December,Total Ridership,5912,21
-21,December,Total Vehicle Hours,160.00000000000003,21
-21,December,Weekday Vehicle Hours,160.00000000000003,21
-56,December,Weekday Ridership,652,21
-56,December,Total Ridership,652,21
-56,December,Total Vehicle Hours,214.55,21
-56,December,Weekday Vehicle Hours,214.55,21
-Urban 86,December,Weekday Ridership,1870,21
-Urban 86,December,Total Ridership,1870,21
-Urban 86,December,Total Vehicle Hours,284.55,21
-Urban 86,December,Weekday Vehicle Hours,284.55,21
-Rural 86,December,Weekday Ridership,1494,21
-Rural 86,December,Total Ridership,1494,21
-Rural 86,December,Total Vehicle Hours,274.75,21
-Rural 86,December,Weekday Vehicle Hours,274.75,21
-96,December,Weekday Ridership,678,21
-96,December,Total Ridership,678,21
-96,December,Total Vehicle Hours,182.00000000000003,21
-96,December,Weekday Vehicle Hours,182.00000000000003,21
-1,January,Weekday Ridership,32179,22
-1,January,Saturday Ridership,5369,4
-1,January,Sunday Ridership,3453,4
-1,January,Total Ridership,41001,30
-1,January,Total Vehicle Hours,1830.2,30
-1,January,Weekday Vehicle Hours,1555.4,22
-1,January,Saturday Vehicle Hours,183.4666666666667,4
-1,January,Sunday Vehicle Hours,91.33333333333333,4
-2,January,Weekday Ridership,36425,22
-2,January,Saturday Ridership,2357,4
-2,January,Sunday Ridership,1578,4
-2,January,Total Ridership,40360,30
-2,January,Total Vehicle Hours,1795.1333333333334,30
-2,January,Weekday Vehicle Hours,1556.1333333333334,22
-2,January,Saturday Vehicle Hours,156.66666666666666,4
-2,January,Sunday Vehicle Hours,82.33333333333333,4
-5,January,Weekday Ridership,5733,22
-5,January,Saturday Ridership,396,4
-5,January,Sunday Ridership,203,4
-5,January,Total Ridership,6332,30
-5,January,Total Vehicle Hours,512.6666666666666,30
-5,January,Weekday Vehicle Hours,451,22
-5,January,Saturday Vehicle Hours,33.333333333333336,4
-5,January,Sunday Vehicle Hours,28.333333333333332,4
-6,January,Weekday Ridership,16886,22
-6,January,Saturday Ridership,1849,4
-6,January,Sunday Ridership,310,4
-6,January,Total Ridership,19045,30
-6,January,Total Vehicle Hours,1158.3000000000002,30
-6,January,Weekday Vehicle Hours,1018.2333333333333,22
-6,January,Saturday Vehicle Hours,110.39999999999999,4
-6,January,Sunday Vehicle Hours,29.666666666666668,4
-7,January,Weekday Ridership,21141,22
-7,January,Saturday Ridership,1913,4
-7,January,Sunday Ridership,592,4
-7,January,Total Ridership,23646,30
-7,January,Total Vehicle Hours,992.1333333333334,30
-7,January,Weekday Vehicle Hours,866.0666666666667,22
-7,January,Saturday Vehicle Hours,89.73333333333333,4
-7,January,Sunday Vehicle Hours,36.333333333333336,4
-8,January,Weekday Ridership,5173,22
-8,January,Saturday Ridership,207,4
-8,January,Sunday Ridership,161,4
-8,January,Total Ridership,5541,30
-8,January,Total Vehicle Hours,419.5,30
-8,January,Weekday Vehicle Hours,356.03333333333336,22
-8,January,Saturday Vehicle Hours,35.26666666666666,4
-8,January,Sunday Vehicle Hours,28.2,4
-9,January,Weekday Ridership,11244,22
-9,January,Saturday Ridership,720,4
-9,January,Total Ridership,11964,26
-9,January,Total Vehicle Hours,730.7333333333333,26
-9,January,Weekday Vehicle Hours,687.1333333333333,22
-9,January,Saturday Vehicle Hours,43.6,4
-10,January,Weekday Ridership,1438,22
-10,January,Total Ridership,1438,22
-10,January,Total Vehicle Hours,297,22
-10,January,Weekday Vehicle Hours,297,22
-11,January,Weekday Ridership,9800,22
-11,January,Saturday Ridership,1238,4
-11,January,Sunday Ridership,656,4
-11,January,Total Ridership,11694,30
-11,January,Total Vehicle Hours,803.9333333333333,30
-11,January,Weekday Vehicle Hours,703.2666666666667,22
-11,January,Saturday Vehicle Hours,91.86666666666667,4
-11,January,Sunday Vehicle Hours,8.799999999999999,4
-21,January,Weekday Ridership,9834,22
-21,January,Total Ridership,9834,22
-21,January,Total Vehicle Hours,224.00000000000003,22
-21,January,Weekday Vehicle Hours,224.00000000000003,22
-56,January,Weekday Ridership,860,22
-56,January,Total Ridership,860,22
-56,January,Total Vehicle Hours,224.76666666666668,22
-56,January,Weekday Vehicle Hours,224.76666666666668,22
-Urban 86,January,Weekday Ridership,2466,22
-Urban 86,January,Total Ridership,2466,22
-Urban 86,January,Total Vehicle Hours,298.1,22
-Urban 86,January,Weekday Vehicle Hours,298.1,22
-Rural 86,January,Weekday Ridership,1681,22
-Rural 86,January,Total Ridership,1681,22
-Rural 86,January,Total Vehicle Hours,287.83333333333337,22
-Rural 86,January,Weekday Vehicle Hours,287.83333333333337,22
-96,January,Weekday Ridership,859,22
-96,January,Total Ridership,859,22
-96,January,Total Vehicle Hours,190.66666666666669,22
-96,January,Weekday Vehicle Hours,190.66666666666669,22
-1,February,Weekday Ridership,35167,20
-1,February,Saturday Ridership,7427,4
-1,February,Sunday Ridership,3507,4
-1,February,Total Ridership,46101,28
-1,February,Total Vehicle Hours,1688.8,28
-1,February,Weekday Vehicle Hours,1414,20
-1,February,Saturday Vehicle Hours,183.4666666666667,4
-1,February,Sunday Vehicle Hours,91.33333333333333,4
-2,February,Weekday Ridership,42003,20
-2,February,Saturday Ridership,3007,4
-2,February,Sunday Ridership,1727,4
-2,February,Total Ridership,46737,28
-2,February,Total Vehicle Hours,1653.6666666666667,28
-2,February,Weekday Vehicle Hours,1414.6666666666667,20
-2,February,Saturday Vehicle Hours,156.66666666666666,4
-2,February,Sunday Vehicle Hours,82.33333333333333,4
-5,February,Weekday Ridership,5072,20
-5,February,Saturday Ridership,273,4
-5,February,Sunday Ridership,197,4
-5,February,Total Ridership,5542,28
-5,February,Total Vehicle Hours,471.66666666666663,28
-5,February,Weekday Vehicle Hours,410,20
-5,February,Saturday Vehicle Hours,33.333333333333336,4
-5,February,Sunday Vehicle Hours,28.333333333333332,4
-6,February,Weekday Ridership,14362,20
-6,February,Saturday Ridership,1917,4
-6,February,Sunday Ridership,274,4
-6,February,Total Ridership,16553,28
-6,February,Total Vehicle Hours,1065.7333333333333,28
-6,February,Weekday Vehicle Hours,925.6666666666666,20
-6,February,Saturday Vehicle Hours,110.39999999999999,4
-6,February,Sunday Vehicle Hours,29.666666666666668,4
-7,February,Weekday Ridership,17494,20
-7,February,Saturday Ridership,2096,4
-7,February,Sunday Ridership,580,4
-7,February,Total Ridership,20170,28
-7,February,Total Vehicle Hours,913.4000000000001,28
-7,February,Weekday Vehicle Hours,787.3333333333334,20
-7,February,Saturday Vehicle Hours,89.73333333333333,4
-7,February,Sunday Vehicle Hours,36.333333333333336,4
-8,February,Weekday Ridership,5539,20
-8,February,Saturday Ridership,333,4
-8,February,Sunday Ridership,162,4
-8,February,Total Ridership,6034,28
-8,February,Total Vehicle Hours,387.1333333333333,28
-8,February,Weekday Vehicle Hours,323.6666666666667,20
-8,February,Saturday Vehicle Hours,35.26666666666666,4
-8,February,Sunday Vehicle Hours,28.2,4
-9,February,Weekday Ridership,10034,20
-9,February,Saturday Ridership,784,4
-9,February,Total Ridership,10818,24
-9,February,Total Vehicle Hours,668.2666666666667,24
-9,February,Weekday Vehicle Hours,624.6666666666666,20
-9,February,Saturday Vehicle Hours,43.6,4
-10,February,Weekday Ridership,1344,20
-10,February,Total Ridership,1344,20
-10,February,Total Vehicle Hours,270,20
-10,February,Weekday Vehicle Hours,270,20
-11,February,Weekday Ridership,9780,20
-11,February,Saturday Ridership,1522,4
-11,February,Sunday Ridership,593,4
-11,February,Total Ridership,11895,28
-11,February,Total Vehicle Hours,739.9999999999999,28
-11,February,Weekday Vehicle Hours,639.3333333333333,20
-11,February,Saturday Vehicle Hours,91.86666666666667,4
-11,February,Sunday Vehicle Hours,8.799999999999999,4
-21,February,Weekday Ridership,6160,20
-21,February,Total Ridership,6160,20
-21,February,Total Vehicle Hours,160.00000000000003,20
-21,February,Weekday Vehicle Hours,160.00000000000003,20
-56,February,Weekday Ridership,736,20
-56,February,Total Ridership,736,20
-56,February,Total Vehicle Hours,204.33333333333334,20
-56,February,Weekday Vehicle Hours,204.33333333333334,20
-Urban 86,February,Weekday Ridership,2340,20
-Urban 86,February,Total Ridership,2340,20
-Urban 86,February,Total Vehicle Hours,271,20
-Urban 86,February,Weekday Vehicle Hours,271,20
-Rural 86,February,Weekday Ridership,1571,20
-Rural 86,February,Total Ridership,1571,20
-Rural 86,February,Total Vehicle Hours,261.6666666666667,20
-Rural 86,February,Weekday Vehicle Hours,261.6666666666667,20
-96,February,Weekday Ridership,779,20
-96,February,Total Ridership,779,20
-96,February,Total Vehicle Hours,173.33333333333337,20
-96,February,Weekday Vehicle Hours,173.33333333333337,20
-1,March,Weekday Ridership,30253,21
-1,March,Saturday Ridership,6637,5
-1,March,Sunday Ridership,4543,5
-1,March,Total Ridership,41433,31
-1,March,Total Vehicle Hours,1814.2,31
-1,March,Weekday Vehicle Hours,1470.7,21
-1,March,Saturday Vehicle Hours,229.33333333333337,5
-1,March,Sunday Vehicle Hours,114.16666666666666,5
-2,March,Weekday Ridership,37573,21
-2,March,Saturday Ridership,3584,5
-2,March,Sunday Ridership,2199,5
-2,March,Total Ridership,43356,31
-2,March,Total Vehicle Hours,1789.4,31
-2,March,Weekday Vehicle Hours,1490.65,21
-2,March,Saturday Vehicle Hours,195.83333333333331,5
-2,March,Sunday Vehicle Hours,102.91666666666666,5
-5,March,Weekday Ridership,4510,21
-5,March,Saturday Ridership,342,5
-5,March,Sunday Ridership,178,5
-5,March,Total Ridership,5030,31
-5,March,Total Vehicle Hours,524.7333333333333,31
-5,March,Weekday Vehicle Hours,447.65,21
-5,March,Saturday Vehicle Hours,41.66666666666667,5
-5,March,Sunday Vehicle Hours,35.416666666666664,5
-6,March,Weekday Ridership,16307,21
-6,March,Saturday Ridership,2551,5
-6,March,Sunday Ridership,361,5
-6,March,Total Ridership,19219,31
-6,March,Total Vehicle Hours,1143.5333333333333,31
-6,March,Weekday Vehicle Hours,968.45,21
-6,March,Saturday Vehicle Hours,138,5
-6,March,Sunday Vehicle Hours,37.083333333333336,5
-7,March,Weekday Ridership,19717,21
-7,March,Saturday Ridership,1863,5
-7,March,Sunday Ridership,796,5
-7,March,Total Ridership,22376,31
-7,March,Total Vehicle Hours,1003.1833333333334,31
-7,March,Weekday Vehicle Hours,845.6000000000001,21
-7,March,Saturday Vehicle Hours,112.16666666666667,5
-7,March,Sunday Vehicle Hours,45.41666666666667,5
-8,March,Weekday Ridership,4839,21
-8,March,Saturday Ridership,333,5
-8,March,Sunday Ridership,217,5
-8,March,Total Ridership,5389,31
-8,March,Total Vehicle Hours,407.2833333333333,31
-8,March,Weekday Vehicle Hours,327.95,21
-8,March,Saturday Vehicle Hours,44.08333333333332,5
-8,March,Sunday Vehicle Hours,35.25,5
-9,March,Weekday Ridership,11427,21
-9,March,Saturday Ridership,964,5
-9,March,Total Ridership,12391,26
-9,March,Total Vehicle Hours,700.25,26
-9,March,Weekday Vehicle Hours,645.75,21
-9,March,Saturday Vehicle Hours,54.5,5
-10,March,Weekday Ridership,1448,21
-10,March,Total Ridership,1448,21
-10,March,Total Vehicle Hours,283.5,21
-10,March,Weekday Vehicle Hours,283.5,21
-11,March,Weekday Ridership,10361,21
-11,March,Saturday Ridership,1924,5
-11,March,Sunday Ridership,770,5
-11,March,Total Ridership,13055,31
-11,March,Total Vehicle Hours,826.1333333333333,31
-11,March,Weekday Vehicle Hours,664.3,21
-11,March,Saturday Vehicle Hours,114.83333333333334,5
-11,March,Sunday Vehicle Hours,47,5
-21,March,Weekday Ridership,6549,21
-21,March,Total Ridership,6549,21
-21,March,Total Vehicle Hours,198.00000000000003,21
-21,March,Weekday Vehicle Hours,198.00000000000003,21
-56,March,Weekday Ridership,858,21
-56,March,Total Ridership,858,21
-56,March,Total Vehicle Hours,198.45,21
-56,March,Weekday Vehicle Hours,198.45,21
-Urban 86,March,Weekday Ridership,2412,21
-Urban 86,March,Total Ridership,2412,21
-Urban 86,March,Total Vehicle Hours,168,21
-Urban 86,March,Weekday Vehicle Hours,168,21
-Rural 86,March,Weekday Ridership,1586,21
-Rural 86,March,Total Ridership,1586,21
-Rural 86,March,Total Vehicle Hours,215.60000000000002,21
-Rural 86,March,Weekday Vehicle Hours,215.60000000000002,21
-96,March,Weekday Ridership,843,21
-96,March,Total Ridership,843,21
-96,March,Total Vehicle Hours,187.25000000000003,21
-96,March,Weekday Vehicle Hours,187.25000000000003,21
-1,April,Weekday Ridership,34303,22
-1,April,Saturday Ridership,6344,4
-1,April,Sunday Ridership,3666,4
-1,April,Total Ridership,44313,30
-1,April,Total Vehicle Hours,1815.5333333333333,30
-1,April,Weekday Vehicle Hours,1540.7333333333333,22
-1,April,Saturday Vehicle Hours,183.4666666666667,4
-1,April,Sunday Vehicle Hours,91.33333333333333,4
-2,April,Weekday Ridership,43864,22
-2,April,Saturday Ridership,3310,4
-2,April,Sunday Ridership,1925,4
-2,April,Total Ridership,49099,30
-2,April,Total Vehicle Hours,1800.6333333333334,30
-2,April,Weekday Vehicle Hours,1561.6333333333334,22
-2,April,Saturday Vehicle Hours,156.66666666666666,4
-2,April,Sunday Vehicle Hours,82.33333333333333,4
-5,April,Weekday Ridership,5651,22
-5,April,Saturday Ridership,365,4
-5,April,Sunday Ridership,196,4
-5,April,Total Ridership,6212,30
-5,April,Total Vehicle Hours,530.6333333333333,30
-5,April,Weekday Vehicle Hours,468.96666666666664,22
-5,April,Saturday Vehicle Hours,33.333333333333336,4
-5,April,Sunday Vehicle Hours,28.333333333333332,4
-6,April,Weekday Ridership,17566,22
-6,April,Saturday Ridership,1989,4
-6,April,Sunday Ridership,279,4
-6,April,Total Ridership,19834,30
-6,April,Total Vehicle Hours,1154.6333333333334,30
-6,April,Weekday Vehicle Hours,1014.5666666666667,22
-6,April,Saturday Vehicle Hours,110.39999999999999,4
-6,April,Sunday Vehicle Hours,29.666666666666668,4
-7,April,Weekday Ridership,22272,22
-7,April,Saturday Ridership,1594,4
-7,April,Sunday Ridership,701,4
-7,April,Total Ridership,24567,30
-7,April,Total Vehicle Hours,1011.9333333333335,30
-7,April,Weekday Vehicle Hours,885.8666666666668,22
-7,April,Saturday Vehicle Hours,89.73333333333333,4
-7,April,Sunday Vehicle Hours,36.333333333333336,4
-8,April,Weekday Ridership,5647,22
-8,April,Saturday Ridership,239,4
-8,April,Sunday Ridership,174,4
-8,April,Total Ridership,6060,30
-8,April,Total Vehicle Hours,407.0333333333333,30
-8,April,Weekday Vehicle Hours,343.56666666666666,22
-8,April,Saturday Vehicle Hours,35.26666666666666,4
-8,April,Sunday Vehicle Hours,28.2,4
-9,April,Weekday Ridership,12966,22
-9,April,Saturday Ridership,782,4
-9,April,Total Ridership,13748,26
-9,April,Total Vehicle Hours,720.1,26
-9,April,Weekday Vehicle Hours,676.5,22
-9,April,Saturday Vehicle Hours,43.6,4
-10,April,Weekday Ridership,1390,22
-10,April,Total Ridership,1390,22
-10,April,Total Vehicle Hours,297,22
-10,April,Weekday Vehicle Hours,297,22
-11,April,Weekday Ridership,13876,22
-11,April,Saturday Ridership,1371,4
-11,April,Sunday Ridership,645,4
-11,April,Total Ridership,15892,30
-11,April,Total Vehicle Hours,832.5999999999999,30
-11,April,Weekday Vehicle Hours,695.9333333333333,22
-11,April,Saturday Vehicle Hours,91.86666666666667,4
-11,April,Sunday Vehicle Hours,44.8,4
-21,April,Weekday Ridership,6101,22
-21,April,Total Ridership,6101,22
-21,April,Total Vehicle Hours,187.00000000000003,22
-21,April,Weekday Vehicle Hours,187.00000000000003,22
-56,April,Weekday Ridership,982,22
-56,April,Total Ridership,982,22
-56,April,Total Vehicle Hours,207.89999999999998,22
-56,April,Weekday Vehicle Hours,207.89999999999998,22
-Urban 86,April,Weekday Ridership,2613,22
-Urban 86,April,Total Ridership,2613,22
-Urban 86,April,Total Vehicle Hours,176,22
-Urban 86,April,Weekday Vehicle Hours,176,22
-Rural 86,April,Weekday Ridership,1658,22
-Rural 86,April,Total Ridership,1658,22
-Rural 86,April,Total Vehicle Hours,225.86666666666667,22
-Rural 86,April,Weekday Vehicle Hours,225.86666666666667,22
-96,April,Weekday Ridership,902,22
-96,April,Total Ridership,902,22
-96,April,Total Vehicle Hours,196.16666666666669,22
-96,April,Weekday Vehicle Hours,196.16666666666669,22
-1,May,Weekday Ridership,25009,21
-1,May,Saturday Ridership,3935,5
-1,May,Sunday Ridership,1905,4
-1,May,Total Ridership,30849,30
-1,May,Total Vehicle Hours,1791.3666666666666,30
-1,May,Weekday Vehicle Hours,1470.7,21
-1,May,Saturday Vehicle Hours,229.33333333333337,5
-1,May,Sunday Vehicle Hours,91.33333333333333,4
-2,May,Weekday Ridership,27450,21
-2,May,Saturday Ridership,2965,5
-2,May,Sunday Ridership,1504,4
-2,May,Total Ridership,31919,30
-2,May,Total Vehicle Hours,1768.8166666666666,30
-2,May,Weekday Vehicle Hours,1490.65,21
-2,May,Saturday Vehicle Hours,195.83333333333331,5
-2,May,Sunday Vehicle Hours,82.33333333333333,4
-5,May,Weekday Ridership,5237,21
-5,May,Saturday Ridership,378,5
-5,May,Sunday Ridership,156,4
-5,May,Total Ridership,5771,30
-5,May,Total Vehicle Hours,517.65,30
-5,May,Weekday Vehicle Hours,447.65,21
-5,May,Saturday Vehicle Hours,41.66666666666667,5
-5,May,Sunday Vehicle Hours,28.333333333333332,4
-6,May,Weekday Ridership,16500,21
-6,May,Saturday Ridership,2198,5
-6,May,Sunday Ridership,279,4
-6,May,Total Ridership,18977,30
-6,May,Total Vehicle Hours,1136.1166666666668,30
-6,May,Weekday Vehicle Hours,968.45,21
-6,May,Saturday Vehicle Hours,138,5
-6,May,Sunday Vehicle Hours,29.666666666666668,4
-7,May,Weekday Ridership,24263,21
-7,May,Saturday Ridership,1898,5
-7,May,Sunday Ridership,628,4
-7,May,Total Ridership,26789,30
-7,May,Total Vehicle Hours,994.1000000000001,30
-7,May,Weekday Vehicle Hours,845.6000000000001,21
-7,May,Saturday Vehicle Hours,112.16666666666667,5
-7,May,Sunday Vehicle Hours,36.333333333333336,4
-8,May,Weekday Ridership,3459,21
-8,May,Saturday Ridership,180,5
-8,May,Sunday Ridership,135,4
-8,May,Total Ridership,3774,30
-8,May,Total Vehicle Hours,400.2333333333333,30
-8,May,Weekday Vehicle Hours,327.95,21
-8,May,Saturday Vehicle Hours,44.08333333333332,5
-8,May,Sunday Vehicle Hours,28.2,4
-9,May,Weekday Ridership,12138,21
-9,May,Saturday Ridership,940,5
-9,May,Total Ridership,13078,26
-9,May,Total Vehicle Hours,700.25,26
-9,May,Weekday Vehicle Hours,645.75,21
-9,May,Saturday Vehicle Hours,54.5,5
-10,May,Weekday Ridership,1472,21
-10,May,Total Ridership,1472,21
-10,May,Total Vehicle Hours,283.5,21
-10,May,Weekday Vehicle Hours,283.5,21
-11,May,Weekday Ridership,10082,21
-11,May,Saturday Ridership,1113,5
-11,May,Sunday Ridership,409,4
-11,May,Total Ridership,11604,30
-11,May,Total Vehicle Hours,823.9333333333333,30
-11,May,Weekday Vehicle Hours,664.3,21
-11,May,Saturday Vehicle Hours,114.83333333333334,5
-11,May,Sunday Vehicle Hours,44.8,4
-21,May,Weekday Ridership,6762,21
-21,May,Total Ridership,6762,21
-21,May,Total Vehicle Hours,231.00000000000003,21
-21,May,Weekday Vehicle Hours,231.00000000000003,21
-56,May,Weekday Ridership,858,21
-56,May,Total Ridership,858,21
-56,May,Total Vehicle Hours,198.45,21
-56,May,Weekday Vehicle Hours,198.45,21
-Urban 86,May,Weekday Ridership,1706,21
-Urban 86,May,Total Ridership,1706,21
-Urban 86,May,Total Vehicle Hours,168,21
-Urban 86,May,Weekday Vehicle Hours,168,21
-Rural 86,May,Weekday Ridership,1518,21
-Rural 86,May,Total Ridership,1518,21
-Rural 86,May,Total Vehicle Hours,215.60000000000002,21
-Rural 86,May,Weekday Vehicle Hours,215.60000000000002,21
-96,May,Weekday Ridership,842,21
-96,May,Total Ridership,842,21
-96,May,Total Vehicle Hours,187.25000000000003,21
-96,May,Weekday Vehicle Hours,187.25000000000003,21
-1,June,Weekday Ridership,20889,21
-1,June,Saturday Ridership,3233,4
-1,June,Sunday Ridership,1963,5
-1,June,Total Ridership,26085,30
-1,June,Total Vehicle Hours,1572.5666666666666,30
-1,June,Weekday Vehicle Hours,1275.2666666666664,21
-1,June,Saturday Vehicle Hours,182.63333333333335,4
-1,June,Sunday Vehicle Hours,114.66666666666666,5
-2,June,Weekday Ridership,22338,21
-2,June,Saturday Ridership,2377,4
-2,June,Sunday Ridership,1561,5
-2,June,Total Ridership,26276,30
-2,June,Total Vehicle Hours,1489.6833333333334,30
-2,June,Weekday Vehicle Hours,1229.7666666666669,21
-2,June,Saturday Vehicle Hours,156.83333333333331,4
-2,June,Sunday Vehicle Hours,103.08333333333334,5
-4,June,Weekday Ridership,206,21
-4,June,Total Ridership,206,21
-4,June,Total Vehicle Hours,82.86666666666666,21
-4,June,Weekday Vehicle Hours,82.86666666666666,21
-5,June,Weekday Ridership,4978,21
-5,June,Saturday Ridership,265,4
-5,June,Sunday Ridership,108,5
-5,June,Total Ridership,5351,30
-5,June,Total Vehicle Hours,485.15000000000003,30
-5,June,Weekday Vehicle Hours,425.4666666666667,21
-5,June,Saturday Vehicle Hours,38.43333333333334,4
-5,June,Sunday Vehicle Hours,21.25,5
-6,June,Weekday Ridership,15855,21
-6,June,Saturday Ridership,2035,4
-6,June,Sunday Ridership,252,5
-6,June,Total Ridership,18142,30
-6,June,Total Vehicle Hours,1021.1333333333333,30
-6,June,Weekday Vehicle Hours,887.05,21
-6,June,Saturday Vehicle Hours,111.83333333333333,4
-6,June,Sunday Vehicle Hours,22.25,5
-7,June,Weekday Ridership,16524,21
-7,June,Saturday Ridership,1708,4
-7,June,Sunday Ridership,563,5
-7,June,Total Ridership,18795,30
-7,June,Total Vehicle Hours,844.9000000000001,30
-7,June,Weekday Vehicle Hours,729.1833333333334,21
-7,June,Saturday Vehicle Hours,88.46666666666667,4
-7,June,Sunday Vehicle Hours,27.25,5
-8,June,Weekday Ridership,2084,21
-8,June,Saturday Ridership,141,4
-8,June,Sunday Ridership,115,5
-8,June,Total Ridership,2340,30
-8,June,Total Vehicle Hours,303.95,30
-8,June,Weekday Vehicle Hours,243.43333333333334,21
-8,June,Saturday Vehicle Hours,39.36666666666666,4
-8,June,Sunday Vehicle Hours,21.15,5
-9,June,Weekday Ridership,9540,21
-9,June,Saturday Ridership,621,4
-9,June,Total Ridership,10161,25
-9,June,Total Vehicle Hours,663.6666666666666,25
-9,June,Weekday Vehicle Hours,621.3666666666667,21
-9,June,Saturday Vehicle Hours,42.3,4
-10,June,Weekday Ridership,730,21
-10,June,Total Ridership,730,21
-10,June,Total Vehicle Hours,135,21
-10,June,Weekday Vehicle Hours,135,21
-11,June,Weekday Ridership,9968,21
-11,June,Saturday Ridership,1027,4
-11,June,Sunday Ridership,309,5
-11,June,Total Ridership,11304,30
-11,June,Total Vehicle Hours,768.6,30
-11,June,Weekday Vehicle Hours,643.4,21
-11,June,Saturday Vehicle Hours,91.6,4
-11,June,Sunday Vehicle Hours,33.599999999999994,5
-21,June,Weekday Ridership,2621,21
-21,June,Total Ridership,2621,21
-21,June,Total Vehicle Hours,99.00000000000001,21
-21,June,Weekday Vehicle Hours,99.00000000000001,21
-56,June,Weekday Ridership,722,21
-56,June,Total Ridership,722,21
-56,June,Total Vehicle Hours,201.56666666666666,21
-56,June,Weekday Vehicle Hours,201.56666666666666,21
-Urban 86,June,Weekday Ridership,1568,21
-Urban 86,June,Total Ridership,1568,21
-Urban 86,June,Total Vehicle Hours,160.11666666666667,21
-Urban 86,June,Weekday Vehicle Hours,160.11666666666667,21
-Rural 86,June,Weekday Ridership,1398,21
-Rural 86,June,Total Ridership,1398,21
-Rural 86,June,Total Vehicle Hours,215.60000000000002,21
-Rural 86,June,Weekday Vehicle Hours,215.60000000000002,21
-96,June,Weekday Ridership,803,21
-96,June,Total Ridership,803,21
-96,June,Total Vehicle Hours,203.75,21
-96,June,Weekday Vehicle Hours,203.75,21
-778,June,Weekday Ridership,0,NA
-778,June,Saturday Ridership,0,NA
-778,June,Sunday Ridership,91,5
-778,June,Total Ridership,91,5
-778,June,Total Vehicle Hours,12,5
-778,June,Weekday Vehicle Hours,0,NA
-778,June,Saturday Vehicle Hours,0,NA
-778,June,Sunday Vehicle Hours,12,5
-756,June,Weekday Ridership,0,NA
-756,June,Saturday Ridership,0,NA
-756,June,Sunday Ridership,186,5
-756,June,Total Ridership,186,5
-756,June,Total Vehicle Hours,9.333333333333334,5
-756,June,Weekday Vehicle Hours,0,NA
-756,June,Saturday Vehicle Hours,0,NA
-756,June,Sunday Vehicle Hours,9.333333333333334,5
+month,route,weekday_monthly_vh,weekday_monthly_ridership,weekdays,saturday_monthly_vh,saturday_monthly_ridership,saturdays,sunday_monthly_vh,sunday_monthly_ridership,sundays,total_vh,total_ridership,total_service_days
+January,1,1555.4,32179,22,183.4666666666667,5369,4,91.33333333333333,3453,4,1830.2,41001,30
+February,1,1414,35167,20,183.4666666666667,7427,4,91.33333333333333,3507,4,1688.8,46101,28
+March,1,1470.7,30253,21,229.33333333333337,6637,5,114.16666666666666,4543,5,1814.2,41433,31
+April,1,1540.7333333333333,34303,22,183.4666666666667,6344,4,91.33333333333333,3666,4,1815.5333333333333,44313,30
+May,1,1470.7,25009,21,229.33333333333337,3935,5,91.33333333333333,1905,4,1791.3666666666666,30849,30
+June,1,1275.2666666666664,20889,21,182.63333333333335,3233,4,114.66666666666666,1963,5,1572.5666666666666,26085,30
+July,1,1568.2333333333333,26045,22,178.13333333333335,3642,4,91.33333333333333,1536,4,1837.7,31223,30
+August,1,1568.2333333333331,34412,22,222.66666666666669,9041,5,91.33333333333333,2409,4,1882.2333333333331,45862,31
+September,1,1425.6666666666665,45026,20,178.13333333333335,9803,4,114.16666666666666,7069,5,1717.9666666666667,61898,29
+October,1,1639.5166666666667,50907,23,178.13333333333335,8585,4,91.33333333333333,4341,4,1908.9833333333333,63833,31
+November,1,1425.6666666666665,37195,20,222.66666666666669,7942,5,91.33333333333333,3991,4,1739.6666666666665,49128,29
+December,1,1476.4790697674418,28378,21,183.4666666666667,4123,4,114.16666666666666,2422,5,1774.1124031007753,34923,30
+January,10,297,1438,22,0,0,4,0,0,4,297,1438,22
+February,10,270,1344,20,0,0,4,0,0,4,270,1344,20
+March,10,283.5,1448,21,0,0,5,0,0,5,283.5,1448,21
+April,10,297,1390,22,0,0,4,0,0,4,297,1390,22
+May,10,283.5,1472,21,0,0,5,0,0,4,283.5,1472,21
+June,10,135,730,21,0,0,4,0,0,5,135,730,21
+July,10,297,1483,22,52.86666666666667,180,4,0,0,4,349.8666666666667,1663,26
+August,10,297,1565,22,66.08333333333333,205,5,0,0,4,363.0833333333333,1770,27
+September,10,270,2045,20,52.86666666666667,194,4,0,0,5,322.8666666666667,2239,24
+October,10,310.5,2214,23,52.86666666666667,213,4,0,0,4,363.3666666666667,2427,27
+November,10,270,1566,20,66.08333333333333,179,5,0,0,4,336.0833333333333,1745,25
+December,10,283.5,1651,21,0,0,4,0,0,5,283.5,1651,21
+January,11,703.2666666666667,9800,22,91.86666666666667,1238,4,8.799999999999999,656,4,803.9333333333333,11694,30
+February,11,639.3333333333333,9780,20,91.86666666666667,1522,4,8.799999999999999,593,4,739.9999999999999,11895,28
+March,11,664.3,10361,21,114.83333333333334,1924,5,47,770,5,826.1333333333333,13055,31
+April,11,695.9333333333333,13876,22,91.86666666666667,1371,4,44.8,645,4,832.5999999999999,15892,30
+May,11,664.3,10082,21,114.83333333333334,1113,5,44.8,409,4,823.9333333333333,11604,30
+June,11,643.4,9968,21,91.6,1027,4,33.599999999999994,309,5,768.6,11304,30
+July,11,703.2666666666667,8278,22,120.6,1130,4,44.8,569,4,868.6666666666666,9977,30
+August,11,703.2666666666667,9777,22,150.75,2089,5,44.8,727,4,898.8166666666666,12593,31
+September,11,639.3333333333333,11810,20,120.6,2371,4,56,1606,5,815.9333333333333,15787,29
+October,11,735.2333333333333,14044,23,120.6,2054,4,44.8,845,4,900.6333333333333,16943,31
+November,11,639.3333333333333,10159,20,150.75,2125,5,44.8,669,4,834.8833333333332,12953,29
+December,11,664.0348484848485,8165,21,91.86666666666667,827,4,10.999999999999998,617,5,766.9015151515151,9609,30
+January,2,1556.1333333333334,36425,22,156.66666666666666,2357,4,82.33333333333333,1578,4,1795.1333333333334,40360,30
+February,2,1414.6666666666667,42003,20,156.66666666666666,3007,4,82.33333333333333,1727,4,1653.6666666666667,46737,28
+March,2,1490.65,37573,21,195.83333333333331,3584,5,102.91666666666666,2199,5,1789.4,43356,31
+April,2,1561.6333333333334,43864,22,156.66666666666666,3310,4,82.33333333333333,1925,4,1800.6333333333334,49099,30
+May,2,1490.65,27450,21,195.83333333333331,2965,5,82.33333333333333,1504,4,1768.8166666666666,31919,30
+June,2,1229.7666666666669,22338,21,156.83333333333331,2377,4,103.08333333333334,1561,5,1489.6833333333334,26276,30
+July,2,1541.466666666667,23997,22,156,2694,4,82.33333333333333,1366,4,1779.8000000000002,28057,30
+August,2,1541.4666666666667,29197,22,195,3907,5,82.33333333333333,1362,4,1818.8,34466,31
+September,2,1401.3333333333335,39815,20,156,3910,4,102.91666666666666,3172,5,1660.2500000000002,46897,29
+October,2,1611.5333333333335,45169,23,156,3337,4,82.33333333333333,1995,4,1849.8666666666668,50501,31
+November,2,1401.3333333333335,35049,20,195,3833,5,82.33333333333333,1957,4,1678.6666666666667,40839,29
+December,2,1477.1751937984498,27745,21,156.66666666666666,2474,4,102.91666666666666,1540,5,1736.7585271317832,31759,30
+January,21,224.00000000000003,9834,22,0,0,4,0,0,4,224.00000000000003,9834,22
+February,21,160.00000000000003,6160,20,0,0,4,0,0,4,160.00000000000003,6160,20
+March,21,198.00000000000003,6549,21,0,0,5,0,0,5,198.00000000000003,6549,21
+April,21,187.00000000000003,6101,22,0,0,4,0,0,4,187.00000000000003,6101,22
+May,21,231.00000000000003,6762,21,0,0,5,0,0,4,231.00000000000003,6762,21
+June,21,99.00000000000001,2621,21,0,0,4,0,0,5,99.00000000000001,2621,21
+August,21,61.25,1243,22,0,0,5,0,0,4,61.25,1243,22
+September,21,245,5668,20,0,0,4,0,0,5,245,5668,20
+October,21,257.25,7178,23,0,0,4,0,0,4,257.25,7178,23
+November,21,183.75,5720,20,0,0,5,0,0,4,183.75,5720,20
+December,21,160.00000000000003,5912,21,0,0,4,0,0,5,160.00000000000003,5912,21
+July,3,12.833333333333332,76,22,0,0,4,0,0,4,12.833333333333332,76,22
+August,3,12.833333333333332,69,22,0,0,5,0,0,4,12.833333333333332,69,22
+September,3,11.666666666666664,41,20,0,0,4,0,0,5,11.666666666666664,41,20
+October,3,13.416666666666664,40,23,0,0,4,0,0,4,13.416666666666664,40,23
+November,3,11.666666666666664,166,20,0,0,5,0,0,4,11.666666666666664,166,20
+July,36,209.36666666666667,588,22,0,0,4,0,0,4,209.36666666666667,588,22
+August,36,211.8666666666667,693,22,0,0,5,0,0,4,211.8666666666667,693,22
+September,36,200.33333333333334,643,20,0,0,4,0,0,5,200.33333333333334,643,20
+October,36,230.38333333333335,793,23,0,0,4,0,0,4,230.38333333333335,793,23
+November,36,200.33333333333334,575,20,0,0,5,0,0,4,200.33333333333334,575,20
+June,4,82.86666666666666,206,21,0,0,4,0,0,5,82.86666666666666,206,21
+July,46,93.5,271,22,0,0,4,0,0,4,93.5,271,22
+August,46,93.5,398,22,0,0,5,0,0,4,93.5,398,22
+September,46,85,309,20,0,0,4,0,0,5,85,309,20
+October,46,17,75,23,0,0,4,0,0,4,17,75,23
+January,5,451,5733,22,33.333333333333336,396,4,28.333333333333332,203,4,512.6666666666666,6332,30
+February,5,410,5072,20,33.333333333333336,273,4,28.333333333333332,197,4,471.66666666666663,5542,28
+March,5,447.65,4510,21,41.66666666666667,342,5,35.416666666666664,178,5,524.7333333333333,5030,31
+April,5,468.96666666666664,5651,22,33.333333333333336,365,4,28.333333333333332,196,4,530.6333333333333,6212,30
+May,5,447.65,5237,21,41.66666666666667,378,5,28.333333333333332,156,4,517.65,5771,30
+June,5,425.4666666666667,4978,21,38.43333333333334,265,4,21.25,108,5,485.15000000000003,5351,30
+July,5,451,4347,22,77.66666666666667,415,4,28.333333333333332,178,4,557,4940,30
+August,5,451,4415,22,97.08333333333334,597,5,28.333333333333332,201,4,576.4166666666667,5213,31
+September,5,410,5515,20,77.66666666666667,878,4,35.416666666666664,490,5,523.0833333333334,6883,29
+October,5,471.5,6420,23,77.66666666666667,559,4,28.333333333333332,236,4,577.5,7215,31
+November,5,410,4779,20,97.08333333333334,737,5,28.333333333333332,248,4,535.4166666666667,5764,29
+December,5,411.79824561403507,5237,21,33.333333333333336,345,4,35.416666666666664,272,5,480.54824561403507,5854,30
+January,56,224.76666666666668,860,22,0,0,4,0,0,4,224.76666666666668,860,22
+February,56,204.33333333333334,736,20,0,0,4,0,0,4,204.33333333333334,736,20
+March,56,198.45,858,21,0,0,5,0,0,5,198.45,858,21
+April,56,207.89999999999998,982,22,0,0,4,0,0,4,207.89999999999998,982,22
+May,56,198.45,858,21,0,0,5,0,0,4,198.45,858,21
+June,56,201.56666666666666,722,21,0,0,4,0,0,5,201.56666666666666,722,21
+July,56,224.76666666666668,946,22,0,0,4,0,0,4,224.76666666666668,946,22
+August,56,224.76666666666668,1029,22,0,0,5,0,0,4,224.76666666666668,1029,22
+September,56,204.33333333333334,1005,20,0,0,4,0,0,5,204.33333333333334,1005,20
+October,56,234.98333333333335,1091,23,0,0,4,0,0,4,234.98333333333335,1091,23
+November,56,204.33333333333334,853,20,0,0,5,0,0,4,204.33333333333334,853,20
+December,56,214.55,652,21,0,0,4,0,0,5,214.55,652,21
+January,6,1018.2333333333333,16886,22,110.39999999999999,1849,4,29.666666666666668,310,4,1158.3000000000002,19045,30
+February,6,925.6666666666666,14362,20,110.39999999999999,1917,4,29.666666666666668,274,4,1065.7333333333333,16553,28
+March,6,968.45,16307,21,138,2551,5,37.083333333333336,361,5,1143.5333333333333,19219,31
+April,6,1014.5666666666667,17566,22,110.39999999999999,1989,4,29.666666666666668,279,4,1154.6333333333334,19834,30
+May,6,968.45,16500,21,138,2198,5,29.666666666666668,279,4,1136.1166666666668,18977,30
+June,6,887.05,15855,21,111.83333333333333,2035,4,22.25,252,5,1021.1333333333333,18142,30
+July,6,1016.4000000000001,17680,22,124.8,2462,4,29.666666666666668,409,4,1170.8666666666668,20551,30
+August,6,1016.4000000000001,17645,22,156,3199,5,29.666666666666668,409,4,1202.0666666666668,21253,31
+September,6,924,17744,20,124.8,2775,4,37.083333333333336,608,5,1085.8833333333332,21127,29
+October,6,1062.6000000000001,19809,23,124.8,2696,4,29.666666666666668,289,4,1217.0666666666668,22794,31
+November,6,924,16402,20,156,2811,5,29.666666666666668,289,4,1109.6666666666667,19502,29
+December,6,965.5217592592592,16633,21,110.39999999999999,1788,4,37.083333333333336,387,5,1113.0050925925925,18808,30
+January,7,866.0666666666667,21141,22,89.73333333333333,1913,4,36.333333333333336,592,4,992.1333333333334,23646,30
+February,7,787.3333333333334,17494,20,89.73333333333333,2096,4,36.333333333333336,580,4,913.4000000000001,20170,28
+March,7,845.6000000000001,19717,21,112.16666666666667,1863,5,45.41666666666667,796,5,1003.1833333333334,22376,31
+April,7,885.8666666666668,22272,22,89.73333333333333,1594,4,36.333333333333336,701,4,1011.9333333333335,24567,30
+May,7,845.6000000000001,24263,21,112.16666666666667,1898,5,36.333333333333336,628,4,994.1000000000001,26789,30
+June,7,729.1833333333334,16524,21,88.46666666666667,1708,4,27.25,563,5,844.9000000000001,18795,30
+July,7,764.1333333333332,13097,22,103.2,1898,4,36.333333333333336,664,4,903.6666666666666,15659,30
+August,7,785.2166666666666,15965,22,129,2456,5,36.333333333333336,700,4,950.55,19121,31
+September,7,779,24585,20,103.2,2363,4,45.41666666666667,1938,5,927.6166666666667,28886,29
+October,7,895.85,26110,23,103.2,2085,4,36.333333333333336,737,4,1035.3833333333334,28932,31
+November,7,779,20310,20,129,2576,5,36.333333333333336,806,4,944.3333333333334,23692,29
+December,7,821.89918699187,19286,21,89.73333333333333,1727,4,45.41666666666667,848,5,957.04918699187,21861,30
+June,756,0,0,21,0,0,4,9.333333333333334,186,5,9.333333333333334,186,5
+June,778,0,0,21,0,0,4,12,91,5,12,91,5
+January,8,356.03333333333336,5173,22,35.26666666666666,207,4,28.2,161,4,419.5,5541,30
+February,8,323.6666666666667,5539,20,35.26666666666666,333,4,28.2,162,4,387.1333333333333,6034,28
+March,8,327.95,4839,21,44.08333333333332,333,5,35.25,217,5,407.2833333333333,5389,31
+April,8,343.56666666666666,5647,22,35.26666666666666,239,4,28.2,174,4,407.0333333333333,6060,30
+May,8,327.95,3459,21,44.08333333333332,180,5,28.2,135,4,400.2333333333333,3774,30
+June,8,243.43333333333334,2084,21,39.36666666666666,141,4,21.15,115,5,303.95,2340,30
+July,8,356.03333333333336,3398,22,59.800000000000004,485,4,28.2,117,4,444.03333333333336,4000,30
+August,8,356.03333333333336,4146,22,74.75,772,5,28.2,212,4,458.98333333333335,5130,31
+September,8,323.6666666666667,5963,20,59.800000000000004,824,4,35.25,716,5,418.7166666666667,7503,29
+October,8,372.2166666666667,7363,23,59.800000000000004,587,4,28.2,263,4,460.2166666666667,8213,31
+November,8,323.6666666666667,5515,20,74.75,471,5,28.2,205,4,426.6166666666667,6191,29
+December,8,324.314,3956,21,35.26666666666666,204,4,35.25,165,5,394.8306666666667,4325,30
+January,86,585.9333333333334,4147,22,0,0,4,0,0,4,585.9333333333334,4147,22
+February,86,532.6666666666667,3911,20,0,0,4,0,0,4,532.6666666666667,3911,20
+March,86,383.6,3998,21,0,0,5,0,0,5,383.6,3998,21
+April,86,401.8666666666667,4271,22,0,0,4,0,0,4,401.8666666666667,4271,22
+May,86,383.6,3224,21,0,0,5,0,0,4,383.6,3224,21
+June,86,375.7166666666667,2966,21,0,0,4,0,0,5,375.7166666666667,2966,21
+July,86,571.45,3849,22,0,0,4,0,0,4,571.45,3849,22
+August,86,590.1833333333334,3609,22,0,0,5,0,0,4,590.1833333333334,3609,22
+September,86,532.6666666666667,3766,20,0,0,4,0,0,5,532.6666666666667,3766,20
+October,86,612.5666666666667,4484,23,0,0,4,0,0,4,612.5666666666667,4484,23
+November,86,532.6666666666667,3474,20,0,0,5,0,0,4,532.6666666666667,3474,20
+December,86,559.3,3364,21,0,0,4,0,0,5,559.3,3364,21
+January,9,687.1333333333333,11244,22,43.6,720,4,0,0,4,730.7333333333333,11964,26
+February,9,624.6666666666666,10034,20,43.6,784,4,0,0,4,668.2666666666667,10818,24
+March,9,645.75,11427,21,54.5,964,5,0,0,5,700.25,12391,26
+April,9,676.5,12966,22,43.6,782,4,0,0,4,720.1,13748,26
+May,9,645.75,12138,21,54.5,940,5,0,0,4,700.25,13078,26
+June,9,621.3666666666667,9540,21,42.3,621,4,0,0,5,663.6666666666666,10161,25
+July,9,663.3,10267,22,66.53333333333333,1017,4,0,0,4,729.8333333333333,11284,26
+August,9,667.4666666666666,10716,22,83.16666666666666,1308,5,0,0,4,750.6333333333332,12024,27
+September,9,619.6666666666666,12120,20,66.53333333333333,1162,4,0,0,5,686.1999999999999,13282,24
+October,9,712.6166666666666,13977,23,66.53333333333333,1172,4,0,0,4,779.1499999999999,15149,27
+November,9,619.6666666666666,10729,20,83.16666666666666,1194,5,0,0,4,702.8333333333333,11923,25
+December,9,650.8623655913979,9930,21,43.6,727,4,0,0,5,694.4623655913979,10657,25
+January,96,190.66666666666669,859,22,0,0,4,0,0,4,190.66666666666669,859,22
+February,96,173.33333333333337,779,20,0,0,4,0,0,4,173.33333333333337,779,20
+March,96,187.25000000000003,843,21,0,0,5,0,0,5,187.25000000000003,843,21
+April,96,196.16666666666669,902,22,0,0,4,0,0,4,196.16666666666669,902,22
+May,96,187.25000000000003,842,21,0,0,5,0,0,4,187.25000000000003,842,21
+June,96,203.75,803,21,0,0,4,0,0,5,203.75,803,21
+July,96,190.66666666666669,744,22,0,0,4,0,0,4,190.66666666666669,744,22
+August,96,190.66666666666669,863,22,0,0,5,0,0,4,190.66666666666669,863,22
+September,96,173.33333333333337,934,20,0,0,4,0,0,5,173.33333333333337,934,20
+October,96,199.33333333333337,974,23,0,0,4,0,0,4,199.33333333333337,974,23
+November,96,173.33333333333337,774,20,0,0,5,0,0,4,173.33333333333337,774,20
+December,96,182.00000000000003,678,21,0,0,4,0,0,5,182.00000000000003,678,21
