@@ -1,10 +1,13 @@
 year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,1,2530427,Williston Road at Mills Avenue,59,44.46454655929074,-73.1600798058771
 2025,December,1,2562322,Downtown Transit Center,6671,44.479731,-73.214298
-2025,December,1,4255578,South Burlington City Center,572,44.465916,-73.178304
-2025,December,1,4255600,Market Street at Garden Street,478,44.464424,-73.175618
-2025,December,1,4255601,Market Street at Hinesburg Road,104,44.46339,-73.172066
-2025,December,1,4255702,Hinesburg Road at Williston Road,148,44.465742,-73.171047
+2025,December,1,4255578,South Burlington City Center,468,44.465916,-73.178304
+2025,December,1,4255600,Market Street at Garden Street,344,44.464424,-73.175618
+2025,December,1,4255601,Market Street at Hinesburg Road,38,44.46339,-73.172066
+2025,December,1,4255602,Market Street at Garden Street,138,44.464565,-73.176005
+2025,December,1,4255603,Market Street at Hinesburg Road,72,44.463335,-73.171739
+2025,December,1,4255702,Hinesburg Road at Williston Road,143,44.465742,-73.171047
+2025,December,1,4259370,South Burlington City Center,99,44.465801,-73.178344
 2025,December,1,805484,S. Winooski Avenue at Bank Street,1198,44.478387,-73.211225
 2025,December,1,805485,Main Street at S. Winooski,830,44.475929,-73.21056
 2025,December,1,805486,Main Street at S. Union Street,586,44.47603,-73.20863
@@ -20,7 +23,7 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,1,805503,Williston Road at Elsom Parkway,13,44.46537,-73.16438
 2025,December,1,805504,Williston Road at Victoria Drive,13,44.46483,-73.16207
 2025,December,1,805505,Williston Road at Mills Avenue,26,44.46438,-73.16013
-2025,December,1,805516,Hinesburg Road at Williston Road,369,44.46578,-73.17117
+2025,December,1,805516,Hinesburg Road at Williston Road,370,44.46578,-73.17117
 2025,December,1,805517,Hinesburg Road at Village Green Drive,174,44.46477,-73.17097
 2025,December,1,805529,Dorset Street at Barnes & Noble,1846,44.466905,-73.181203
 2025,December,1,805530,Williston Road at Sheraton Hotel,184,44.471703,-73.188163
@@ -37,7 +40,7 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,1,805895,Marshall Avenue at Harvest Lane,32,44.445714,-73.117377
 2025,December,1,805896,Williston Road at N. Brownell Road,162,44.45493,-73.12297
 2025,December,1,805904,Williston Road at S. Brownell Road,54,44.455,-73.12343
-2025,December,1,805943,University Mall at Stop sign at Hannafords,508,44.463252,-73.183412
+2025,December,1,805943,University Mall at Stop sign at Hannafords,509,44.463252,-73.183412
 2025,December,1,805946,Williston Road at Staples Plaza,193,44.471708,-73.188722
 2025,December,1,805947,Dorset Street at Blue Mall,690,44.46448,-73.18078
 2025,December,1,805960,Williston Road at Kennedy Drive,82,44.46303,-73.15443
@@ -415,9 +418,9 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,9,805607,Pearl Street at Elmwood Avenue,12,44.480451,-73.213722
 2025,December,9,805608,Elmwood Avenue at Elmwood Center,49,44.48132,-73.21352
 2025,December,9,805609,Elmwood Avenue at Opposite Peru Street,87,44.48258,-73.21362
-2025,December,9,805611,Elmwood Avenue at Spring Street,49,44.487349,-73.214014
-2025,December,9,805612,Archibald Street at Walnut Street,34,44.4877,-73.21333
-2025,December,9,805613,Archibald Street at Intervale Avenue,43,44.48778,-73.21147
+2025,December,9,805611,Elmwood Avenue at Spring Street,45,44.487349,-73.214014
+2025,December,9,805612,Archibald Street at Walnut Street,28,44.487673,-73.213751
+2025,December,9,805613,Archibald Street at Intervale Avenue,52,44.48778,-73.21147
 2025,December,9,805614,Intervale Avenue at Opposite Willow Street,51,44.48863,-73.21042
 2025,December,9,805615,Intervale Avenue at Riverside Avenue,61,44.4893,-73.20985
 2025,December,9,805616,Riverside Avenue at Bright Street,80,44.48947,-73.20833
@@ -441,7 +444,7 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,9,805637,Community Health Center,335,44.489674,-73.206354
 2025,December,9,805638,Riverside Avenue at Intervale Avenue,91,44.489485,-73.209628
 2025,December,9,805639,Intervale Avenue at Willow Street,117,44.488718,-73.210544
-2025,December,9,805640,Archibald Street at Walnut Street,53,44.487786,-73.213167
+2025,December,9,805640,Archibald Street at Walnut Street,54,44.487786,-73.213167
 2025,December,9,805641,Elmwood Avenue at Spring Street,39,44.48738,-73.21415
 2025,December,9,805642,Elmwood Avenue at Cedar Street,56,44.48595,-73.21402
 2025,December,9,805643,Elmwood Avenue at North Street,34,44.484847,-73.213943
@@ -464,11 +467,11 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,9,806068,Abenaki Way at Opposite CCV,4,44.49057554288402,-73.18206826541565
 2025,December,9,806150,Hickock St at River Street (Chick's Market),120,44.493262,-73.192766
 2025,December,11,2562322,Downtown Transit Center,2064,44.479731,-73.214298
-2025,December,11,4255578,South Burlington City Center,787,44.465916,-73.178304
+2025,December,11,4255578,South Burlington City Center,572,44.465916,-73.178304
 2025,December,11,4255597,Hinesburg Road at Wright Court,63,44.459664,-73.169867
-2025,December,11,4255599,Hinesburg Road at Opposite Iby Street,131,44.462676,-73.170423
-2025,December,11,4255600,Market Street at Garden Street,37,44.464424,-73.175618
-2025,December,11,4255601,Market Street at Hinesburg Road,20,44.46339,-73.172066
+2025,December,11,4255599,Hinesburg Road at Opposite Iby Street,28,44.462676,-73.170423
+2025,December,11,4255600,Market Street at Garden Street,306,44.464424,-73.175618
+2025,December,11,4255601,Market Street at Hinesburg Road,69,44.46339,-73.172066
 2025,December,11,4255703,620 Hinesburg Rd,93,44.454911,-73.165713
 2025,December,11,805484,S. Winooski Avenue at Bank Street,385,44.478387,-73.211225
 2025,December,11,805485,Main Street at S. Winooski,285,44.475929,-73.21056
@@ -511,6 +514,21 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,20,806015,83 Barlow Street,25,44.4928496500632,-73.18398111017882
 2025,December,20,806029,Fern Hill,36,44.48710922696219,-73.20080938773157
 2025,December,20,806030,McAuley Square,30,44.48485932111906,-73.197974635582
+2025,December,21,2562322,Downtown Transit Center,134,44.479731,-73.214298
+2025,December,21,4247351,Opposite Boys & Girls Club,341,44.4897185785598,-73.2111712459659
+2025,December,21,4258661,Austin Drive at Ledgewood Circle,58,44.451498,-73.221579
+2025,December,21,4258662,South Cove Road at Austin Drive,24,44.451304,-73.228474
+2025,December,21,805734,Green Mountain Transit Office,6,44.450385,-73.219485
+2025,December,21,805739,Champlain School (Pine Street),721,44.45695374427129,-73.21422196016476
+2025,December,21,805742,Lakeside Community,94,44.46027,-73.22083
+2025,December,21,805761,Colchester Avenue at Chase Street,288,44.486436,-73.186976
+2025,December,21,815404,Edmunds,1833,44.475857265390026,-73.20756304519637
+2025,December,21,815405,North Ave. at Woodbury (Hunt School),406,44.5118223,-73.2513535
+2025,December,21,815406,HO Wheeler,306,44.48774619008058,-73.21388883915517
+2025,December,21,815407,CP Smith Elementary School,109,44.51259996341931,-73.2420368935691
+2025,December,21,815412,Raymond Pl,567,44.45016821350688,-73.21304296866504
+2025,December,21,849122,King Street at Pine Street,205,44.47462726277847,-73.21515011917177
+2025,December,21,849473,Flynn School Circle,127,44.51734811447099,-73.25961513417269
 2025,December,86,2387294,Waterbury State Complex,54,44.331774,-72.754829
 2025,December,86,2562322,Downtown Transit Center,345,44.479731,-73.214298
 2025,December,86,2574444,Montpelier Transit Center,428,44.2600159183554,-72.5796957353113
@@ -540,8 +558,8 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,96,4256754,Creek Farm Plaza,16,44.551831,-73.163725
 2025,December,96,4256766,River Street Park,9,44.637401,-73.1137
 2025,December,96,4256767,River Street at Opposite Villemaire Lane,1,44.627308,-73.1170779
-2025,December,96,4256770,Fairfield Street at Northwestern Medical Center,37,44.80638,-73.072262
-2025,December,96,4256771,Fairfield Street at opposite Northwestern Medical Center,80,44.806265,-73.072225
+2025,December,96,4256770,Fairfield Street at Northwestern Medical Center,4,44.80638,-73.072262
+2025,December,96,4256771,Fairfield Street at opposite Northwestern Medical Center,1,44.806265,-73.072225
 2025,December,96,805621,Main Street at Platt Street,10,44.493943,-73.186434
 2025,December,96,805757,UVM Medical Center,184,44.4786566641105,-73.1939696441803
 2025,December,96,805763,Winooski Falls/Champlain Mill,30,44.49022,-73.18437
@@ -551,6 +569,10 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,December,96,806127,Milton Town Office Park & Ride,122,44.618487707147665,-73.12487808119201
 2025,December,96,806165,Severance Corners,5,44.5282694,-73.1747521
 2025,December,96,806169,Water Tower Hill/Albany College of Pharmacy and Health Sciences,13,44.509066,-73.185039
+2025,December,96,806188,S Main Street at New Street,15,44.806083,-73.085288
+2025,December,96,806189,South Main Street at St. Albans Police Department,14,44.803963,-73.086992
+2025,December,96,806193,S Main Street at Upper Gilman Street,10,44.80425,-73.086534
+2025,December,96,806194,S Main Street at Upper Weldon Street,73,44.806508,-73.084709
 2025,December,96,847926,Birchwood Park,65,44.633361,-73.150694
 2025,December,108,806420,Commodores Inn,1,44.45532,-72.69455
 2025,December,756,2562322,Downtown Transit Center,81,44.479731,-73.214298
