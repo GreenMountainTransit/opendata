@@ -234,7 +234,7 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,September,6,805547,Shelburne Road at Ferguson Avenue,22,44.453955,-73.208797
 2025,September,6,805548,Shelburne Road at Lyman Avenue,20,44.45298,-73.20883
 2025,September,6,805549,Shelburne Road at Scarff Avenue,37,44.451904,-73.208988
-2025,September,6,805550,Shelburne Road at Home Avenue,575,44.450357,-73.209121
+2025,September,6,805550,Shelburne Road at Home Avenue,576,44.450357,-73.209121
 2025,September,6,805551,Shelburne Road at Queen City Parkway,48,44.445006,-73.209668
 2025,September,6,805552,Shelburne Road at Opposite Brewer Parkway,145,44.44257,-73.20993
 2025,September,6,805553,Shelburne Road at Fayette Road,108,44.436915,-73.210534
@@ -258,7 +258,7 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,September,6,805573,Marsett Road at Falls Roadd,29,44.370314,-73.224723
 2025,September,6,805574,Falls Road at Shelburne Shopping Park,246,44.37948,-73.22692
 2025,September,6,805576,Shelburne Road at Webster Road,70,44.38762,-73.22465
-2025,September,6,805577,Shelburne Road at Dutch Mill,172,44.3937,-73.22055
+2025,September,6,805577,Shelburne Road at Dutch Mill,174,44.3937,-73.22055
 2025,September,6,805578,Shelburne Road at Longmeadow Drive,187,44.39648,-73.21962
 2025,September,6,805579,Shelburne Road at Opposite Tenneybrook,59,44.40157,-73.218
 2025,September,6,805580,Shelburne Road at Opposite Shed Sales Antiques,105,44.40338,-73.21745
@@ -457,7 +457,7 @@ year,month,route,stop_id,stop_name,total_boardings,latitude,longitude
 2025,September,9,806031,Abenaki Way at CCV,2,44.4914,-73.18188
 2025,September,9,806068,Abenaki Way at Opposite CCV,150,44.49057554288402,-73.18206826541565
 2025,September,9,806150,Hickock St at River Street (Chick's Market),125,44.493262,-73.192766
-2025,September,11,2562322,Downtown Transit Center,2890,44.479731,-73.214298
+2025,September,11,2562322,Downtown Transit Center,2891,44.479731,-73.214298
 2025,September,11,4255578,South Burlington City Center,1190,44.465916,-73.178304
 2025,September,11,4255597,Hinesburg Road at Wright Court,58,44.459664,-73.169867
 2025,September,11,4255599,Hinesburg Road at Opposite Iby Street,22,44.462676,-73.170423
