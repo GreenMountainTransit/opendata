@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.  
 
+## [0.0.3] - 2025-02-24 
+
+### Updated  
+
+- Revised mobile fare data to correct duplicated fare cap charges. These errors overstated the volume of mobile fare cap transactions and understated the number of regular and discount mobile transactions.
+
 ## [0.0.2] - 2025-02-13  
 
 ### Updated  

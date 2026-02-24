@@ -1,4 +1,4 @@
-year,month,fare_group,general_route,count,pct
+year,month,fare_group,route,count,pct
 2025,7,Discount,1,11629,0.4352007784139815
 2025,7,Discount,2,9564,0.35763966793807495
 2025,7,Discount,4,193,0.44883720930232557
