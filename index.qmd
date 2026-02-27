@@ -6,7 +6,7 @@ pagetitle: "GMT Open Data"
 ## Overview
 
 Green Mountain Transit (GMT) publishes open datasets to support transparency, analysis, and public understanding 
-of transit performance in our urban service area. This site provides access to ridership, fare transaction, 
+of transit operations in our urban service area. This site provides access to ridership, fare transaction, 
 and stop-level boarding estimates, along with dashboards for exploring trends over time.
 
 All datasets are updated on a monthly schedule and are freely available for informational and analytical use.
