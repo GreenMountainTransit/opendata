@@ -73,11 +73,7 @@ Important considerations:
 
 | Dataset | Download |
 |---|---|
-| FY26 September boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_september.csv) |
-| FY26 October boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_october.csv) |
-| FY26 November boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_november.csv) |
-| FY26 December boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_december.csv) |
-| FY26 January boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop_january.csv) |
+| FY26 boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop.csv) |
 
 ## Data Limitations and Use
 
