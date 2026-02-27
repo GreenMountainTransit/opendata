@@ -81,11 +81,11 @@ These datasets are provided for informational and analytical purposes only and a
 
 Stop-level boarding estimates and other inferred values are subject to methodological limitations and should be interpreted with care. The data may not be suitable for detailed operational, financial, or regulatory reporting without additional validation.
 
-Datasets are typically published within one month of the close of each reporting period. Substantive revisions to previously published data will be documented in the project changelog.
+Datasets are typically published within one month of the close of each reporting period. Substantive revisions to previously published data will be documented in the [project changelog](https://github.com/GreenMountainTransit/opendata/blob/main/CHANGELOG.md).
 
 ## Contact and Feedback
 
-Questions, feedback, or issue reports are welcome and may be submitted through this repository or by contacting **planning@ridegmt.com**.
+Questions, feedback, or issue reports are welcome and may be submitted through our [Github repository](https://github.com/GreenMountainTransit/opendata) or by contacting **planning@ridegmt.com**.
 
 Public feedback helps improve data quality, documentation, and usability.
 
