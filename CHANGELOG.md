@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.  
 
+
+## [0.0.4] - 2025-03-06 
+
+### Updated  
+
+- Added February ridership data
+
 ## [0.0.3] - 2025-02-24 
 
 ### Updated  
