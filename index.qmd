@@ -35,10 +35,12 @@ Reported metrics include:
 
 Trends in fare usage can be explored in the **<a href="../fare_tracker.html">Fare Tracker Dashboard</a>**.
 
-Fare data are summarized monthly and reported by:
+Each time a rider boards a bus and validates a fare, a fare transaction is recorded. Fare transactions are summarized monthly and reported by:
 
-- **Fare group** – high-level payment categories (e.g., regular, discounted, sponsored)
-- **Fare type** – specific products within each fare group
+- **Fare Group** - the broad category of fare a rider used  
+- **Fare Type** - the specific fare product within that category  
+- **Fare Capture Method** - how the fare was validated when boarding  
+- **Fare Funding Source** - who ultimately paid for the ride  
 
 Fare transactions represent completed payments and may not correspond one-to-one with passenger boardings.
 
@@ -49,6 +51,8 @@ Fare transactions represent completed payments and may not correspond one-to-one
 | FY26 Fare group totals by month | [CSV](data/fares/fy26_fare_group_monthly_totals.csv) |
 | FY26 Fare group totals by month and route | [CSV](data/fares/fy26_fare_group_monthly_totals_by_route.csv) |
 | FY26 Fare type totals by month | [CSV](data/fares/fy26_fare_type_monthly_totals.csv) |
+| FY26 Fare funding source totals by month | [CSV](data/fares/fy26_fare_funding_source_monthly_totals.csv) |
+| FY26 Fare capture method totals by month | [CSV](data/fares/fy26_fare_capture_method_monthly_totals.csv) |
   
 <br/>
 Notes:

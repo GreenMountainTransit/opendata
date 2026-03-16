@@ -186,10 +186,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="fare-transactions" class="level2">
 <h2 class="anchored" data-anchor-id="fare-transactions">Fare Transactions</h2>
 <p>Trends in fare usage can be explored in the <strong><a href="../fare_tracker.html">Fare Tracker Dashboard</a></strong>.</p>
-<p>Fare data are summarized monthly and reported by:</p>
+<p>Each time a rider boards a bus and validates a fare, a fare transaction is recorded. Fare transactions are summarized monthly and reported by:</p>
 <ul>
-<li><strong>Fare group</strong> – high-level payment categories (e.g., regular, discounted, sponsored)</li>
-<li><strong>Fare type</strong> – specific products within each fare group</li>
+<li><strong>Fare Group</strong> - the broad category of fare a rider used<br>
+</li>
+<li><strong>Fare Type</strong> - the specific fare product within that category<br>
+</li>
+<li><strong>Fare Capture Method</strong> - how the fare was validated when boarding<br>
+</li>
+<li><strong>Fare Funding Source</strong> - who ultimately paid for the ride</li>
 </ul>
 <p>Fare transactions represent completed payments and may not correspond one-to-one with passenger boardings.</p>
 <section id="fare-data-downloads" class="level3">
@@ -213,6 +218,14 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>FY26 Fare type totals by month</td>
 <td><a href="data/fares/fy26_fare_type_monthly_totals.csv">CSV</a></td>
+</tr>
+<tr class="even">
+<td>FY26 Fare funding source totals by month</td>
+<td><a href="data/fares/fy26_fare_funding_source_monthly_totals.csv">CSV</a></td>
+</tr>
+<tr class="odd">
+<td>FY26 Fare capture method totals by month</td>
+<td><a href="data/fares/fy26_fare_capture_method_monthly_totals.csv">CSV</a></td>
 </tr>
 </tbody>
 </table>

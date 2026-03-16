@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.  
 
+## [0.0.4] - 2025-03-16 
+
+### Updated  
+
+- Added new fare datasets detailing the Fare Capture Method and Funding Source  
+- Revised fares dashboard to be able to display more than six months of data  
+- Revised fare group and type names for consistency and clarity
 
 ## [0.0.4] - 2025-03-06 
 
