@@ -69,15 +69,16 @@ Notes:
 
 Estimated boardings by stop can be explored in the **<a href="https://gmtransit.maps.arcgis.com/apps/dashboards/1c3245162c0e4e629805a1ef619619fd" >Boarding Estimates by Stop Dashboard</a>**.
 
-Stop-level boarding estimates are produced by matching fare transaction timestamps with 
-vehicle GPS locations and associating each transaction with the nearest stop along a 
-route. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.
+Stop-level boarding estimates are produced by matching fare transaction timestamps to 
+vehicle GPS locations and associating each transaction with the nearest stop along the 
+route based on the latest GTFS feed. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.
 
 Important considerations:
 
 - Stop-level estimates will not sum to published ridership totals  
 - Stop-level data should not be aggregated to the route level  
 - Route-level analysis should use the ridership datasets above  
+- Because stop assignments are based on the GTFS feed at the time of processing, some historical transactions may be attributed to stops that were not in service at the time.  
 
 ### Stop Data Downloads
 

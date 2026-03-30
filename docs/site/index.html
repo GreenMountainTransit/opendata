@@ -239,14 +239,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="boarding-estimates-by-stop" class="level2">
 <h2 class="anchored" data-anchor-id="boarding-estimates-by-stop">Boarding Estimates by Stop</h2>
 <p>Estimated boardings by stop can be explored in the <strong><a href="https://gmtransit.maps.arcgis.com/apps/dashboards/1c3245162c0e4e629805a1ef619619fd">Boarding Estimates by Stop Dashboard</a></strong>.</p>
-<p>Stop-level boarding estimates are produced by matching fare transaction timestamps with vehicle GPS locations and associating each transaction with the nearest stop along a route. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.</p>
+<p>Stop-level boarding estimates are produced by matching fare transaction timestamps to vehicle GPS locations and associating each transaction with the nearest stop along the route based on the latest GTFS feed. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.</p>
 <p>Important considerations:</p>
 <ul>
 <li>Stop-level estimates will not sum to published ridership totals<br>
 </li>
 <li>Stop-level data should not be aggregated to the route level<br>
 </li>
-<li>Route-level analysis should use the ridership datasets above</li>
+<li>Route-level analysis should use the ridership datasets above<br>
+</li>
+<li>Because stop assignments are based on the GTFS feed at the time of processing, some historical transactions may be attributed to stops that were not in service at the time.</li>
 </ul>
 <section id="stop-data-downloads" class="level3">
 <h3 class="anchored" data-anchor-id="stop-data-downloads">Stop Data Downloads</h3>
