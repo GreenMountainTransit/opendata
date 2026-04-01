@@ -65,7 +65,7 @@ Notes:
 
 ## Boarding Estimates by Stop
 
-Estimated boardings by stop can be explored in the **<a href="https://gmtransit.maps.arcgis.com/apps/dashboards/1c3245162c0e4e629805a1ef619619fd" >Boarding Estimates by Stop Dashboard</a>**.
+Estimated boardings by stop can be explored in the **<a href="https://gmtransit.maps.arcgis.com/apps/dashboards/1e816fda88fe4a589ef6ec582dcccdf2" >Boarding Estimates by Stop Dashboard</a>**.
 
 Stop-level boarding estimates are produced by matching fare transaction timestamps to 
 vehicle GPS locations and associating each transaction with the nearest stop along the 
