@@ -94,7 +94,7 @@ Datasets are typically published within one month of the close of each reporting
 
 ## Contact and Feedback
 
-Questions, feedback, or issue reports are welcome and may be submitted through our [Github repository](https://github.com/GreenMountainTransit/opendata) or by contacting **planning@ridegmt.com**.
+Questions, feedback, or issue reports are welcome and may be submitted through [this feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdzSlkfUjXiXvld0SWsigx7xpIfNXpNgof8Y3_VfITtoDC8nw/viewform), our [Github repository](https://github.com/GreenMountainTransit/opendata), or by contacting **planning@ridegmt.com**.
 
 Public feedback helps improve data quality, documentation, and usability.
 
