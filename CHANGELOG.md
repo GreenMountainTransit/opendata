@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.  
 
+## [0.0.4] - 2025-04-13 
+
+### Updated  
+
+- Changed ridership productivity measure to use Vehicle Revenue Hours (VRH) instead of Vehicle Hours (VH). VRH reflects when vehicles are actively in service and available to carry passengers, providing a more accurate measure of route productivity.  
+
 ## [0.0.4] - 2025-03-16 
 
 ### Updated  

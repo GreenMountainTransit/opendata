@@ -1,0 +1,213 @@
+year,month,fare_group,fare_type,count,pct
+2025,7,Discounted Fare,Discount Cash,20278,0.16775869486084913
+2025,7,Discounted Fare,Discount Mobile,2089,0.017282173467024056
+2025,7,Discounted Fare,Discount Smart Card,16811,0.13907640888182932
+2025,7,Discounted Fare,Discount Smart Card Daily Fare Cap,6049,0.050043019292498096
+2025,7,Discounted Fare,Discount Smart Card Monthly Fare Cap,4847,0.040098944372745624
+2025,7,Discounted Fare,Free Ride,12230,0.10117806677917866
+2025,7,Regular Fare,Regular Cash,7447,0.06160859062179423
+2025,7,Regular Fare,Regular Credit Card,10392,0.0859724014692743
+2025,7,Regular Fare,Regular Mobile,8510,0.07040272676130911
+2025,7,Regular Fare,Regular Smart Card,3191,0.02639895430027466
+2025,7,Regular Fare,Regular Smart Card Daily Fare Cap,887,0.007338098547271584
+2025,7,Regular Fare,Regular Smart Card Monthly Fare Cap,914,0.007561467950627089
+2025,7,Sponsored Fare,Burlington School District,52,4.301929249809722e-4
+2025,7,Sponsored Fare,Champlain College,1641,0.013575895959495682
+2025,7,Sponsored Fare,Employer Program,404,0.0033422681094675533
+2025,7,Sponsored Fare,Essex Westford School District,232,0.0019193222806843378
+2025,7,Sponsored Fare,South Burlington School District,568,0.00469903041133062
+2025,7,Sponsored Fare,St. Michael's College,1283,0.010614183129818988
+2025,7,Sponsored Fare,UVM,19389,0.16040405043184752
+2025,8,Discounted Fare,Discount Cash,19475,0.13373666066940434
+2025,8,Discounted Fare,Discount Mobile,1762,0.012099820082130447
+2025,8,Discounted Fare,Discount Smart Card,17778,0.12208320171402673
+2025,8,Discounted Fare,Discount Smart Card Daily Fare Cap,4028,0.02766065567015973
+2025,8,Discounted Fare,Discount Smart Card Monthly Fare Cap,4513,0.030991196385161582
+2025,8,Discounted Fare,Free Ride,10962,0.07527708725329964
+2025,8,Regular Fare,Regular Cash,7284,0.05001991457334743
+2025,8,Regular Fare,Regular Credit Card,10186,0.06994822210929667
+2025,8,Regular Fare,Regular Mobile,8444,0.05798574391232094
+2025,8,Regular Fare,Regular Smart Card,3236,0.02222191701803299
+2025,8,Regular Fare,Regular Smart Card Daily Fare Cap,552,0.0037906360302701514
+2025,8,Regular Fare,Regular Smart Card Monthly Fare Cap,810,0.005562346348765983
+2025,8,Sponsored Fare,Burlington School District,3098,0.021274258010465452
+2025,8,Sponsored Fare,Champlain College,2566,0.017620963865350017
+2025,8,Sponsored Fare,Employer Program,386,0.0026506983834860116
+2025,8,Sponsored Fare,Essex Westford School District,516,0.0035434206369916632
+2025,8,Sponsored Fare,South Burlington School District,792,0.005438738652126739
+2025,8,Sponsored Fare,St. Michael's College,877,0.006022441664034281
+2025,8,Sponsored Fare,UVM,44560,0.30599772012470644
+2025,9,Discounted Fare,Discount Cash,16844,0.09073964337660938
+2025,9,Discounted Fare,Discount Mobile,1847,0.009949900339384797
+2025,9,Discounted Fare,Discount Smart Card,17804,0.09591122124656574
+2025,9,Discounted Fare,Discount Smart Card Daily Fare Cap,5389,0.029030867855411303
+2025,9,Discounted Fare,Discount Smart Card Monthly Fare Cap,1356,0.007304853741313365
+2025,9,Discounted Fare,Free Ride,6686,0.0360178850401336
+2025,9,Regular Fare,Regular Cash,6227,0.033545224371060715
+2025,9,Regular Fare,Regular Credit Card,9243,0.04979259817917363
+2025,9,Regular Fare,Regular Mobile,8623,0.04645262080482681
+2025,9,Regular Fare,Regular Smart Card,3431,0.0184830038248128
+2025,9,Regular Fare,Regular Smart Card Daily Fare Cap,702,0.003781716317405592
+2025,9,Regular Fare,Regular Smart Card Monthly Fare Cap,194,0.001045089694553682
+2025,9,Sponsored Fare,Burlington School District,26612,0.1433604482034154
+2025,9,Sponsored Fare,Champlain College,4204,0.022647201422183915
+2025,9,Sponsored Fare,Employer Program,398,0.0021440499919194098
+2025,9,Sponsored Fare,Essex Westford School District,858,0.004622097721273501
+2025,9,Sponsored Fare,South Burlington School District,653,0.003517750363626569
+2025,9,Sponsored Fare,St. Michael's College,1886,0.010159995690351776
+2025,9,Sponsored Fare,UVM,68689,0.3700317836556591
+2025,9,Sponsored Fare,UVMMC,76,4.0941658137154553e-4
+2025,10,Discounted Fare,Discount Cash,17070,0.08762069018617472
+2025,10,Discounted Fare,Discount Mobile,1893,0.009716811161243628
+2025,10,Discounted Fare,Discount Smart Card,16761,0.08603458630406997
+2025,10,Discounted Fare,Discount Smart Card Daily Fare Cap,5061,0.025978225719521398
+2025,10,Discounted Fare,Discount Smart Card Monthly Fare Cap,3863,0.0198288650374454
+2025,10,Discounted Fare,Free Ride,7100,0.03644445813250384
+2025,10,Regular Fare,Regular Cash,6523,0.033482704281453876
+2025,10,Regular Fare,Regular Credit Card,9775,0.05017529271059507
+2025,10,Regular Fare,Regular Mobile,7075,0.036316132575699246
+2025,10,Regular Fare,Regular Smart Card,3127,0.01605096064511824
+2025,10,Regular Fare,Regular Smart Card Daily Fare Cap,720,0.00369577603597222
+2025,10,Regular Fare,Regular Smart Card Monthly Fare Cap,565,0.002900157583783756
+2025,10,Sponsored Fare,Burlington School District,28213,0.14481795736511702
+2025,10,Sponsored Fare,Champlain College,4607,0.023647833607950024
+2025,10,Sponsored Fare,Employer Program,438,0.002248263755216434
+2025,10,Sponsored Fare,Essex Westford School District,793,0.004070486661841626
+2025,10,Sponsored Fare,South Burlington School District,297,0.0015245076148385408
+2025,10,Sponsored Fare,St. Michael's College,1769,0.009080316399492857
+2025,10,Sponsored Fare,UVM,73363,0.37657391295420833
+2025,10,Sponsored Fare,UVMMC,2173,0.011154057397455048
+2025,11,Discounted Fare,Discount Cash,14363,0.09668407873125286
+2025,11,Discounted Fare,Discount Mobile,1562,0.01051455343439511
+2025,11,Discounted Fare,Discount Smart Card,12907,0.08688306093325077
+2025,11,Discounted Fare,Discount Smart Card Daily Fare Cap,4650,0.03130132744554242
+2025,11,Discounted Fare,Discount Smart Card Monthly Fare Cap,4213,0.02835967581248822
+2025,11,Discounted Fare,Free Ride,4309,0.029005896766202643
+2025,11,Regular Fare,Regular Cash,4847,0.03262742669431056
+2025,11,Regular Fare,Regular Credit Card,7960,0.053582487412154337
+2025,11,Regular Fare,Regular Mobile,6060,0.040792697703223024
+2025,11,Regular Fare,Regular Smart Card,2515,0.016929642693664343
+2025,11,Regular Fare,Regular Smart Card Daily Fare Cap,719,0.004839925684590323
+2025,11,Regular Fare,Regular Smart Card Monthly Fare Cap,649,0.004368722905840222
+2025,11,Sponsored Fare,Burlington School District,21528,0.1449150488704596
+2025,11,Sponsored Fare,Champlain College,3085,0.020766579606343736
+2025,11,Sponsored Fare,Employer Program,383,0.002578152346589838
+2025,11,Sponsored Fare,Essex Westford School District,493,0.0033186138560542824
+2025,11,Sponsored Fare,South Burlington School District,303,0.002039634885161151
+2025,11,Sponsored Fare,St. Michael's College,1039,0.00699399553030507
+2025,11,Sponsored Fare,UVM,51723,0.34817173321844963
+2025,11,Sponsored Fare,UVMMC,2166,0.014580360268181696
+2025,12,Discounted Fare,Discount Cash,14557,0.11719668303679252
+2025,12,Discounted Fare,Discount Mobile,1610,0.012961919330166653
+2025,12,Discounted Fare,Discount Smart Card,12578,0.10126398840673054
+2025,12,Discounted Fare,Discount Smart Card Daily Fare Cap,4274,0.03440946783672812
+2025,12,Discounted Fare,Discount Smart Card Monthly Fare Cap,4128,0.03323403912728444
+2025,12,Discounted Fare,Free Ride,4145,0.03337090411400048
+2025,12,Regular Fare,Regular Cash,5280,0.0425086546976894
+2025,12,Regular Fare,Regular Credit Card,8993,0.07240157797278803
+2025,12,Regular Fare,Regular Mobile,6984,0.05622735689558007
+2025,12,Regular Fare,Regular Smart Card,3069,0.024708155543031962
+2025,12,Regular Fare,Regular Smart Card Daily Fare Cap,853,0.006867401980516867
+2025,12,Regular Fare,Regular Smart Card Monthly Fare Cap,702,0.0056517188632155225
+2025,12,Sponsored Fare,Burlington School District,21039,0.16938249738346348
+2025,12,Sponsored Fare,Champlain College,2141,0.01723693744465019
+2025,12,Sponsored Fare,Employer Program,379,0.0030512841156106595
+2025,12,Sponsored Fare,Essex Westford School District,473,0.003808066983334675
+2025,12,Sponsored Fare,South Burlington School District,302,0.002431366234602689
+2025,12,Sponsored Fare,St. Michael's College,623,0.005015699219064487
+2025,12,Sponsored Fare,UVM,25798,0.20769664278238467
+2025,12,Sponsored Fare,UVMMC,3052,0.024571290556315916
+2026,1,Discounted Fare,Discount Cash,13275,0.09658408818072683
+2026,1,Discounted Fare,Discount Mobile,1564,0.011379097093382808
+2026,1,Discounted Fare,Discount Smart Card,12375,0.09003601440576231
+2026,1,Discounted Fare,Discount Smart Card Daily Fare Cap,4263,0.031016042780748664
+2026,1,Discounted Fare,Discount Smart Card Monthly Fare Cap,3368,0.024504347193422822
+2026,1,Discounted Fare,Free Ride,3824,0.02782203790607152
+2026,1,Regular Fare,Regular Cash,5143,0.03741860380515843
+2026,1,Regular Fare,Regular Credit Card,9124,0.06638291680308488
+2026,1,Regular Fare,Regular Mobile,7615,0.05540397977372767
+2026,1,Regular Fare,Regular Smart Card,3415,0.024846302157226528
+2026,1,Regular Fare,Regular Smart Card Daily Fare Cap,940,0.006839099276074066
+2026,1,Regular Fare,Regular Smart Card Monthly Fare Cap,758,0.005514933246025683
+2026,1,Sponsored Fare,Burlington School District,21764,0.15834697515369783
+2026,1,Sponsored Fare,Champlain College,2779,0.020218996689584923
+2026,1,Sponsored Fare,Employer Program,406,0.0029539088362617776
+2026,1,Sponsored Fare,Essex Westford School District,460,0.0033467932627596494
+2026,1,Sponsored Fare,South Burlington School District,287,0.002088107970460912
+2026,1,Sponsored Fare,St. Michael's College,980,0.0071301247771836
+2026,1,Sponsored Fare,UVM,38464,0.2798501218669286
+2026,1,Sponsored Fare,UVMMC,3425,0.02491905853250391
+2026,2,Discounted Fare,Discount Cash,13402,0.09287273483247288
+2026,2,Discounted Fare,Discount Mobile,1580,0.010949031565087836
+2026,2,Discounted Fare,Discount Smart Card,11636,0.08063476664010256
+2026,2,Discounted Fare,Discount Smart Card Daily Fare Cap,4165,0.028862478777589132
+2026,2,Discounted Fare,Discount Smart Card Monthly Fare Cap,3686,0.02554312047399605
+2026,2,Discounted Fare,Free Ride,2435,0.01687398219049929
+2026,2,Regular Fare,Regular Cash,5317,0.03684557014656457
+2026,2,Regular Fare,Regular Credit Card,8908,0.06173036277329268
+2026,2,Regular Fare,Regular Mobile,7519,0.052104916669554066
+2026,2,Regular Fare,Regular Smart Card,3086,0.021385260385988012
+2026,2,Regular Fare,Regular Smart Card Daily Fare Cap,858,0.0059457399258514955
+2026,2,Regular Fare,Regular Smart Card Monthly Fare Cap,921,0.006382315235092339
+2026,2,Sponsored Fare,Burlington School District,19351,0.1340979176050726
+2026,2,Sponsored Fare,Champlain College,3320,0.023006825820311147
+2026,2,Sponsored Fare,Employer Program,431,0.002986729496552441
+2026,2,Sponsored Fare,Essex Westford School District,448,0.0031045355323793353
+2026,2,Sponsored Fare,Single-fare voucher,2380,0.016492845015765218
+2026,2,Sponsored Fare,South Burlington School District,296,0.0020512109767506326
+2026,2,Sponsored Fare,St. Michael's College,1083,0.00750493745885451
+2026,2,Sponsored Fare,UVM,46429,0.32174214337687534
+2026,2,Sponsored Fare,UVMMC,3343,0.02316621045701812
+2026,3,Discounted Fare,Discount Cash,15174,0.10009895111814764
+2026,3,Discounted Fare,Discount Mobile,2913,0.01921630714427073
+2026,3,Discounted Fare,Discount Smart Card,12851,0.08477472128768389
+2026,3,Discounted Fare,Discount Smart Card Daily Fare Cap,4582,0.030226268223497593
+2026,3,Discounted Fare,Discount Smart Card Monthly Fare Cap,4450,0.029355498383798403
+2026,3,Discounted Fare,Free Ride,2132,0.014064252259383864
+2026,3,Regular Fare,Regular Cash,5832,0.03847219473580051
+2026,3,Regular Fare,Regular Credit Card,10289,0.06787387030806781
+2026,3,Regular Fare,Regular Mobile,11573,0.07634408602150537
+2026,3,Regular Fare,Regular Smart Card,3405,0.02246190381951316
+2026,3,Regular Fare,Regular Smart Card Daily Fare Cap,953,0.0062866943729797484
+2026,3,Regular Fare,Regular Smart Card Monthly Fare Cap,1004,0.006623128174681707
+2026,3,Sponsored Fare,Burlington School District,24871,0.1640675506299888
+2026,3,Sponsored Fare,Champlain College,3191,0.0210502012006069
+2026,3,Sponsored Fare,Employer Program,567,0.0037403522659806058
+2026,3,Sponsored Fare,Essex Westford School District,605,0.003991028431954614
+2026,3,Sponsored Fare,Single-fare voucher,2771,0.01827956989247312
+2026,3,Sponsored Fare,South Burlington School District,482,0.003179629263144007
+2026,3,Sponsored Fare,St. Michael's College,1170,0.007718187215515536
+2026,3,Sponsored Fare,UVM,39267,0.25903423708687906
+2026,3,Sponsored Fare,UVMMC,3508,0.023141368164126923
+2025,7,Discounted Fare,Discount Mobile Daily Fare Cap,512,0.004235745722889573
+2025,7,Discounted Fare,Discount Mobile Monthly Fare Cap,448,0.003706277507528376
+2025,7,Regular Fare,Regular Mobile Daily Fare Cap,1370,0.011333928985075615
+2025,7,Regular Fare,Regular Mobile Monthly Fare Cap,1332,0.011019557232204904
+2025,8,Discounted Fare,Discount Mobile Daily Fare Cap,437,0.0030009201906305368
+2025,8,Discounted Fare,Discount Mobile Monthly Fare Cap,418,0.0028704453997335567
+2025,8,Regular Fare,Regular Mobile Daily Fare Cap,1336,0.009174437928335005
+2025,8,Regular Fare,Regular Mobile Monthly Fare Cap,1606,0.011028553377923665
+2025,9,Discounted Fare,Discount Mobile Daily Fare Cap,573,0.003086785541130205
+2025,9,Discounted Fare,Discount Mobile Monthly Fare Cap,408,0.002197920594731455
+2025,9,Regular Fare,Regular Mobile Daily Fare Cap,1515,0.008161396326024889
+2025,9,Regular Fare,Regular Mobile Monthly Fare Cap,1411,0.007601142056779616
+2025,10,Discounted Fare,Discount Mobile Daily Fare Cap,581,0.002982285940138694
+2025,10,Discounted Fare,Discount Mobile Monthly Fare Cap,423,0.002171268421133679
+2025,10,Regular Fare,Regular Mobile Daily Fare Cap,1160,0.005954305835733021
+2025,10,Regular Fare,Regular Mobile Monthly Fare Cap,1467,0.007530143673293398
+2025,11,Discounted Fare,Discount Mobile Daily Fare Cap,442,0.0029753089743934946
+2025,11,Discounted Fare,Discount Mobile Monthly Fare Cap,337,0.002268504806268343
+2025,11,Regular Fare,Regular Mobile Daily Fare Cap,1008,0.006785320014001454
+2025,11,Regular Fare,Regular Mobile Monthly Fare Cap,1295,0.008717251406876868
+2025,12,Discounted Fare,Discount Mobile Daily Fare Cap,493,0.003969084614765317
+2025,12,Discounted Fare,Discount Mobile Monthly Fare Cap,363,0.002922470010466146
+2025,12,Regular Fare,Regular Mobile Daily Fare Cap,1120,0.009016987360115932
+2025,12,Regular Fare,Regular Mobile Monthly Fare Cap,1254,0.010095805490701232
+2026,1,Discounted Fare,Discount Mobile Daily Fare Cap,463,0.0033686201753428645
+2026,1,Discounted Fare,Discount Mobile Monthly Fare Cap,319,0.0023209283713485395
+2026,1,Regular Fare,Regular Mobile Daily Fare Cap,1409,0.01025137327658336
+2026,1,Regular Fare,Regular Mobile Monthly Fare Cap,1025,0.007457528465931828
+2026,2,Discounted Fare,Discount Mobile Daily Fare Cap,471,0.00326392016908631
+2026,2,Discounted Fare,Discount Mobile Monthly Fare Cap,333,0.0023076123488444612
+2026,2,Regular Fare,Regular Mobile Daily Fare Cap,1360,0.009424482866151555
+2026,2,Regular Fare,Regular Mobile Monthly Fare Cap,1547,0.010720349260247392
