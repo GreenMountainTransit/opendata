@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.  
 
+## [0.0.4] - 2025-04-22 
+
+### Updated  
+
+- Revised fare and stop estimates slightly downwards. Fare totals were overstated due to the inclusion of some incomplete Genfare Link transactions.
+
 ## [0.0.4] - 2025-04-13 
 
 ### Updated  
