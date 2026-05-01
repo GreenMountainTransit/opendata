@@ -1,0 +1,627 @@
+---
+title: "GMT Ridership Tracker"
+format: 
+  html:
+    self-contained: true   # embed all images, CSS, JS in the HTML
+    include-in-header:
+      text: |
+        <link rel="icon" href="favicon.jpg">
+    toc: true
+    toc-depth: 4
+    toc-location: right
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+img {
+  width: 100%;
+}
+
+.dashboard-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+</style>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(dplyr)
+library(tidyr)
+library(here)
+library(ggplot2)
+library(gmtviz)
+library(DT)
+library(stringr)
+library(readr)
+library(googledrive)
+
+load_fonts()
+
+i_am("ridership_tracker.qmd")
+
+```
+
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+
+sync_with_gdrive <- FALSE
+
+if (sync_with_gdrive) {
+  drive_auth()
+}
+
+
+```
+
+
+```{r, message=FALSE, echo=FALSE}
+
+fy26_urban_sirs_stats_fpath <- here("data/ridership/fy26_urban_ridership.csv")
+fy25_urban_sirs_stats_fpath <- here("data/ridership/fy25_urban_ridership.csv")
+
+if (sync_with_gdrive) {
+  
+  fy26_urban_gdrive <- drive_get(paste0("coredata/processed/fy26_urban_ridership.csv"))
+  fy25_urban_gdrive <- drive_get(paste0("coredata/processed/fy25_urban_ridership.csv"))
+  
+  drive_download(fy26_urban_gdrive, path = fy26_urban_sirs_stats_fpath, overwrite = TRUE)
+  drive_download(fy25_urban_gdrive, path = fy25_urban_sirs_stats_fpath, overwrite = TRUE)
+  
+}
+
+fy25_urban_sirs_stats <- read_csv(fy25_urban_sirs_stats_fpath) %>%
+  mutate(route = as.character(route))
+
+fy26_urban_sirs_stats <- read_csv(fy26_urban_sirs_stats_fpath) %>%
+  mutate(route = as.character(route))
+
+# Combine them together
+historic_gmt_ridership <- bind_rows(
+  fy25_urban_sirs_stats %>% mutate(fiscal_year = 2025),
+  fy26_urban_sirs_stats %>% mutate(fiscal_year = 2026)
+)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+month_order <- c("Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+                 "Jan", "Feb", "Mar", "Apr", "May", "Jun")
+
+chrt_dta <- historic_gmt_ridership %>%
+  mutate(
+    route = if_else(
+      route %in% c("56", "96"),
+      "56-96",
+      route
+    )
+  ) %>%
+  # Group to consolidate 56 and 96
+  group_by(fiscal_year, month, route) %>%
+  summarise(
+    across(matches("(_vrh|_ridership)$"), ~ sum(.x, na.rm = TRUE)),
+    # across(all_of(c("weekdays", "saturdays", "sundays", "total_service_days")), ~ max(.x, na.rm = TRUE)),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    month = substr(month, 1, 3), # keep first 3 letters
+    month = factor(month, levels = month_order),
+    fiscal_year = as.character(fiscal_year),
+    ridership_per_vrh = total_ridership / total_vrh
+  )
+
+```
+
+
+```{r, message=FALSE, echo=FALSE}
+
+get_data_table <- function(chrt_dta, route) {
+  
+  chrt_dta %>%
+    mutate(
+      month = factor(month, levels = month_order)
+    ) %>%
+    select(route, month, fiscal_year, total_ridership, total_vrh, ridership_per_vrh) %>%
+    rename(
+      Route = route,
+      `Fiscal Year` = fiscal_year,
+      Month = month,
+      `Total Ridership` = total_ridership,
+      `Total Vehicle Revenue Hours` = total_vrh,
+      `Ridership per VRH` = ridership_per_vrh
+    ) %>%
+    filter(Route == route) %>%
+    arrange(desc(`Fiscal Year`), desc(Month)) %>%
+    datatable(rownames = FALSE, options = list(pageLength = 5)) %>%
+    formatRound("Total Vehicle Revenue Hours", 1) %>%
+    formatRound("Ridership per VRH", 1) %>%
+    formatRound("Total Ridership", 1)
+  
+}
+
+```
+
+
+```{r, message=FALSE, echo=FALSE}
+
+get_line_chart <- function(dta, y_var, color_palette) {
+  
+  fig <- dta %>%
+    ggplot(
+      aes(x = month, y = !!as.symbol(y_var), group = fiscal_year)
+    ) +
+    geom_line(aes(color = fiscal_year), linewidth = 1.5) +
+    geom_point(aes(color = fiscal_year), size = 3) +
+    scale_color_brewer(palette = color_palette) +
+    scale_y_continuous(
+      expand = expansion(mult = c(0, .1)),
+      limits = c(0,NA),
+      labels = scales::label_comma(accuracy = 1)
+    ) +
+    scale_x_discrete(
+      expand = expansion(mult = c(0.01, 0.01)),
+      limits = month_order
+    ) +
+    theme_gmt(base_size = 10) +
+    theme(
+      axis.text.x = element_text(color = "dimgray"),
+      axis.text.y = element_text(color = "dimgray"),
+      axis.ticks = element_line(linewidth = .25, color = "#d0d2ce"),
+      plot.margin = margin(20, 20, 20, 20, "pt")
+    ) +
+    labs(
+      title = NULL,
+      subtitle = NULL,
+      x = NULL,
+      y = NULL
+    )
+  
+  return(fig)
+  
+}
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+totals_dta <- chrt_dta %>%
+  group_by(fiscal_year, month) %>%
+  summarise(
+    total_ridership = sum(total_ridership),
+    total_vrh = sum(total_vrh)
+  ) %>%
+  ungroup() %>%
+  mutate(
+    month = factor(month, levels = month_order),
+    ridership_per_vrh = total_ridership / total_vrh
+  )
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+# Total ridership
+fig <- get_line_chart(
+  totals_dta,
+  "total_ridership",
+  1
+)
+  
+save_plot(fig, here(paste0("export/gmt_ridership_over_time_all_routes.svg")), chart_height = 2.5)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+# Vehicle Revenue Hour
+fig <- get_line_chart(
+  totals_dta,
+  "total_vrh",
+  7
+)
+  
+save_plot(fig, here(paste0("export/gmt_vrh_over_time_all_routes.svg")), chart_height = 2.5)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+# Ridership per vehicle revenue hour
+fig <- get_line_chart(
+  totals_dta,
+  "ridership_per_vrh",
+  2
+)
+
+save_plot(fig, here(paste0("export/gmt_ridership_per_vrh_over_time_all_routes.svg")), chart_height = 2.5)
+
+```
+
+
+```{r, echo=FALSE, warning=FALSE}
+
+routes <- chrt_dta %>% pull(route) %>% unique()
+months <- chrt_dta %>% pull(month) %>% unique()
+
+for (gmt_route in routes) {
+  
+  ## Total Ridership
+  fig <- get_line_chart(
+    chrt_dta %>% filter(route == gmt_route),
+    "total_ridership",
+    1
+  )
+  
+  save_plot(fig, here(paste0("export/gmt_ridership_over_time_route_", gmt_route, ".svg")), chart_height = 2.5)
+  
+  
+  ## Vehicle Revenue Hours
+  fig <- get_line_chart(
+    chrt_dta %>% filter(route == gmt_route),
+    "total_vrh",
+    7
+  )
+  
+  save_plot(fig, here(paste0("export/gmt_vrh_over_time_route_", gmt_route, ".svg")), chart_height = 2.5)  
+  
+  ## Ridership per Vehicle Revenue Hour
+  fig <- get_line_chart(
+    chrt_dta %>% filter(route == gmt_route),
+    "ridership_per_vrh",
+    2
+  )
+  
+  save_plot(fig, here(paste0("export/gmt_ridership_per_vrh_over_time_route_", gmt_route, ".svg")), chart_height = 2.5)
+  
+}
+
+```
+
+This dashboard displays ridership trends for [Green Mountain Transit](https://ridegmt.com/)’s urban service area (Chittenden County).
+
+Three metrics are presented for each route, month, and fiscal year:  
+
+- **Total ridership**: The total number of recorded passenger boardings  
+- **Total vehicle revenue hours**: The total time that vehicles were in service    
+- **Ridership per vehicle revenue hour**: A productivity measure calculated as total ridership divided by total vehicle revenue hours  
+
+GMT's fiscal year begins July 1.
+
+Data downloads are available at <a href="index.html" >GMT’s open data site</a>.
+
+If you have feedback or questions, please complete our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdzSlkfUjXiXvld0SWsigx7xpIfNXpNgof8Y3_VfITtoDC8nw/viewform) or contact **planning@ridegmt.com**.
+
+---  
+
+
+### All Routes
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_all_routes.svg){fig-alt="Line chart of total GMT ridership over time"}  
+
+#### Total vehicle revenue hours 
+
+![](export/gmt_vrh_over_time_all_routes.svg){fig-alt="Line chart of total GMT vehicle revenue hours over time"}  
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_all_routes.svg){fig-alt="Line chart of GMT ridership per vehicle revenue hour over time"}  
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+
+# For All Routes
+totals_dta %>%
+  mutate(
+    month = factor(month, levels = month_order)
+  ) %>%
+  rename(
+    `Ridership per VRH` = ridership_per_vrh,
+    `Fiscal Year` = fiscal_year,
+    `Total Vehicle Revenue Hours` = total_vrh,
+    `Total Ridership` = total_ridership,
+    `Month` = month
+  ) %>%
+  arrange(desc(`Fiscal Year`), desc(Month)) %>%
+  datatable(rownames = FALSE, options = list(pageLength = 5)) %>%
+  formatRound("Total Vehicle Revenue Hours", 1) %>%
+  formatRound("Ridership per VRH", 1) %>%
+  formatRound("Total Ridership", 1)
+
+```
+
+---  
+
+### 1: Williston
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_1.svg){fig-alt="Line chart of GMT route 1 ridership over time"}
+
+#### Total vehicle revenue hours
+
+![](export/gmt_vrh_over_time_route_1.svg){fig-alt="Line chart of GMT route 1 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_1.svg){fig-alt="Line chart of GMT route 1 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "1")
+```
+
+---  
+
+
+### 2: Essex Junction    
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_2.svg){fig-alt="Line chart of GMT route 2 ridership over time"}
+
+#### Total vehicle revenue hours
+
+![](export/gmt_vrh_over_time_route_2.svg){fig-alt="Line chart of GMT route 2 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_2.svg){fig-alt="Line chart of GMT route 2 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "2")
+```
+
+---  
+
+
+### 4: Essex Center    
+
+Note: Route 4 Essex Center was introduced in June 2025.
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_4.svg){fig-alt="Line chart of GMT route 4 ridership over time"}
+
+#### Total vehicle revenue hours
+
+![](export/gmt_vrh_over_time_route_4.svg){fig-alt="Line chart of GMT route 4 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_4.svg){fig-alt="Line chart of GMT route 4 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "4")
+```
+
+---  
+
+
+### 5: Pine Street  
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_5.svg){fig-alt="Line chart of GMT route 5 ridership over time"}
+
+#### Total vehicle revenue hours
+
+![](export/gmt_vrh_over_time_route_5.svg){fig-alt="Line chart of GMT route 5 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_5.svg){fig-alt="Line chart of GMT route 5 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "5")
+```
+
+
+---  
+
+
+### 6: Shelburne Road  
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_6.svg){fig-alt="Line chart of GMT route 6 ridership over time"}
+
+#### Total vehicle revenue hours   
+
+![](export/gmt_vrh_over_time_route_6.svg){fig-alt="Line chart of GMT route 6 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_6.svg){fig-alt="Line chart of GMT route 6 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "6")
+```
+
+
+---
+
+
+### 7: North Avenue    
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_7.svg){fig-alt="Line chart of GMT route 7 ridership over time"}
+
+#### Total vehicle revenue hours
+
+![](export/gmt_vrh_over_time_route_7.svg){fig-alt="Line chart of GMT route 7 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour
+
+![](export/gmt_ridership_per_vrh_over_time_route_7.svg){fig-alt="Line chart of GMT route 7 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "7")
+```
+
+
+---  
+
+
+### 8: City Loop  
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_8.svg){fig-alt="Line chart of GMT route 8 ridership over time"}
+
+
+#### Total vehicle revenue hours  
+
+![](export/gmt_vrh_over_time_route_8.svg){fig-alt="Line chart of GMT route 8 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_8.svg){fig-alt="Line chart of GMT route 8 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "8")
+```
+
+---  
+
+
+### 9: Winooski  
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_9.svg){fig-alt="Line chart of GMT route 9 ridership over time"}
+
+#### Total vehicle revenue hours 
+
+![](export/gmt_vrh_over_time_route_9.svg){fig-alt="Line chart of GMT route 9 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_9.svg){fig-alt="Line chart of GMT route 9 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "9")
+```
+
+
+---  
+
+
+### 11: City Connector  
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_11.svg){fig-alt="Line chart of GMT route 11 ridership over time"}
+
+#### Total vehicle revenue hours 
+
+![](export/gmt_vrh_over_time_route_11.svg){fig-alt="Line chart of GMT route 11 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_11.svg){fig-alt="Line chart of GMT route 11 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "11")
+```
+
+
+---  
+
+
+### 86: Montpelier LINK Express  
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_86.svg){fig-alt="Line chart of GMT route 86 ridership over time"}
+
+#### Total vehicle revenue hours 
+
+![](export/gmt_vrh_over_time_route_86.svg){fig-alt="Line chart of GMT route 86 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_86.svg){fig-alt="Line chart of GMT route 86 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "86")
+```
+
+
+---  
+
+
+### 56 and 96: Franklin County Commuter
+
+Routes 56 (Milton Commuter) and 96 (St. Albans Link) are reported as a single combined route group for consistency, following the absorption of Route 56 into Route 96 to create the Franklin County Commuter on August 25, 2025.
+
+#### Total ridership 
+
+![](export/gmt_ridership_over_time_route_56-96.svg){fig-alt="Line chart of GMT route 56 and 96 ridership over time"}
+
+#### Total vehicle revenue hours 
+
+![](export/gmt_vrh_over_time_route_56-96.svg){fig-alt="Line chart of GMT route 56 and 96 vehicle revenue hours over time"}
+
+#### Ridership per vehicle revenue hour 
+
+![](export/gmt_ridership_per_vrh_over_time_route_56-96.svg){fig-alt="Line chart of GMT route 56 and 96 ridership per vehicle revenue hour over time"}
+
+#### Detailed data  
+
+```{r, echo=FALSE}
+get_data_table(chrt_dta, "56-96")
+```
+
+<div class="dashboard-footer">
+  © 2026 [Green Mountain Transit](https://ridegmt.com/). Data provided as-is and subject to revision.
+</div>

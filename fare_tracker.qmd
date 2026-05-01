@@ -1,0 +1,539 @@
+---
+title: "GMT Fare Tracker"
+format: 
+  html:
+    self-contained: true # embed all images, CSS, JS in the HTML
+    toc: true
+    include-in-header:
+      text: |
+        <link rel="icon" href="favicon.jpg">
+editor: source
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+.dashboard-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+
+</style>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(dplyr)
+library(tidyr)
+library(readr)
+library(here)
+library(lubridate)
+library(stringr)
+library(DatawRappr)
+library(googledrive)
+
+i_am("fare_tracker.qmd")
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+publish_to_dw <- FALSE
+
+sync_with_gdrive <- TRUE
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+if (sync_with_gdrive) {
+  drive_auth() 
+}
+
+```
+
+
+```{r, echo=FALSE}
+
+fy <- "fy26"
+
+## Edit this each month with the new month
+fare_months <- c(
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
+  "january",
+  "february",
+  "march"
+)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+# Load all merged transaction data
+all_dta <- tibble::tibble()
+
+for (mo in fare_months) {
+  
+  merged_transactions_fpath <- here(
+    paste0("data-raw/", fy, "_", mo, "_merged_transaction_records.csv")
+  )
+  
+  if (sync_with_gdrive) {
+  
+    merged_transactions_gdrive <- drive_get(
+      paste0("coredata/processed/", fy, "_", mo, "_merged_transaction_records.csv")
+    )
+    
+    drive_download(
+      merged_transactions_gdrive,
+      path = merged_transactions_fpath,
+      overwrite = TRUE
+    )
+    
+  }
+  
+  mo_dta <- read_csv(
+    merged_transactions_fpath,
+    locale = readr::locale(tz = "America/New_York")
+  )
+  
+  all_dta <- bind_rows(all_dta, mo_dta)
+  
+}
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+# Retroactively re-allocate School trippers D key to BSD
+all_dta_clean <- all_dta %>%
+  mutate(
+    fare_group = if_else(
+      general_route == 21 & fare_type == "Free Ride",
+      "Sponsored Fare",
+      fare_group
+    ),
+    fare_funding_source = if_else(
+      general_route == 21 & fare_type == "Free Ride",
+      "Partner",
+      fare_funding_source
+    ),
+    fare_type = if_else(
+      general_route == 21 & fare_type == "Free Ride",
+      "Burlington School District",
+      fare_type
+    )
+  )
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+monthly_mobile_fare_cap_fpath <- here("data-raw/fy26_monthly_mobile_fare_cap_totals.csv")
+
+if (sync_with_gdrive) {
+  
+  monthly_mobile_fare_cap_gdrive <- drive_get(
+    "coredata/processed/fy26_monthly_mobile_fare_cap_totals.csv")
+  
+  drive_download(
+    monthly_mobile_fare_cap_gdrive,
+    path = monthly_mobile_fare_cap_fpath,
+    overwrite = TRUE
+  )
+  
+}
+
+fy26_monthly_mobile_fare_cap_totals <- read_csv(monthly_mobile_fare_cap_fpath)
+
+fy26_monthly_fare_cap_subtraction_totals <- fy26_monthly_mobile_fare_cap_totals %>%
+  group_by(year, month_full, subtract_from_col) %>%
+  summarise(fare_cap_count = sum(fare_cap_count))
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+fare_dta <- all_dta_clean %>%
+  mutate(
+    month = lubridate::month(date_and_time, label = FALSE, abbr = FALSE),
+    month_full = lubridate::month(date_and_time, label = TRUE, abbr = TRUE),
+    year = lubridate::year(date_and_time)
+  ) %>%
+  filter(fare_type != "Non-fare")
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+## FARE GROUP BY ROUTE
+
+# Create monthly totals by route, and both Fare Type and Group
+monthly_fare_dta_by_route <- fare_dta %>%
+  count(month, year, fare_group, fare_type, general_route, name = "count")
+
+# Create monthly totals by route and Fare Group
+valid_routes <- c(1, 2, 4, 5, 6, 7, 8, 9, 11, 86, 56, 96) 
+
+monthly_fare_group_by_route <- fare_dta %>% 
+  filter(
+    general_route %in% valid_routes
+  ) %>%
+  mutate(
+    # Aggregate 56 into 96
+    general_route = ifelse(general_route == 56, 96, general_route)
+  ) %>%
+  count(year, month, fare_group, general_route, name = "count") %>%
+  group_by(year, month, general_route) %>%
+  mutate(pct = count / sum(count)) %>%
+  ungroup() %>%
+  rename(route = general_route)
+
+readr::write_csv(
+  monthly_fare_group_by_route,
+  here("data/fares/fy26_fare_group_monthly_totals_by_route.csv")
+)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+## FARE GROUP totals by month
+
+fare_group_counts <- fare_dta %>%
+  count(fare_group, name = "count") %>%
+  mutate(pct = count / sum(count))
+
+fare_group_counts_by_month <- fare_dta %>%
+  count(year, month, fare_group, name = "count") %>%
+  group_by(year, month) %>%
+  mutate(pct = count / sum(count)) %>%
+  ungroup()
+
+write_csv(fare_group_counts_by_month, here("data/fares/fy26_fare_group_monthly_totals.csv"))
+
+dw_export_fare_groups <- fare_group_counts_by_month %>%
+  mutate(month_year = make_date(year, month, 1)) %>%
+  select(-c(month, year, pct)) %>%
+  pivot_wider(
+    names_from = month_year,
+    values_from = "count"
+  ) %>%
+  mutate(
+    fare_group = factor(
+      fare_group,
+      levels = c(
+        "Sponsored Fare",
+        "Regular Fare",
+        "Discounted Fare"
+      )
+    )
+  ) %>%
+  arrange(fare_group)
+
+write_csv(
+  dw_export_fare_groups,
+  here("data-raw/fy26_fare_group_monthly_totals_DW.csv")
+)
+
+# Push to the datawrapper chart
+fare_groups_dw_chart_id <- "ItOlW"
+if (publish_to_dw) {
+  dw_data_to_chart(dw_export_fare_groups, fare_groups_dw_chart_id, parse_dates = FALSE)
+  dw_publish_chart(fare_groups_dw_chart_id, return_urls = FALSE) 
+}
+
+```
+
+
+```{r, message=FALSE, echo=FALSE}
+
+## FARE TYPE
+
+fare_type_counts_by_month <- fare_dta %>%
+  count(year, month_full, fare_group, fare_type, name = "count") %>%
+  # Join in Mobile Fare Cap data
+  left_join(
+    .,
+    fy26_monthly_fare_cap_subtraction_totals,
+    by = c("year"="year", "month_full"="month_full", "fare_type"="subtract_from_col")
+  ) %>%
+  mutate(
+    count = ifelse(!is.na(fare_cap_count), count - fare_cap_count, count)
+  ) %>% 
+  bind_rows(
+    .,
+    fy26_monthly_mobile_fare_cap_totals %>% 
+      select(year, month_full, fare_group, fare_type, count = fare_cap_count)
+  ) %>%
+  group_by(month_full, year) %>%
+  mutate(pct = count / sum(count)) %>%
+  ungroup() %>%
+  select(-fare_cap_count) %>%
+  filter(fare_type != "Discount Credit Card")
+
+fare_type_counts_by_month %>%
+  mutate(
+    month = match(month_full, month.abb)
+  ) %>%
+  select(year, month, fare_group, fare_type, count, pct) %>%
+  write_csv(here("data-raw/fy26_fare_type_monthly_totals.csv"))
+
+```
+
+
+```{r, message=FALSE, echo=FALSE}
+
+## Partner program monthly totals
+
+dw_export_partners <- fare_type_counts_by_month %>%
+  filter(fare_group == "Sponsored Fare") %>%
+  mutate(month_year = make_date(year, match(month_full, month.abb), 1)) %>%
+  group_by(fare_type) %>%
+  # Filter to only Sponsored Fare Types that, on average, 
+  # represent at least 1% of monthly ridership
+  filter(mean(pct, na.rm = TRUE) > 0.01) %>%
+  ungroup() %>%
+  select(-c(year, month_full, fare_group, pct)) %>%
+  gmtdata::get_fare_type_short_col() %>%
+  select(-fare_type) %>%
+  rename(fare_type = fare_type_short) %>%
+  pivot_wider(
+    names_from = "fare_type",
+    values_from = "count"
+  )
+
+# Push to the Data-Wrapper chart
+dw_chart_id <- "194L7"
+if (publish_to_dw) {
+  dw_data_to_chart(dw_export_partners, dw_chart_id, parse_dates = FALSE)
+  dw_publish_chart(dw_chart_id, return_urls = FALSE)
+}
+
+write_csv(
+  dw_export_partners,
+  here(paste0("data-raw/fy26_major_partner_monthly_totals_DW.csv"))
+)
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+## CAPTURE METHOD
+
+fare_capture_method_monthly_totals <- fare_dta %>%
+  count(year, month, fare_capture_method, name = "count") %>%
+  group_by(year, month) %>%
+  mutate(pct = count / sum(count)) %>%
+  ungroup()
+
+# Open data export
+write_csv(fare_capture_method_monthly_totals, here("data/fares/fy26_fare_capture_method_monthly_totals.csv"))
+
+
+# Now prepare export for DataWrapper
+dw_export_fare_capture_method <- fare_capture_method_monthly_totals %>%
+  mutate(month_year = make_date(year, month, 1)) %>%
+  select(-c(month, year, pct)) %>%
+  pivot_wider(
+    names_from = month_year,
+    values_from = "count"
+  )
+
+write_csv(
+  dw_export_fare_capture_method,
+  here("data-raw/fy26_fare_capture_method_monthly_totals_DW.csv")
+)
+
+# Push to the Data-Wrapper chart
+dw_chart_id <- "8IC6C"
+if (publish_to_dw) {
+  dw_data_to_chart(dw_export_fare_capture_method, dw_chart_id, parse_dates = FALSE)
+  dw_publish_chart(dw_chart_id, return_urls = FALSE)
+}
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+## FUNDING SOURCE
+
+fare_funding_source_monthly_totals <- fare_dta %>%
+  count(year, month_full, month, fare_type, fare_funding_source, name = "count") %>%
+  left_join(
+    .,
+    fy26_monthly_fare_cap_subtraction_totals,
+    by = c("year"="year", "month_full"="month_full", "fare_type"="subtract_from_col")
+  ) %>%
+  mutate(
+    # Subtract From Mobile Fares
+    count = ifelse(!is.na(fare_cap_count), count - fare_cap_count, count)
+  ) %>%
+  # Then add in Mobile Fare Caps
+  bind_rows(
+    .,
+    fy26_monthly_mobile_fare_cap_totals %>% 
+      select(year, month_full, fare_type, count = fare_cap_count) %>%
+      mutate(
+        month = match(month_full, month.abb),
+        fare_funding_source = "Fare Cap"
+      )
+  ) %>%
+  mutate(month_year = make_date(year, month, 1)) %>%
+  # This is where the Fare Funding Source values
+  # get all summed together
+  group_by(
+    month_year, month, year, fare_funding_source
+  ) %>% 
+  summarise(
+    count = sum(count, na.rm = TRUE)
+  ) %>%
+  ungroup() 
+
+# Open data export
+fare_funding_source_monthly_totals %>% 
+  select(-month_year) %>%
+  group_by(year, month) %>%
+  mutate(pct = count / sum(count)) %>%
+  ungroup() %>%
+  write_csv(here("data/fares/fy26_fare_funding_source_monthly_totals.csv"))
+
+# Prepare DataWrapper export
+dw_export_fare_funding_source <- fare_funding_source_monthly_totals %>%
+  select(-c(year, month)) %>%
+  pivot_wider(
+    names_from = month_year,
+    values_from = "count"
+  )
+  
+write_csv(
+  dw_export_fare_funding_source,
+  here("data-raw/fy26_fare_funding_source_monthly_totals_DW.csv")
+)
+
+# # Push to the Data-Wrapper chart
+dw_chart_id <- "oG5A9"
+if (publish_to_dw) {
+  dw_data_to_chart(dw_export_fare_funding_source, dw_chart_id, parse_dates = FALSE)
+  dw_publish_chart(dw_chart_id, return_urls = FALSE)
+}
+
+```
+This dashboard provides detailed fare transaction information for [Green Mountain Transit](https://ridegmt.com/)’s urban service area in Chittenden County. GMT’s rural services are fare-free and are not included in these totals.
+
+Each time a rider boards a bus and validates a fare, a fare transaction is recorded. This dashboard summarizes those transactions in three different ways:
+
+- **Fare Group** - the broad category of fare a rider used  
+- **Fare Capture Method** - how the fare was validated when boarding  
+- **Fare Funding Source** - who ultimately paid for the ride  
+
+These categories help show who is riding, what fares they use, and how rides are paid for.  
+
+Additional information on **partner transactions** is also provided below.
+
+Please note that fare data is compiled from multiple systems and may contain errors or inconsistencies. We make every effort to process, reconcile, and format the data accurately, but some error may remain.
+
+Data downloads are available at <a href="index.html" >GMT's open data site</a>. 
+
+To learn more about GMT’s fare structure, visit the [GMT Fares webpage](https://ridegmt.com/gmt-fares/). If you have feedback or questions, please complete our [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdzSlkfUjXiXvld0SWsigx7xpIfNXpNgof8Y3_VfITtoDC8nw/viewform) or contact **planning@ridegmt.com**.  
+
+
+## Fare Group  
+
+Fare Group shows the broad category of fare used for a ride.
+
+The three Fare Groups are:
+
+- **Regular Fare** – standard fares available to all riders  
+- **Discounted Fare** – reduced fares available to eligible riders, such as seniors, youth, or riders with disabilities  
+- **Sponsored Fare** – rides funded by partner organizations such as schools, employers, or community programs 
+
+<iframe title="Fare groups totals by month" aria-label="Stacked column chart" id="datawrapper-chart-ItOlW" src="https://datawrapper.dwcdn.net/ItOlW/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="451" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+
+
+<br/>
+
+## Fare Capture Method  
+
+Fare Capture Method describes how the fare was validated when the rider boarded the bus.
+
+Categories include:
+
+- **Cash** – cash paid at the farebox  
+- **Mobile** – a mobile ticket scanned from a phone  
+- **Smart Card** – a smart card tapped at the farebox  
+- **Farebox Key** – a driver-entered category used for certain eligible riders (for example, students at partner schools).  
+- **ID Card** – an institutional ID card swiped at the farebox  
+- **Credit Card** – a credit card tapped at the farebox  
+
+Changes in this chart may reflect shifts in how riders choose to pay or how fares are recorded.
+
+<iframe title="Fare Capture Method" aria-label="Stacked column chart" id="datawrapper-chart-8IC6C" src="https://datawrapper.dwcdn.net/8IC6C/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="451" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+
+
+## Fare Funding Source
+
+Fare Funding Source shows who ultimately pays for the ride.
+
+Categories include:
+
+- **Fare** – the rider paid the fare directly  
+- **Partner** – a partner organization, such as a school, employer, or social service program, paid for the ride  
+- **Fare Cap** – the ride was covered through a daily or monthly fare cap program  
+- **Agency** – GMT covered the cost of the ride, such as for a Free Ride  
+
+<iframe title="Fare Funding Source" aria-label="Stacked column chart" id="datawrapper-chart-oG5A9" src="https://datawrapper.dwcdn.net/oG5A9/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="451" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+
+
+## Partner Transactions  
+
+Partner programs provide ride access through agreements with organizations such as schools, employers, and community groups. These transactions are included in the Sponsored Fare group and funded through Partner sources.  
+
+While most partner programs are administered through accounts or rider IDs, Single-ride vouchers are distributed by community organizations and are valid for one trip. These vouchers began being tracked in February 2026.  
+
+Only partner programs that account for at least 1% of average monthly ridership are displayed below.
+
+<iframe title="Partner Transactions" aria-label="Small multiple column chart" id="datawrapper-chart-194L7" src="https://datawrapper.dwcdn.net/194L7/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="728" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+
+<div class="dashboard-footer">
+  © 2026 [Green Mountain Transit](https://ridegmt.com/). Data provided as-is and subject to revision.
+</div>
+
+

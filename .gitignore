@@ -52,3 +52,10 @@ Thumbs.db
 
 /.quarto/
 **/*.quarto_ipynb
+
+
+# Don't track more detailed data
+data-raw/
+
+# Ignore exports (from tracker qmd files)
+export/

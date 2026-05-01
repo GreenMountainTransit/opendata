@@ -13,7 +13,7 @@ All datasets are updated on a monthly schedule and are freely available for info
 
 ## Ridership Data
 
-Monthly ridership performance by route can be explored in the **<a href="../ridership_tracker.html" >Ridership Tracker Dashboard</a>**.
+Monthly ridership performance by route can be explored in the **<a href="ridership_tracker.html" >Ridership Tracker Dashboard</a>**.
 
 Reported metrics include:
 
@@ -33,7 +33,7 @@ Reported metrics include:
 
 ## Fare Transactions
 
-Trends in fare usage can be explored in the **<a href="../fare_tracker.html">Fare Tracker Dashboard</a>**.
+Trends in fare usage can be explored in the **<a href="fare_tracker.html">Fare Tracker Dashboard</a>**.
 
 Each time a rider boards a bus and validates a fare, a fare transaction is recorded. Fare transactions are summarized monthly and reported by:
 
