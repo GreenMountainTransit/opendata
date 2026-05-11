@@ -61,7 +61,7 @@ i_am("fare_tracker.qmd")
 
 ```{r, echo=FALSE, message=FALSE}
 
-publish_to_dw <- FALSE
+publish_to_dw <- TRUE
 
 sync_with_gdrive <- TRUE
 
@@ -91,7 +91,8 @@ fare_months <- c(
   "december",
   "january",
   "february",
-  "march"
+  "march",
+  "april"
 )
 
 ```
