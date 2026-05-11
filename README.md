@@ -14,11 +14,11 @@ This repository includes monthly datasets covering:
 
 ### Ridership  
 
-Ridership performance can be readily visualized in the <a href="https://GreenMountainTransit.github.io/opendata/ridership_tracker.html" target="_blank">Ridership Tracker Dashboard</a>. Raw data files are available in the [`/data/ridership/`](./data/ridership/) directory.
+Ridership performance can be readily visualized in the <a href="https://GreenMountainTransit.github.io/opendata/site/ridership_tracker.html" target="_blank">Ridership Tracker Dashboard</a>. Raw data files are available in the [`/data/ridership/`](./data/ridership/) directory.
 
 ### Fares  
  
-Fare transactions trends can be visualized in the <a href="https://GreenMountainTransit.github.io/opendata/fare_tracker.html" target="_blank">Fare Tracker Dashboard</a>. Raw data files are available in the [`/data/fares/`](./data/fares/) directory.
+Fare transactions trends can be visualized in the <a href="https://GreenMountainTransit.github.io/opendata/site/fare_tracker.html" target="_blank">Fare Tracker Dashboard</a>. Raw data files are available in the [`/data/fares/`](./data/fares/) directory.
 
 ### Boarding Estimates by Stop
 
