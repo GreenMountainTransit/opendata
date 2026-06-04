@@ -68,20 +68,11 @@ sync_with_gdrive <- TRUE
 ```
 
 
-```{r, echo=FALSE, message=FALSE}
-
-if (sync_with_gdrive) {
-  drive_auth() 
-}
-
-```
-
-
 ```{r, echo=FALSE}
 
 fy <- "fy26"
 
-## Edit this each month with the new month
+## Edit this each month with the new month!!
 fare_months <- c(
   "july",
   "august",
@@ -92,8 +83,18 @@ fare_months <- c(
   "january",
   "february",
   "march",
-  "april"
+  "april",
+  "may"
 )
+
+```
+
+
+```{r, echo=FALSE, message=FALSE}
+
+if (sync_with_gdrive) {
+  drive_auth() 
+}
 
 ```
 

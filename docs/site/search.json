@@ -1,47 +1,5 @@
 [
   {
-    "objectID": "ridership_tracker.html",
-    "href": "ridership_tracker.html",
-    "title": "GMT Ridership Tracker",
-    "section": "",
-    "text": "This dashboard displays ridership trends for Green Mountain Transit’s urban service area (Chittenden County).\nThree metrics are presented for each route, month, and fiscal year:\n\nTotal ridership: The total number of recorded passenger boardings\n\nTotal vehicle revenue hours: The total time that vehicles were in service\n\nRidership per vehicle revenue hour: A productivity measure calculated as total ridership divided by total vehicle revenue hours\n\nGMT’s fiscal year begins July 1.\nData downloads are available at GMT’s open data site.\nIf you have feedback or questions, please complete our feedback form or contact planning@ridegmt.com.\n\n\nAll Routes\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n1: Williston\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n2: Essex Junction\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n4: Essex Center\nNote: Route 4 Essex Center was introduced in June 2025.\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n5: Pine Street\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n6: Shelburne Road\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n7: North Avenue\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n8: City Loop\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n9: Winooski\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n11: City Connector\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n86: Montpelier LINK Express\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n56 and 96: Franklin County Commuter\nRoutes 56 (Milton Commuter) and 96 (St. Albans Link) are reported as a single combined route group for consistency, following the absorption of Route 56 into Route 96 to create the Franklin County Commuter on August 25, 2025.\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
-  },
-  {
-    "objectID": "fare_tracker.html",
-    "href": "fare_tracker.html",
-    "title": "GMT Fare Tracker",
-    "section": "",
-    "text": "This dashboard provides detailed fare transaction information for Green Mountain Transit’s urban service area in Chittenden County. GMT’s rural services are fare-free and are not included in these totals.\nEach time a rider boards a bus and validates a fare, a fare transaction is recorded. This dashboard summarizes those transactions in three different ways:\nThese categories help show who is riding, what fares they use, and how rides are paid for.\nAdditional information on partner transactions is also provided below.\nPlease note that fare data is compiled from multiple systems and may contain errors or inconsistencies. We make every effort to process, reconcile, and format the data accurately, but some error may remain.\nData downloads are available at GMT’s open data site.\nTo learn more about GMT’s fare structure, visit the GMT Fares webpage. If you have feedback or questions, please complete our feedback form or contact planning@ridegmt.com."
-  },
-  {
-    "objectID": "fare_tracker.html#fare-group",
-    "href": "fare_tracker.html#fare-group",
-    "title": "GMT Fare Tracker",
-    "section": "Fare Group",
-    "text": "Fare Group\nFare Group shows the broad category of fare used for a ride.\nThe three Fare Groups are:\n\nRegular Fare – standard fares available to all riders\n\nDiscounted Fare – reduced fares available to eligible riders, such as seniors, youth, or riders with disabilities\n\nSponsored Fare – rides funded by partner organizations such as schools, employers, or community programs"
-  },
-  {
-    "objectID": "fare_tracker.html#fare-capture-method",
-    "href": "fare_tracker.html#fare-capture-method",
-    "title": "GMT Fare Tracker",
-    "section": "Fare Capture Method",
-    "text": "Fare Capture Method\nFare Capture Method describes how the fare was validated when the rider boarded the bus.\nCategories include:\n\nCash – cash paid at the farebox\n\nMobile – a mobile ticket scanned from a phone\n\nSmart Card – a smart card tapped at the farebox\n\nFarebox Key – a driver-entered category used for certain eligible riders (for example, students at partner schools).\n\nID Card – an institutional ID card swiped at the farebox\n\nCredit Card – a credit card tapped at the farebox\n\nChanges in this chart may reflect shifts in how riders choose to pay or how fares are recorded."
-  },
-  {
-    "objectID": "fare_tracker.html#fare-funding-source",
-    "href": "fare_tracker.html#fare-funding-source",
-    "title": "GMT Fare Tracker",
-    "section": "Fare Funding Source",
-    "text": "Fare Funding Source\nFare Funding Source shows who ultimately pays for the ride.\nCategories include:\n\nFare – the rider paid the fare directly\n\nPartner – a partner organization, such as a school, employer, or social service program, paid for the ride\n\nFare Cap – the ride was covered through a daily or monthly fare cap program\n\nAgency – GMT covered the cost of the ride, such as for a Free Ride"
-  },
-  {
-    "objectID": "fare_tracker.html#partner-transactions",
-    "href": "fare_tracker.html#partner-transactions",
-    "title": "GMT Fare Tracker",
-    "section": "Partner Transactions",
-    "text": "Partner Transactions\nPartner programs provide ride access through agreements with organizations such as schools, employers, and community groups. These transactions are included in the Sponsored Fare group and funded through Partner sources.\nWhile most partner programs are administered through accounts or rider IDs, Single-ride vouchers are distributed by community organizations and are valid for one trip. These vouchers began being tracked in February 2026.\nOnly partner programs that account for at least 1% of average monthly ridership are displayed below.\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Green Mountain Transit Open Data",
@@ -89,5 +47,47 @@
     "title": "Green Mountain Transit Open Data",
     "section": "Contact and Feedback",
     "text": "Contact and Feedback\nQuestions, feedback, or issue reports are welcome and may be submitted through this feedback form, our Github repository, or by contacting planning@ridegmt.com.\nPublic feedback helps improve data quality, documentation, and usability."
+  },
+  {
+    "objectID": "fare_tracker.html",
+    "href": "fare_tracker.html",
+    "title": "GMT Fare Tracker",
+    "section": "",
+    "text": "This dashboard provides detailed fare transaction information for Green Mountain Transit’s urban service area in Chittenden County. GMT’s rural services are fare-free and are not included in these totals.\nEach time a rider boards a bus and validates a fare, a fare transaction is recorded. This dashboard summarizes those transactions in three different ways:\nThese categories help show who is riding, what fares they use, and how rides are paid for.\nAdditional information on partner transactions is also provided below.\nPlease note that fare data is compiled from multiple systems and may contain errors or inconsistencies. We make every effort to process, reconcile, and format the data accurately, but some error may remain.\nData downloads are available at GMT’s open data site.\nTo learn more about GMT’s fare structure, visit the GMT Fares webpage. If you have feedback or questions, please complete our feedback form or contact planning@ridegmt.com."
+  },
+  {
+    "objectID": "fare_tracker.html#fare-group",
+    "href": "fare_tracker.html#fare-group",
+    "title": "GMT Fare Tracker",
+    "section": "Fare Group",
+    "text": "Fare Group\nFare Group shows the broad category of fare used for a ride.\nThe three Fare Groups are:\n\nRegular Fare – standard fares available to all riders\n\nDiscounted Fare – reduced fares available to eligible riders, such as seniors, youth, or riders with disabilities\n\nSponsored Fare – rides funded by partner organizations such as schools, employers, or community programs"
+  },
+  {
+    "objectID": "fare_tracker.html#fare-capture-method",
+    "href": "fare_tracker.html#fare-capture-method",
+    "title": "GMT Fare Tracker",
+    "section": "Fare Capture Method",
+    "text": "Fare Capture Method\nFare Capture Method describes how the fare was validated when the rider boarded the bus.\nCategories include:\n\nCash – cash paid at the farebox\n\nMobile – a mobile ticket scanned from a phone\n\nSmart Card – a smart card tapped at the farebox\n\nFarebox Key – a driver-entered category used for certain eligible riders (for example, students at partner schools).\n\nID Card – an institutional ID card swiped at the farebox\n\nCredit Card – a credit card tapped at the farebox\n\nChanges in this chart may reflect shifts in how riders choose to pay or how fares are recorded."
+  },
+  {
+    "objectID": "fare_tracker.html#fare-funding-source",
+    "href": "fare_tracker.html#fare-funding-source",
+    "title": "GMT Fare Tracker",
+    "section": "Fare Funding Source",
+    "text": "Fare Funding Source\nFare Funding Source shows who ultimately pays for the ride.\nCategories include:\n\nFare – the rider paid the fare directly\n\nPartner – a partner organization, such as a school, employer, or social service program, paid for the ride\n\nFare Cap – the ride was covered through a daily or monthly fare cap program\n\nAgency – GMT covered the cost of the ride, such as for a Free Ride"
+  },
+  {
+    "objectID": "fare_tracker.html#partner-transactions",
+    "href": "fare_tracker.html#partner-transactions",
+    "title": "GMT Fare Tracker",
+    "section": "Partner Transactions",
+    "text": "Partner Transactions\nPartner programs provide ride access through agreements with organizations such as schools, employers, and community groups. These transactions are included in the Sponsored Fare group and funded through Partner sources.\nWhile most partner programs are administered through accounts or rider IDs, Single-ride vouchers are distributed by community organizations and are valid for one trip. These vouchers began being tracked in February 2026.\nOnly partner programs that account for at least 1% of average monthly ridership are displayed below.\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
+  },
+  {
+    "objectID": "ridership_tracker.html",
+    "href": "ridership_tracker.html",
+    "title": "GMT Ridership Tracker",
+    "section": "",
+    "text": "This dashboard displays ridership trends for Green Mountain Transit’s urban service area (Chittenden County).\nThree metrics are presented for each route, month, and fiscal year:\n\nTotal ridership: The total number of recorded passenger boardings\n\nTotal vehicle revenue hours: The total time that vehicles were in service\n\nRidership per vehicle revenue hour: A productivity measure calculated as total ridership divided by total vehicle revenue hours\n\nGMT’s fiscal year begins July 1.\nData downloads are available at GMT’s open data site.\nIf you have feedback or questions, please complete our feedback form or contact planning@ridegmt.com.\n\n\nAll Routes\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n1: Williston\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n2: Essex Junction\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n4: Essex Center\nNote: Route 4 Essex Center was introduced in June 2025.\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n5: Pine Street\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n6: Shelburne Road\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n7: North Avenue\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n8: City Loop\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n9: Winooski\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n11: City Connector\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n86: Montpelier LINK Express\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n\n\n\n56 and 96: Franklin County Commuter\nRoutes 56 (Milton Commuter) and 96 (St. Albans Link) are reported as a single combined route group for consistency, following the absorption of Route 56 into Route 96 to create the Franklin County Commuter on August 25, 2025.\n\nTotal ridership\n\n\n\nTotal vehicle revenue hours\n\n\n\nRidership per vehicle revenue hour\n\n\n\nDetailed data\n\n\n\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
   }
 ]

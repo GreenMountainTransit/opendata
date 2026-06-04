@@ -1,0 +1,40 @@
+---
+editor: source
+---
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+
+library(dplyr)
+library(googledrive)
+library(here)
+
+i_am("stops_download.qmd")
+
+```
+
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+
+sync_with_gdrive <- TRUE
+
+if (sync_with_gdrive) {
+  drive_auth()
+}
+
+
+```
+
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+
+fy26_boardings_by_stop_fpath <- here("data/stops/fy26_boardings_by_stop.csv")
+
+if (sync_with_gdrive) {
+  
+  fy26_boardings_by_stop_gdrive <- drive_get(paste0("coredata/processed/fy26_boardings_by_stop.csv"))
+  drive_download(fy26_boardings_by_stop_gdrive, path = fy26_boardings_by_stop_fpath, overwrite = TRUE)
+
+}
+
+```
+
