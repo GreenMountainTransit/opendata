@@ -40,3 +40,9 @@ Questions, feedback, or issue reports related to these datasets may be submitted
 
 We welcome feedback that helps improve data quality, documentation, and usability.
 
+
+## Development
+
+To build the site, run: `quarto render`. Depending on your quarto installation, 
+you may want to specify the full path to your quarto.exe.
+

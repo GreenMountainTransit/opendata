@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "performance_dashboard.html#ridership",
+    "href": "performance_dashboard.html#ridership",
+    "title": "Performance Metrics",
+    "section": "Ridership",
+    "text": "Ridership\nRidership is a key indicator of transit demand and usage.\n\n\n\nRidership data by route can be found in the ridership tracker."
+  },
+  {
+    "objectID": "performance_dashboard.html#productivity",
+    "href": "performance_dashboard.html#productivity",
+    "title": "Performance Metrics",
+    "section": "Productivity",
+    "text": "Productivity\nRidership per vehicle revenue hour measures how effectively service hours are being utilized by riders.\n\n\n\nRidership per vehicle revenue hour data by route can be found in the ridership tracker."
+  },
+  {
+    "objectID": "performance_dashboard.html#reliability",
+    "href": "performance_dashboard.html#reliability",
+    "title": "Performance Metrics",
+    "section": "Reliability",
+    "text": "Reliability\nOn-time performance reflects the consistency and dependability of our service."
+  },
+  {
+    "objectID": "performance_dashboard.html#data-quality",
+    "href": "performance_dashboard.html#data-quality",
+    "title": "Performance Metrics",
+    "section": "Data quality",
+    "text": "Data quality\nData completeness helps ensure on-time performance metrics are accurate and representative."
+  },
+  {
+    "objectID": "performance_dashboard.html#missed-service",
+    "href": "performance_dashboard.html#missed-service",
+    "title": "Performance Metrics",
+    "section": "Missed Service",
+    "text": "Missed Service\nDropped runs represent scheduled trips that could not be operated as planned."
+  },
+  {
+    "objectID": "performance_dashboard.html#customer-feedback",
+    "href": "performance_dashboard.html#customer-feedback",
+    "title": "Performance Metrics",
+    "section": "Customer Feedback",
+    "text": "Customer Feedback\nCustomer service contacts provide insight into rider questions, concerns, and feedback."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Green Mountain Transit Open Data",
@@ -49,6 +91,20 @@
     "text": "Contact and Feedback\nQuestions, feedback, or issue reports are welcome and may be submitted through this feedback form, our Github repository, or by contacting planning@ridegmt.com.\nPublic feedback helps improve data quality, documentation, and usability."
   },
   {
+    "objectID": "dropped_runs.html",
+    "href": "dropped_runs.html",
+    "title": "GMT Open Data",
+    "section": "",
+    "text": "library(dplyr)\nlibrary(readr)\nlibrary(googlesheets4)\nlibrary(here)\nlibrary(tidyr)\nlibrary(stringr)\nlibrary(tibble)\nlibrary(DatawRappr)\n\ni_am(\"dropped_runs.qmd\")\n\n\npublish_to_dw &lt;- TRUE\n\nss &lt;- \"1OxsU3-A1oFJ0Ay4nPu76VSkX3HT13S35A3BUT3XCF5k\"\n\nmonths &lt;- c(month.name[7:12], month.name[1:6])\n\nall_months &lt;- tibble::tibble()\n\nfor (m in months) {\n  \n  month_data &lt;- read_sheet(ss, sheet = m) %&gt;%\n      janitor::clean_names() %&gt;%\n      mutate(month = m,) %&gt;%\n      mutate(\n        date_click_twice_for_calendar = as.character(date_click_twice_for_calendar),\n        route_affected = as.character(route_affected),\n        run_affected_24hr_format = as.character(run_affected_24hr_format),\n        driver = as.character(driver),\n        bus = as.character(bus),\n        reason = as.character(reason),\n        reason_detail = as.character(reason_detail),\n        notes = as.character(notes)\n      )\n\n  all_months &lt;- bind_rows(all_months, month_data)\n  \n}\n\n! Using an auto-discovered, cached token.\n\n\n  To suppress this message, modify your code or options to clearly consent to\n  the use of a cached token.\n\n\n  See gargle's \"Non-interactive auth\" vignette for more details:\n\n\n  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;\n\n\nℹ The googlesheets4 package is using a cached token for\n  'cblatchly@ridegmt.com'.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''July''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''August''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''September''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''October''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''November''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''December''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''January''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''February''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''March''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''April''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''May''.\n\n\n✔ Reading from \"Dropped Runs Log FY26\".\n\n\n✔ Range ''June''.\n\n\n\ndropped_runs_chrt_dta &lt;- all_months %&gt;%\n  mutate(\n    reason_str = paste0(reason, \" - \", reason_detail),\n    year = if_else(month %in% month.name[7:12], 2025L, 2026L),\n    month_start = as.Date(\n      paste(\"1\", month, year),\n      format = \"%d %B %Y\"\n    )\n  ) %&gt;%\n  count(month_start, reason) %&gt;%\n  pivot_wider(names_from = \"month_start\", values_from = \"n\")\n\n# write.csv(dropped_runs_chrt_dta, stdout(), row.names = FALSE)\n\ndw_chart_id &lt;- \"uLNyj\"\nif (publish_to_dw) {\n  dw_data_to_chart(dropped_runs_chrt_dta, dw_chart_id, parse_dates = FALSE)\n  dw_publish_chart(dw_chart_id, return_urls = FALSE) \n}\n\nData in uLNyj successfully updated.\n\n\nChart uLNyj published!"
+  },
+  {
+    "objectID": "customer_service.html",
+    "href": "customer_service.html",
+    "title": "GMT Open Data",
+    "section": "",
+    "text": "library(dplyr)\nlibrary(readr)\nlibrary(googlesheets4)\nlibrary(here)\nlibrary(tidyr)\nlibrary(stringr)\nlibrary(tibble)\nlibrary(lubridate)\nlibrary(DatawRappr)\n\ni_am(\"customer_service.qmd\")\n\n\npublish_to_dw &lt;- TRUE\n\nss &lt;- \"1S1tGCbf9WAe4Bgczxmmk-oo0HLit3MsyQ-WoEP7aU2Q\"\n\ncs_raw &lt;- read_sheet(\n    ss,\n    sheet = \"Sheet1\",\n    col_types = c(\n      \"Date of Incident\" = \"c\"\n    )\n  )\n\n! Using an auto-discovered, cached token.\n\n\n  To suppress this message, modify your code or options to clearly consent to\n  the use of a cached token.\n\n\n  See gargle's \"Non-interactive auth\" vignette for more details:\n\n\n  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;\n\n\nℹ The googlesheets4 package is using a cached token for\n  'cblatchly@ridegmt.com'.\n\n\n✔ Reading from \"Customer_Service_Tracking_Updated\".\n\n\n✔ Range ''Sheet1''.\n\n\n\ncs_clean &lt;- cs_raw %&gt;% \n  janitor::clean_names() %&gt;%\n  mutate(\n    \n    ## Date Processing\n    date_clean = date_of_incident %&gt;%\n      str_squish() %&gt;%\n      str_remove_all(\"\\\\s+\") %&gt;%\n      str_extract(\"^\\\\d+/\\\\d+/?\\\\d*\"),\n\n    date = mdy(date_clean),\n\n    guessed_year = coalesce(\n      year(lag(date)),\n      year(lead(date))\n    ),\n\n    date_try2 = if_else(\n      is.na(date),\n      paste0(date_clean, \"/\", guessed_year),\n      NA_character_\n    ),\n\n    date = coalesce(\n      date,\n      mdy(date_try2)\n    ),\n    \n    # Useful columns\n    month = lubridate::floor_date(date, unit = \"month\")\n  ) %&gt;%\n  filter(month &gt;= make_date(year = 2025, month = 7, day = 1)) %&gt;%\n  select(date_of_incident, date, date_clean, -date_try2, -guessed_year, everything())\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `date = mdy(date_clean)`.\nCaused by warning:\n!  5 failed to parse.\n\n\n\ncs_chrt_dta &lt;- cs_clean %&gt;%\n  select(month, nature_of_report) %&gt;%\n  separate_rows(nature_of_report, sep = \",\") %&gt;%\n  mutate(\n    nature_of_report = stringr::str_squish(nature_of_report)\n  ) %&gt;%\n  count(month, nature_of_report) %&gt;%\n  tidyr::pivot_wider(\n    names_from = \"month\",\n    values_from = \"n\"\n  )\n\n# write.csv(cs_chrt_dta, stdout(), row.names = FALSE)\n\ndw_chart_id &lt;- \"tDQ69\"\nif (publish_to_dw) {\n  dw_data_to_chart(cs_chrt_dta, dw_chart_id, parse_dates = FALSE)\n  dw_publish_chart(dw_chart_id, return_urls = FALSE) \n}\n\nData in tDQ69 successfully updated.\n\n\nChart tDQ69 published!\n\n\n\nvrh_per_month &lt;- read_csv(\n    here(\"data/ridership/fy26_urban_ridership.csv\")\n  ) %&gt;%\n  group_by(month) %&gt;%\n  summarise(\n    total_vrh = sum(total_vrh)\n  ) %&gt;%\n  ungroup() %&gt;%\n  mutate(\n    year = if_else(month %in% month.name[7:12], 2025L, 2026L),\n    month_start = as.Date(\n      paste(\"1\", month, year),\n      format = \"%d %B %Y\"\n    )\n  )\n\ncs_per_month &lt;- cs_clean %&gt;%\n  count(month, name = \"cs_interactions\")\n\ncs_per_vh_per_month &lt;- left_join(\n    vrh_per_month,\n    cs_per_month,\n    by = c(\"month_start\"=\"month\")\n  ) %&gt;%\n  mutate(\n    interactions_per_1000_vrh = cs_interactions / total_vrh * 1000\n  ) %&gt;%\n  select(month_start, cs_interactions, total_vrh , interactions_per_1000_vrh) %&gt;%\n  rename(month = month_start)\n\nwrite_csv(cs_per_month, here(\"data/customer_service/customer_service_interactions.csv\"))\n\n\nfy_to_date_interactions_per_1000_vrh &lt;- (\n  sum(cs_per_vh_per_month$cs_interactions) /\n  sum(cs_per_vh_per_month$total_vrh)) * 1000\n\nfy_to_date_interactions_per_1000_vrh\n\n[1] 5.601971"
+  },
+  {
     "objectID": "fare_tracker.html",
     "href": "fare_tracker.html",
     "title": "GMT Fare Tracker",
@@ -82,6 +138,13 @@
     "title": "GMT Fare Tracker",
     "section": "Partner Transactions",
     "text": "Partner Transactions\nPartner programs provide ride access through agreements with organizations such as schools, employers, and community groups. These transactions are included in the Sponsored Fare group and funded through Partner sources.\nWhile most partner programs are administered through accounts or rider IDs, Single-ride vouchers are distributed by community organizations and are valid for one trip. These vouchers began being tracked in February 2026.\nOnly partner programs that account for at least 1% of average monthly ridership are displayed below.\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
+  },
+  {
+    "objectID": "on_time_performance.html",
+    "href": "on_time_performance.html",
+    "title": "GMT Open Data",
+    "section": "",
+    "text": "library(httr)\nlibrary(readr)\nlibrary(dplyr)\nlibrary(here)\nlibrary(lubridate)\nlibrary(tidyr)\nlibrary(DatawRappr)\n\ni_am(\"on_time_performance.qmd\")\n\n\npublish_to_dw &lt;- TRUE\n\n\nswiftly_api_key &lt;- Sys.getenv(\"SWIFTLY_API_KEY\")\nswiftly_agency_key &lt;- Sys.getenv(\"SWIFTLY_AGENCY_KEY\")\n\nbase_url &lt;- paste0(\n  \"https://api.goswift.ly/otp/\",\n  swiftly_agency_key,\n  \"/otp-stats\"\n)\n\n# Most recent complete month\nlast_complete_month &lt;- floor_date(today(), \"month\") %m-% months(1)\n\n# Last 12 complete months\nmonths &lt;- seq(\n  last_complete_month %m-% months(11),\n  last_complete_month,\n  by = \"month\"\n)\n\nresults &lt;- data.frame()\n\nfor (i in seq_along(months)) {\n\n  month_start &lt;- months[i]\n  month_end &lt;- ceiling_date(month_start, \"month\") - days(1)\n\n  response &lt;- GET(\n    base_url,\n    query = list(\n      startDate = format(month_start, \"%m-%d-%Y\"),\n      endDate = format(month_end, \"%m-%d-%Y\"),\n      allowableEarly = 1,\n      allowableLate = 5,\n      dropOffOnlyStops = \"earliesAsOnTime\",\n      lastStopOfTrip = \"earliesAsOnTime\",\n      stopType = \"scheduleAdherenceStops\",\n      format = \"csv\"\n    ),\n    add_headers(\n      Authorization = swiftly_api_key\n    ),\n    accept(\"text/csv\")\n  )\n\n  stop_for_status(response)\n\n  monthly_df &lt;- response |&gt;\n    content(\"text\", encoding = \"UTF-8\") |&gt;\n    I() |&gt;\n    read_csv() |&gt;\n    mutate(\n      month = month_start\n    )\n\n  results &lt;- bind_rows(results, monthly_df)\n}\n\notp_df &lt;- results\n\n\n# Trying to make these match what I see in the portal\notp_df_tidy &lt;- otp_df %&gt;%\n  pivot_longer(\n    cols = any_of(c(\"num_stops_early\", \"num_stops_late\", \"num_stops_ontime\", \"num_missing_stops_unexplained\", \"num_missing_stops_explained\"))\n  ) %&gt;%\n  select(month, num_scheduled_stops, num_observed_stops, everything()) %&gt;%\n  # filter(name %in% )\n  mutate(\n    pct_otp = value / num_observed_stops,\n    pct_completeness = value / num_scheduled_stops,\n    # Update name\n    variable = case_when(\n      name == \"num_stops_early\" ~ \"Early\",\n      name == \"num_stops_ontime\" ~ \"On time\",\n      name == \"num_stops_late\" ~ \"Late\",\n      name == \"num_missing_stops_unexplained\" ~ \"Missing\",\n      name == \"num_missing_stops_explained\" ~ \"Adjusted\",\n      TRUE ~ NA\n    )\n  ) \n\n\ncompleteness_chrt_dta &lt;- otp_df_tidy %&gt;%\n  mutate(\n    pct_completeness = pct_completeness * 100,\n    variable = case_when(\n      variable %in% c(\"Early\", \"On time\", \"Late\") ~ \"Observed\",\n      TRUE ~ variable\n    ),\n  ) %&gt;%\n  group_by(month, variable) %&gt;%\n  summarise(\n    pct_completeness = sum(pct_completeness)\n  ) %&gt;%\n  ungroup() %&gt;%\n  mutate(\n    variable = factor(variable, levels = c(\"Observed\", \"Missing\", \"Adjusted\"))\n  ) %&gt;%\n  arrange(variable) %&gt;%\n  select(month, variable, pct_completeness) %&gt;%\n  pivot_wider(\n    names_from = \"month\",\n    values_from = \"pct_completeness\"\n  )\n\n`summarise()` has regrouped the output.\nℹ Summaries were computed grouped by month and variable.\nℹ Output is grouped by month.\nℹ Use `summarise(.groups = \"drop_last\")` to silence this message.\nℹ Use `summarise(.by = c(month, variable))` for per-operation grouping\n  (`?dplyr::dplyr_by`) instead.\n\n# write.csv(completeness_chrt_dta, stdout(), row.names = FALSE)\n\ndw_chart_id &lt;- \"A12sD\"\nif (publish_to_dw) {\n  dw_data_to_chart(completeness_chrt_dta, dw_chart_id, parse_dates = FALSE)\n  dw_publish_chart(dw_chart_id, return_urls = FALSE) \n}\n\nData in A12sD successfully updated.\n\nChart A12sD published!\n\n\n\notp_chrt_dta &lt;- otp_df_tidy %&gt;%\n  filter(variable %in% c(\"Early\", \"On time\", \"Late\")) %&gt;%\n  mutate(\n    variable = factor(variable, levels = c(\"Early\", \"On time\", \"Late\"))\n  ) %&gt;%\n  arrange(variable) %&gt;%\n  select(month, variable, pct_otp) %&gt;%\n  pivot_wider(\n    names_from = \"month\",\n    values_from = \"pct_otp\"\n  )\n\n# write.csv(completeness_chrt_dta, stdout(), row.names = FALSE)\n\ndw_chart_id &lt;- \"A12sD\"\nif (publish_to_dw) {\n  dw_data_to_chart(otp_chrt_dta, dw_chart_id, parse_dates = FALSE)\n  dw_publish_chart(dw_chart_id, return_urls = FALSE) \n}\n\nData in A12sD successfully updated.\n\n\nChart A12sD published!"
   },
   {
     "objectID": "ridership_tracker.html",

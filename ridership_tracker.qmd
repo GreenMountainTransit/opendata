@@ -56,6 +56,7 @@ library(DT)
 library(stringr)
 library(readr)
 library(googledrive)
+library(DatawRappr)
 
 load_fonts()
 
@@ -66,12 +67,12 @@ i_am("ridership_tracker.qmd")
 
 ```{r, message=FALSE, echo=FALSE, warning=FALSE}
 
-sync_with_gdrive <- TRUE
+publish_to_dw <- TRUE
+sync_with_gdrive <- FALSE
 
 if (sync_with_gdrive) {
   drive_auth()
 }
-
 
 ```
 
@@ -261,6 +262,55 @@ fig <- get_line_chart(
 )
 
 save_plot(fig, here(paste0("export/gmt_ridership_per_vrh_over_time_all_routes.svg")), chart_height = 2.5)
+
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+## Datawrapper charts
+dw_dta <- totals_dta %>%
+  mutate(
+    month_num = match(month, month.abb),
+    date = as.Date(
+      ifelse(
+        month_num >= 7,
+        paste0("2000-", sprintf("%02d", match(month, month.abb)), "-01"),
+        paste0("2001-", sprintf("%02d", match(month, month.abb)), "-01")
+      )
+    )
+  )
+
+ridership_dw <- dw_dta %>%
+  select(date, total_ridership, fiscal_year) %>%
+  pivot_wider(
+    names_from = "date",
+    values_from = "total_ridership"
+  )
+
+# write.csv(ridership_dw, stdout(), row.names = FALSE)
+
+dw_chart_id <- "WlAlx"
+if (publish_to_dw) {
+  dw_data_to_chart(ridership_dw, dw_chart_id, parse_dates = FALSE)
+  dw_publish_chart(dw_chart_id, return_urls = FALSE) 
+}
+
+
+ridership_per_vrh_dw <- dw_dta %>%
+  select(date, ridership_per_vrh, fiscal_year) %>%
+  pivot_wider(
+    names_from = "date",
+    values_from = "ridership_per_vrh"
+  )
+
+# write.csv(ridership_per_vrh_dw, stdout(), row.names = FALSE)
+
+dw_chart_id <- "Gz99h"
+if (publish_to_dw) {
+  dw_data_to_chart(ridership_per_vrh_dw, dw_chart_id, parse_dates = FALSE)
+  dw_publish_chart(dw_chart_id, return_urls = FALSE) 
+}
 
 ```
 
