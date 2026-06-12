@@ -1,10 +1,3 @@
----
-editor: source
-draft: true
----
-
-
-```{r, warning=FALSE, message=FALSE}
 
 library(httr)
 library(readr)
@@ -14,19 +7,9 @@ library(lubridate)
 library(tidyr)
 library(DatawRappr)
 
-i_am("on_time_performance.qmd")
-
-```
-
-
-```{r}
+i_am("scripts/on_time_performance.R")
 
 publish_to_dw <- TRUE
-
-```
-
-
-```{r, message=FALSE}
 
 swiftly_api_key <- Sys.getenv("SWIFTLY_API_KEY")
 swiftly_agency_key <- Sys.getenv("SWIFTLY_AGENCY_KEY")
@@ -50,10 +33,10 @@ months <- seq(
 results <- data.frame()
 
 for (i in seq_along(months)) {
-
+  
   month_start <- months[i]
   month_end <- ceiling_date(month_start, "month") - days(1)
-
+  
   response <- GET(
     base_url,
     query = list(
@@ -73,9 +56,9 @@ for (i in seq_along(months)) {
     ),
     accept("text/csv")
   )
-
+  
   stop_for_status(response)
-
+  
   monthly_df <- response |>
     content("text", encoding = "UTF-8") |>
     I() |>
@@ -83,17 +66,11 @@ for (i in seq_along(months)) {
     mutate(
       month = month_start
     )
-
+  
   results <- bind_rows(results, monthly_df)
 }
 
 otp_df <- results
-
-
-```
-
-
-```{r}
 
 # Trying to make these match what I see in the portal
 otp_df_tidy <- otp_df %>%
@@ -115,11 +92,6 @@ otp_df_tidy <- otp_df %>%
       TRUE ~ NA
     )
   ) 
-
-```
-
-
-```{r}
 
 completeness_chrt_dta <- otp_df_tidy %>%
   mutate(
@@ -144,7 +116,6 @@ completeness_chrt_dta <- otp_df_tidy %>%
     values_from = "pct_completeness"
   )
 
-# write.csv(completeness_chrt_dta, stdout(), row.names = FALSE)
 
 dw_chart_id <- "ZEdGM"
 if (publish_to_dw) {
@@ -152,11 +123,6 @@ if (publish_to_dw) {
   dw_publish_chart(dw_chart_id, return_urls = FALSE) 
 }
 
-
-```
-
-
-```{r}
 
 otp_chrt_dta <- otp_df_tidy %>%
   filter(variable %in% c("Early", "On time", "Late")) %>%
@@ -171,18 +137,11 @@ otp_chrt_dta <- otp_df_tidy %>%
     values_from = "pct_otp"
   )
 
-# write.csv(completeness_chrt_dta, stdout(), row.names = FALSE)
 
 dw_chart_id <- "A12sD"
 if (publish_to_dw) {
   dw_data_to_chart(otp_chrt_dta, dw_chart_id, parse_dates = FALSE)
   dw_publish_chart(dw_chart_id, return_urls = FALSE) 
 }
-
-
-```
-
-
-
 
 

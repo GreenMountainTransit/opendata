@@ -1,11 +1,3 @@
----
-editor: source
-draft: true
----
-
-
-```{r, warning=FALSE, message=FALSE}
-
 library(dplyr)
 library(readr)
 library(googlesheets4)
@@ -15,12 +7,7 @@ library(stringr)
 library(tibble)
 library(DatawRappr)
 
-i_am("dropped_runs.qmd")
-
-```
-
-
-```{r}
+i_am("scripts/dropped_runs.R")
 
 publish_to_dw <- TRUE
 
@@ -33,27 +20,22 @@ all_months <- tibble::tibble()
 for (m in months) {
   
   month_data <- read_sheet(ss, sheet = m) %>%
-      janitor::clean_names() %>%
-      mutate(month = m,) %>%
-      mutate(
-        date_click_twice_for_calendar = as.character(date_click_twice_for_calendar),
-        route_affected = as.character(route_affected),
-        run_affected_24hr_format = as.character(run_affected_24hr_format),
-        driver = as.character(driver),
-        bus = as.character(bus),
-        reason = as.character(reason),
-        reason_detail = as.character(reason_detail),
-        notes = as.character(notes)
-      )
-
+    janitor::clean_names() %>%
+    mutate(month = m,) %>%
+    mutate(
+      date_click_twice_for_calendar = as.character(date_click_twice_for_calendar),
+      route_affected = as.character(route_affected),
+      run_affected_24hr_format = as.character(run_affected_24hr_format),
+      driver = as.character(driver),
+      bus = as.character(bus),
+      reason = as.character(reason),
+      reason_detail = as.character(reason_detail),
+      notes = as.character(notes)
+    )
+  
   all_months <- bind_rows(all_months, month_data)
   
 }
-
-```
-
-
-```{r}
 
 dropped_runs_chrt_dta <- all_months %>%
   mutate(
@@ -67,14 +49,11 @@ dropped_runs_chrt_dta <- all_months %>%
   count(month_start, reason) %>%
   pivot_wider(names_from = "month_start", values_from = "n")
 
-# write.csv(dropped_runs_chrt_dta, stdout(), row.names = FALSE)
 
 dw_chart_id <- "uLNyj"
 if (publish_to_dw) {
   dw_data_to_chart(dropped_runs_chrt_dta, dw_chart_id, parse_dates = FALSE)
   dw_publish_chart(dw_chart_id, return_urls = FALSE) 
 }
-
-```
 
 

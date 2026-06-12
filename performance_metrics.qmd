@@ -45,6 +45,13 @@ img {
 
 </style>
 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+here::i_am("performance_metrics.qmd")
+
+```
+
 ## Ridership  
 
 Ridership is a key indicator of transit demand and usage.
@@ -69,7 +76,7 @@ On-time performance reflects the consistency and dependability of our service.
 
 ## Data quality  
 
-Data completeness helps ensure on-time performance metrics are accurate and representative.
+Data completeness helps ensure on-time performance metrics are accurate and reflects how consistently GMT's technology systems are being used in daily operations.
 
 <iframe title="Data Completeness" aria-label="Stacked column chart" id="datawrapper-chart-ZEdGM" src="https://datawrapper.dwcdn.net/ZEdGM/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="458" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 
@@ -81,7 +88,19 @@ Dropped runs represent scheduled trips that could not be operated as planned.
 
 ## Customer Feedback  
 
-Customer service contacts provide insight into rider questions, concerns, and feedback.
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+cs_per_vh_per_month <- readr::read_csv(here::here("data/customer_service/customer_service_interactions.csv"))
+
+fy_to_date_interactions_per_1000_vrh <- scales::comma(
+  (sum(cs_per_vh_per_month$cs_interactions) / sum(cs_per_vh_per_month$total_vrh)) * 1000,
+  accuracy = .1
+)
+
+```
+
+Customer service contacts provide insight into rider questions, concerns, and feedback. Fiscal year-to-date, 
+GMT has recorded an average of **`r fy_to_date_interactions_per_1000_vrh`** customer service interactions for every 1,000 hours of service operated.
 
 <iframe title="Customer Service Contacts" aria-label="Stacked column chart" id="datawrapper-chart-tDQ69" src="https://datawrapper.dwcdn.net/tDQ69/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="509" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 
