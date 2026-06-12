@@ -107,7 +107,7 @@ completeness_chrt_dta <- otp_df_tidy %>%
   ) %>%
   ungroup() %>%
   mutate(
-    variable = factor(variable, levels = c("Observed", "Missing", "Adjusted"))
+    variable = factor(variable, levels = c("Observed", "Adjusted", "Missing"))
   ) %>%
   arrange(variable) %>%
   select(month, variable, pct_completeness) %>%
