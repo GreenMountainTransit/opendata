@@ -25,7 +25,7 @@
     "href": "performance_metrics.html#data-quality",
     "title": "Performance Metrics",
     "section": "Data quality",
-    "text": "Data quality\nData completeness helps ensure on-time performance metrics are accurate and representative."
+    "text": "Data quality\nData completeness helps ensure on-time performance metrics are accurate and reflects how consistently GMT’s technology systems are being used in daily operations."
   },
   {
     "objectID": "performance_metrics.html#missed-service",
@@ -39,7 +39,42 @@
     "href": "performance_metrics.html#customer-feedback",
     "title": "Performance Metrics",
     "section": "Customer Feedback",
-    "text": "Customer Feedback\nCustomer service contacts provide insight into rider questions, concerns, and feedback. Fiscal year-to-date, GMT has recorded an average of 5.6 customer service interactions for every 1,000 hours of service operated."
+    "text": "Customer Feedback\nCustomer service contacts provide insight into rider questions, concerns, and feedback. Fiscal year-to-date, GMT has recorded an average of 5.6 customer service interactions for every 1,000 hours of service operated.\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
+  },
+  {
+    "objectID": "fare_tracker.html",
+    "href": "fare_tracker.html",
+    "title": "GMT Fare Tracker",
+    "section": "",
+    "text": "This dashboard provides detailed fare transaction information for Green Mountain Transit’s urban service area in Chittenden County. GMT’s rural services are fare-free and are not included in these totals.\nEach time a rider boards a bus and validates a fare, a fare transaction is recorded. This dashboard summarizes those transactions in three different ways:\nThese categories help show who is riding, what fares they use, and how rides are paid for.\nAdditional information on partner transactions is also provided below.\nPlease note that fare data is compiled from multiple systems and may contain errors or inconsistencies. We make every effort to process, reconcile, and format the data accurately, but some error may remain.\nData downloads are available at GMT’s open data site.\nTo learn more about GMT’s fare structure, visit the GMT Fares webpage. If you have feedback or questions, please complete our feedback form or contact planning@ridegmt.com."
+  },
+  {
+    "objectID": "fare_tracker.html#fare-group",
+    "href": "fare_tracker.html#fare-group",
+    "title": "GMT Fare Tracker",
+    "section": "Fare Group",
+    "text": "Fare Group\nFare Group shows the broad category of fare used for a ride.\nThe three Fare Groups are:\n\nRegular Fare – standard fares available to all riders\n\nDiscounted Fare – reduced fares available to eligible riders, such as seniors, youth, or riders with disabilities\n\nSponsored Fare – rides funded by partner organizations such as schools, employers, or community programs"
+  },
+  {
+    "objectID": "fare_tracker.html#fare-capture-method",
+    "href": "fare_tracker.html#fare-capture-method",
+    "title": "GMT Fare Tracker",
+    "section": "Fare Capture Method",
+    "text": "Fare Capture Method\nFare Capture Method describes how the fare was validated when the rider boarded the bus.\nCategories include:\n\nCash – cash paid at the farebox\n\nMobile – a mobile ticket scanned from a phone\n\nSmart Card – a smart card tapped at the farebox\n\nFarebox Key – a driver-entered category used for certain eligible riders (for example, students at partner schools).\n\nID Card – an institutional ID card swiped at the farebox\n\nCredit Card – a credit card tapped at the farebox\n\nChanges in this chart may reflect shifts in how riders choose to pay or how fares are recorded."
+  },
+  {
+    "objectID": "fare_tracker.html#fare-funding-source",
+    "href": "fare_tracker.html#fare-funding-source",
+    "title": "GMT Fare Tracker",
+    "section": "Fare Funding Source",
+    "text": "Fare Funding Source\nFare Funding Source shows who ultimately pays for the ride.\nCategories include:\n\nFare – the rider paid the fare directly\n\nPartner – a partner organization, such as a school, employer, or social service program, paid for the ride\n\nFare Cap – the ride was covered through a daily or monthly fare cap program\n\nAgency – GMT covered the cost of the ride, such as for a Free Ride"
+  },
+  {
+    "objectID": "fare_tracker.html#partner-transactions",
+    "href": "fare_tracker.html#partner-transactions",
+    "title": "GMT Fare Tracker",
+    "section": "Partner Transactions",
+    "text": "Partner Transactions\nPartner programs provide ride access through agreements with organizations such as schools, employers, and community groups. These transactions are included in the Sponsored Fare group and funded through Partner sources.\nWhile most partner programs are administered through accounts or rider IDs, Single-ride vouchers are distributed by community organizations and are valid for one trip. These vouchers began being tracked in February 2026.\nOnly partner programs that account for at least 1% of average monthly ridership are displayed below.\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
   },
   {
     "objectID": "index.html",
@@ -89,48 +124,6 @@
     "title": "Green Mountain Transit Open Data",
     "section": "Contact and Feedback",
     "text": "Contact and Feedback\nQuestions, feedback, or issue reports are welcome and may be submitted through this feedback form, our Github repository, or by contacting planning@ridegmt.com.\nPublic feedback helps improve data quality, documentation, and usability."
-  },
-  {
-    "objectID": "customer_service.html",
-    "href": "customer_service.html",
-    "title": "GMT Open Data",
-    "section": "",
-    "text": "library(dplyr)\nlibrary(readr)\nlibrary(googlesheets4)\nlibrary(here)\nlibrary(tidyr)\nlibrary(stringr)\nlibrary(tibble)\nlibrary(lubridate)\nlibrary(DatawRappr)\n\ni_am(\"customer_service.qmd\")\n\n\npublish_to_dw &lt;- FALSE\n\nss &lt;- \"1S1tGCbf9WAe4Bgczxmmk-oo0HLit3MsyQ-WoEP7aU2Q\"\n\ncs_raw &lt;- read_sheet(\n    ss,\n    sheet = \"Sheet1\",\n    col_types = c(\n      \"Date of Incident\" = \"c\"\n    )\n  )\n\n! Using an auto-discovered, cached token.\n\n\n  To suppress this message, modify your code or options to clearly consent to\n  the use of a cached token.\n\n\n  See gargle's \"Non-interactive auth\" vignette for more details:\n\n\n  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;\n\n\nℹ The googlesheets4 package is using a cached token for\n  'cblatchly@ridegmt.com'.\n\n\n✔ Reading from \"Customer_Service_Tracking_Updated\".\n\n\n✔ Range ''Sheet1''.\n\n\n\ncs_clean &lt;- cs_raw %&gt;% \n  janitor::clean_names() %&gt;%\n  mutate(\n    \n    ## Date Processing\n    date_clean = date_of_incident %&gt;%\n      str_squish() %&gt;%\n      str_remove_all(\"\\\\s+\") %&gt;%\n      str_extract(\"^\\\\d+/\\\\d+/?\\\\d*\"),\n\n    date = mdy(date_clean),\n\n    guessed_year = coalesce(\n      year(lag(date)),\n      year(lead(date))\n    ),\n\n    date_try2 = if_else(\n      is.na(date),\n      paste0(date_clean, \"/\", guessed_year),\n      NA_character_\n    ),\n\n    date = coalesce(\n      date,\n      mdy(date_try2)\n    ),\n    \n    # Useful columns\n    month = lubridate::floor_date(date, unit = \"month\")\n  ) %&gt;%\n  filter(month &gt;= make_date(year = 2025, month = 7, day = 1)) %&gt;%\n  select(date_of_incident, date, date_clean, -date_try2, -guessed_year, everything())\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `date = mdy(date_clean)`.\nCaused by warning:\n!  5 failed to parse.\n\n\n\ncs_chrt_dta &lt;- cs_clean %&gt;%\n  select(month, nature_of_report) %&gt;%\n  separate_rows(nature_of_report, sep = \",\") %&gt;%\n  mutate(\n    nature_of_report = stringr::str_squish(nature_of_report)\n  ) %&gt;%\n  count(month, nature_of_report) %&gt;%\n  tidyr::pivot_wider(\n    names_from = \"month\",\n    values_from = \"n\"\n  )\n\n# write.csv(cs_chrt_dta, stdout(), row.names = FALSE)\n\ndw_chart_id &lt;- \"tDQ69\"\nif (publish_to_dw) {\n  dw_data_to_chart(cs_chrt_dta, dw_chart_id, parse_dates = FALSE)\n  dw_publish_chart(dw_chart_id, return_urls = FALSE) \n}\n\n\nvrh_per_month &lt;- read_csv(\n    here(\"data/ridership/fy26_urban_ridership.csv\")\n  ) %&gt;%\n  group_by(month) %&gt;%\n  summarise(\n    total_vrh = sum(total_vrh)\n  ) %&gt;%\n  ungroup() %&gt;%\n  mutate(\n    year = if_else(month %in% month.name[7:12], 2025L, 2026L),\n    month_start = as.Date(\n      paste(\"1\", month, year),\n      format = \"%d %B %Y\"\n    )\n  )\n\ncs_per_month &lt;- cs_clean %&gt;%\n  count(month, name = \"cs_interactions\")\n\ncs_per_vh_per_month &lt;- left_join(\n    vrh_per_month,\n    cs_per_month,\n    by = c(\"month_start\"=\"month\")\n  ) %&gt;%\n  mutate(\n    interactions_per_1000_vrh = cs_interactions / total_vrh * 1000\n  ) %&gt;%\n  select(month_start, cs_interactions, total_vrh , interactions_per_1000_vrh) %&gt;%\n  rename(month = month_start)\n\n\n# Note: I wrote this out so that I can read it back in Performance Metrics\nwrite_csv(cs_per_vh_per_month, here(\"data/customer_service/customer_service_interactions.csv\"))"
-  },
-  {
-    "objectID": "fare_tracker.html",
-    "href": "fare_tracker.html",
-    "title": "GMT Fare Tracker",
-    "section": "",
-    "text": "This dashboard provides detailed fare transaction information for Green Mountain Transit’s urban service area in Chittenden County. GMT’s rural services are fare-free and are not included in these totals.\nEach time a rider boards a bus and validates a fare, a fare transaction is recorded. This dashboard summarizes those transactions in three different ways:\nThese categories help show who is riding, what fares they use, and how rides are paid for.\nAdditional information on partner transactions is also provided below.\nPlease note that fare data is compiled from multiple systems and may contain errors or inconsistencies. We make every effort to process, reconcile, and format the data accurately, but some error may remain.\nData downloads are available at GMT’s open data site.\nTo learn more about GMT’s fare structure, visit the GMT Fares webpage. If you have feedback or questions, please complete our feedback form or contact planning@ridegmt.com."
-  },
-  {
-    "objectID": "fare_tracker.html#fare-group",
-    "href": "fare_tracker.html#fare-group",
-    "title": "GMT Fare Tracker",
-    "section": "Fare Group",
-    "text": "Fare Group\nFare Group shows the broad category of fare used for a ride.\nThe three Fare Groups are:\n\nRegular Fare – standard fares available to all riders\n\nDiscounted Fare – reduced fares available to eligible riders, such as seniors, youth, or riders with disabilities\n\nSponsored Fare – rides funded by partner organizations such as schools, employers, or community programs"
-  },
-  {
-    "objectID": "fare_tracker.html#fare-capture-method",
-    "href": "fare_tracker.html#fare-capture-method",
-    "title": "GMT Fare Tracker",
-    "section": "Fare Capture Method",
-    "text": "Fare Capture Method\nFare Capture Method describes how the fare was validated when the rider boarded the bus.\nCategories include:\n\nCash – cash paid at the farebox\n\nMobile – a mobile ticket scanned from a phone\n\nSmart Card – a smart card tapped at the farebox\n\nFarebox Key – a driver-entered category used for certain eligible riders (for example, students at partner schools).\n\nID Card – an institutional ID card swiped at the farebox\n\nCredit Card – a credit card tapped at the farebox\n\nChanges in this chart may reflect shifts in how riders choose to pay or how fares are recorded."
-  },
-  {
-    "objectID": "fare_tracker.html#fare-funding-source",
-    "href": "fare_tracker.html#fare-funding-source",
-    "title": "GMT Fare Tracker",
-    "section": "Fare Funding Source",
-    "text": "Fare Funding Source\nFare Funding Source shows who ultimately pays for the ride.\nCategories include:\n\nFare – the rider paid the fare directly\n\nPartner – a partner organization, such as a school, employer, or social service program, paid for the ride\n\nFare Cap – the ride was covered through a daily or monthly fare cap program\n\nAgency – GMT covered the cost of the ride, such as for a Free Ride"
-  },
-  {
-    "objectID": "fare_tracker.html#partner-transactions",
-    "href": "fare_tracker.html#partner-transactions",
-    "title": "GMT Fare Tracker",
-    "section": "Partner Transactions",
-    "text": "Partner Transactions\nPartner programs provide ride access through agreements with organizations such as schools, employers, and community groups. These transactions are included in the Sponsored Fare group and funded through Partner sources.\nWhile most partner programs are administered through accounts or rider IDs, Single-ride vouchers are distributed by community organizations and are valid for one trip. These vouchers began being tracked in February 2026.\nOnly partner programs that account for at least 1% of average monthly ridership are displayed below.\n\n\n\n\n© 2026 Green Mountain Transit. Data provided as-is and subject to revision."
   },
   {
     "objectID": "ridership_tracker.html",

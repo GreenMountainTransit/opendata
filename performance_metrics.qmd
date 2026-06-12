@@ -1,5 +1,7 @@
 ---
 title: "Performance Metrics"
+metadata:
+  robots: noindex,nofollow
 format: 
   html:
     self-contained: true   # embed all images, CSS, JS in the HTML
@@ -105,5 +107,8 @@ GMT has recorded an average of **`r fy_to_date_interactions_per_1000_vrh`** cust
 <iframe title="Customer Service Contacts" aria-label="Stacked column chart" id="datawrapper-chart-tDQ69" src="https://datawrapper.dwcdn.net/tDQ69/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="509" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 
 
+<div class="dashboard-footer">
+  © 2026 [Green Mountain Transit](https://ridegmt.com/). Data provided as-is and subject to revision.
+</div>
 
 
