@@ -18,7 +18,7 @@
     "href": "performance_metrics.html#reliability",
     "title": "Performance Metrics",
     "section": "Reliability",
-    "text": "Reliability\nOn-time performance reflects the consistency and dependability of our service."
+    "text": "Reliability\nOn-time performance reflects the consistency and dependability of our service. On-time is defined as an arrival occurring no more than 1 minute early and no more than 5 minutes late relative to the scheduled arrival time."
   },
   {
     "objectID": "performance_metrics.html#data-quality",

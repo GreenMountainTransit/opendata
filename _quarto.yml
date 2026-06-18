@@ -19,8 +19,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      # - href: performance_metrics.html
-      #   text: Performance Metrics
+      - href: performance_metrics.html
+        text: Performance Metrics
       - href: ridership_tracker.html
         text: Ridership Dashboard
       - href: fare_tracker.html
