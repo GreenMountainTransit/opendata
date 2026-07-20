@@ -373,6 +373,8 @@ If you have feedback or questions, please complete our [feedback form](https://d
 
 ### All Routes
 
+<em>Note: All Route totals do not include Shopping Special or School Tripper ridership.</em>  
+
 #### Total ridership 
 
 ![](export/gmt_ridership_over_time_all_routes.svg){fig-alt="Line chart of total GMT ridership over time"}  

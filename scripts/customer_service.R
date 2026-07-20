@@ -53,7 +53,10 @@ cs_clean <- cs_raw %>%
     # Useful columns
     month = lubridate::floor_date(date, unit = "month")
   ) %>%
-  filter(month >= make_date(year = 2025, month = 7, day = 1)) %>%
+  filter(
+    month >= floor_date(today(), unit = "month") %m-% months(12),
+    month < floor_date(today(), unit = "month")
+  ) %>%
   select(date_of_incident, date, date_clean, -date_try2, -guessed_year, everything())
 
 
