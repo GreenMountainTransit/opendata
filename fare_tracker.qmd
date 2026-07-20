@@ -84,7 +84,8 @@ fare_months <- c(
   "february",
   "march",
   "april",
-  "may"
+  "may",
+  "june"
 )
 
 ```

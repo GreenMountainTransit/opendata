@@ -68,7 +68,7 @@ i_am("ridership_tracker.qmd")
 ```{r, message=FALSE, echo=FALSE, warning=FALSE}
 
 publish_to_dw <- TRUE
-sync_with_gdrive <- FALSE
+sync_with_gdrive <- TRUE
 
 if (sync_with_gdrive) {
   drive_auth()
