@@ -18,7 +18,7 @@
     "href": "performance_metrics.html#reliability",
     "title": "Performance Metrics",
     "section": "Reliability",
-    "text": "Reliability\nOn-time performance reflects the consistency and dependability of our service. On-time is defined as an arrival occurring no more than 1 minute early and no more than 5 minutes late relative to the scheduled arrival time.\nOn-time performance is measured at timepoints. These are designated stops along a route where buses are scheduled to arrive at a specific time."
+    "text": "Reliability\nOn-time performance reflects the consistency and dependability of our service.\nOn-time is defined as a departure occurring no more than 1 minute early and no more than 5 minutes late relative to the scheduled departure time. On-time performance is measured at timepoints. These are designated stops along a route where buses are scheduled to depart at a specific time."
   },
   {
     "objectID": "performance_metrics.html#data-quality",
@@ -109,7 +109,7 @@
     "href": "index.html#boarding-estimates-by-stop",
     "title": "Green Mountain Transit Open Data",
     "section": "Boarding Estimates by Stop",
-    "text": "Boarding Estimates by Stop\nEstimated boardings by stop can be explored in the Boarding Estimates by Stop Dashboard.\nStop-level boarding estimates are produced by matching fare transaction timestamps to vehicle GPS locations and associating each transaction with the nearest stop along the route based on the latest GTFS feed. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.\nImportant considerations:\n\nStop-level estimates will not sum to published ridership totals\n\nStop-level data should not be aggregated to the route level\n\nRoute-level analysis should use the ridership datasets above\n\nBecause stop assignments are based on the GTFS feed at the time of processing, some historical transactions may be attributed to stops that were not in service at the time.\n\n\nStop Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY26 boarding estimates by stop\nCSV"
+    "text": "Boarding Estimates by Stop\nEstimated boardings by stop can be explored in the Boarding Estimates by Stop Dashboard.\nStop-level boarding estimates are produced by matching fare transaction timestamps to vehicle GPS locations and associating each transaction with the nearest stop along the route using GTFS data. To simplify analysis, each calendar month is assigned a single representative GTFS feed. For example, all March 2026 transactions use the March 9, 2026 BID GTFS, even though the first eight days of the month operated under the previous BID. As a result, some historical transactions may be assigned to stops that were not yet in service at the time.\nBecause these estimates rely on spatial and temporal inference, they should be interpreted as approximate.\nImportant considerations:\n\nStop-level estimates will not sum to published ridership totals\n\nStop-level data should not be aggregated to the route level\n\nRoute-level analysis should use the ridership datasets above\n\nBecause stop assignments are based on the GTFS feed at the time of processing, some historical transactions may be attributed to stops that were not in service at the time.\n\n\nStop Data Downloads\n\n\n\nDataset\nDownload\n\n\n\n\nFY26 boarding estimates by stop\nCSV"
   },
   {
     "objectID": "index.html#data-limitations-and-use",

@@ -237,7 +237,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="boarding-estimates-by-stop" class="level2">
 <h2 class="anchored" data-anchor-id="boarding-estimates-by-stop">Boarding Estimates by Stop</h2>
 <p>Estimated boardings by stop can be explored in the <strong><a href="https://gmtransit.maps.arcgis.com/apps/dashboards/1e816fda88fe4a589ef6ec582dcccdf2">Boarding Estimates by Stop Dashboard</a></strong>.</p>
-<p>Stop-level boarding estimates are produced by matching fare transaction timestamps to vehicle GPS locations and associating each transaction with the nearest stop along the route based on the latest GTFS feed. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.</p>
+<p>Stop-level boarding estimates are produced by matching fare transaction timestamps to vehicle GPS locations and associating each transaction with the nearest stop along the route using GTFS data. To simplify analysis, each calendar month is assigned a single representative GTFS feed. For example, all March 2026 transactions use the March 9, 2026 BID GTFS, even though the first eight days of the month operated under the previous BID. As a result, some historical transactions may be assigned to stops that were not yet in service at the time.</p>
+<p>Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.</p>
 <p>Important considerations:</p>
 <ul>
 <li>Stop-level estimates will not sum to published ridership totals<br>

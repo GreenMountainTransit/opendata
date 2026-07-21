@@ -69,7 +69,13 @@ Estimated boardings by stop can be explored in the **<a href="https://gmtransit.
 
 Stop-level boarding estimates are produced by matching fare transaction timestamps to 
 vehicle GPS locations and associating each transaction with the nearest stop along the 
-route based on the latest GTFS feed. Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.
+route using GTFS data. To simplify analysis, each calendar month is 
+assigned a single representative GTFS feed. For example, all March 2026 transactions 
+use the March 9, 2026 BID GTFS, even though the first eight days of the month operated under the previous BID. 
+As a result, some historical transactions may be assigned to stops that were not yet 
+in service at the time.
+
+Because these estimates rely on spatial and temporal inference, they should be interpreted as approximate.
 
 Important considerations:
 
