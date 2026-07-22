@@ -61,32 +61,42 @@ i_am("fare_tracker.qmd")
 
 ```{r, echo=FALSE, message=FALSE}
 
-publish_to_dw <- TRUE
+publish_to_dw <- FALSE
 
-sync_with_gdrive <- TRUE
+sync_with_gdrive <- FALSE
 
 ```
 
 
 ```{r, echo=FALSE}
 
-fy <- "fy26"
+# Most recent complete month
+latest_complete_month <- floor_date(today(), "month") - months(1)
 
-## Edit this each month with the new month!!
-fare_months <- c(
-  "july",
-  "august",
-  "september",
-  "october",
-  "november",
-  "december",
-  "january",
-  "february",
-  "march",
-  "april",
-  "may",
-  "june"
-)
+# Rolling 12 complete months
+reporting_months <- tibble(
+  month_date = seq(
+    from = latest_complete_month - months(11),
+    to = latest_complete_month,
+    by = "1 month"
+  )
+) %>%
+  mutate(
+    year = year(month_date),
+    month = month(month_date),
+    month_name = str_to_lower(
+      month(month_date, label = TRUE, abbr = FALSE)
+    ),
+    fiscal_year = if_else(
+      month >= 7,
+      year + 1L,
+      year
+    ),
+    fy = paste0(
+      "fy",
+      str_sub(fiscal_year, -2)
+    )
+  )
 
 ```
 
@@ -103,35 +113,53 @@ if (sync_with_gdrive) {
 ```{r, echo=FALSE, message=FALSE}
 
 # Load all merged transaction data
-all_dta <- tibble::tibble()
+all_dta <- tibble()
 
-for (mo in fare_months) {
-  
-  merged_transactions_fpath <- here(
-    paste0("data-raw/", fy, "_", mo, "_merged_transaction_records.csv")
+for (i in seq_len(nrow(reporting_months))) {
+
+  fy_i <- reporting_months$fy[i]
+  month_name_i <- reporting_months$month_name[i]
+
+  filename <- paste0(
+    fy_i,
+    "_",
+    month_name_i,
+    "_merged_transaction_records.csv"
   )
-  
+
+  merged_transactions_fpath <- here(
+    "data-raw",
+    filename
+  )
+
   if (sync_with_gdrive) {
-  
+
     merged_transactions_gdrive <- drive_get(
-      paste0("coredata/processed/", fy, "_", mo, "_merged_transaction_records.csv")
+      paste0(
+        "coredata/processed/",
+        filename
+      )
     )
-    
+
     drive_download(
       merged_transactions_gdrive,
       path = merged_transactions_fpath,
       overwrite = TRUE
     )
-    
   }
-  
+
   mo_dta <- read_csv(
     merged_transactions_fpath,
-    locale = readr::locale(tz = "America/New_York")
+    locale = readr::locale(
+      tz = "America/New_York"
+    ),
+    show_col_types = FALSE
   )
-  
-  all_dta <- bind_rows(all_dta, mo_dta)
-  
+
+  all_dta <- bind_rows(
+    all_dta,
+    mo_dta
+  )
 }
 
 ```
@@ -164,26 +192,72 @@ all_dta_clean <- all_dta %>%
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-monthly_mobile_fare_cap_fpath <- here("data-raw/fy26_monthly_mobile_fare_cap_totals.csv")
+fiscal_years_needed <- reporting_months %>%
+  distinct(fy) %>%
+  pull(fy)
 
-if (sync_with_gdrive) {
-  
-  monthly_mobile_fare_cap_gdrive <- drive_get(
-    "coredata/processed/fy26_monthly_mobile_fare_cap_totals.csv")
-  
-  drive_download(
-    monthly_mobile_fare_cap_gdrive,
-    path = monthly_mobile_fare_cap_fpath,
-    overwrite = TRUE
+monthly_mobile_fare_cap_totals <- tibble()
+
+for (fy_i in fiscal_years_needed) {
+
+  filename <- paste0(
+    fy_i,
+    "_monthly_mobile_fare_cap_totals.csv"
   )
-  
+
+  monthly_mobile_fare_cap_fpath <- here(
+    "data-raw",
+    filename
+  )
+
+  if (sync_with_gdrive) {
+
+    monthly_mobile_fare_cap_gdrive <- drive_get(
+      paste0(
+        "coredata/processed/",
+        filename
+      )
+    )
+
+    drive_download(
+      monthly_mobile_fare_cap_gdrive,
+      path = monthly_mobile_fare_cap_fpath,
+      overwrite = TRUE
+    )
+  }
+
+  fy_mobile_fare_cap <- read_csv(
+    monthly_mobile_fare_cap_fpath,
+    show_col_types = FALSE
+  )
+
+  monthly_mobile_fare_cap_totals <- bind_rows(
+    monthly_mobile_fare_cap_totals,
+    fy_mobile_fare_cap
+  )
 }
 
-fy26_monthly_mobile_fare_cap_totals <- read_csv(monthly_mobile_fare_cap_fpath)
+monthly_mobile_fare_cap_totals <-
+  monthly_mobile_fare_cap_totals %>%
+  mutate(
+    month = match(month_full, month.abb),
+    month_date = make_date(year, month, 1)
+  ) %>%
+  filter(
+    month_date %in% reporting_months$month_date
+  )
 
-fy26_monthly_fare_cap_subtraction_totals <- fy26_monthly_mobile_fare_cap_totals %>%
-  group_by(year, month_full, subtract_from_col) %>%
-  summarise(fare_cap_count = sum(fare_cap_count))
+monthly_fare_cap_subtraction_totals <-
+  monthly_mobile_fare_cap_totals %>%
+  group_by(
+    year,
+    month_full,
+    subtract_from_col
+  ) %>%
+  summarise(
+    fare_cap_count = sum(fare_cap_count),
+    .groups = "drop"
+  )
 
 ```
 
@@ -194,9 +268,33 @@ fare_dta <- all_dta_clean %>%
   mutate(
     month = lubridate::month(date_and_time, label = FALSE, abbr = FALSE),
     month_full = lubridate::month(date_and_time, label = TRUE, abbr = TRUE),
-    year = lubridate::year(date_and_time)
+    year = lubridate::year(date_and_time),
+    month_date = floor_date(date_and_time, "month")
   ) %>%
   filter(fare_type != "Non-fare")
+
+```
+
+
+```{r}
+
+current_fy <- last(reporting_months$fy)
+
+current_fy_months <- reporting_months %>%
+  filter(fy == current_fy) %>%
+  pull(month_date) %>%
+  as.character()
+
+fare_dta_current_fy <- fare_dta %>%
+  mutate(
+    month_date = make_date(year, month, 1)
+  ) %>%
+  semi_join(
+    reporting_months %>%
+      filter(fy == current_fy) %>%
+      select(month_date),
+    by = "month_date"
+  )
 
 ```
 
@@ -205,14 +303,10 @@ fare_dta <- all_dta_clean %>%
 
 ## FARE GROUP BY ROUTE
 
-# Create monthly totals by route, and both Fare Type and Group
-monthly_fare_dta_by_route <- fare_dta %>%
-  count(month, year, fare_group, fare_type, general_route, name = "count")
-
 # Create monthly totals by route and Fare Group
 valid_routes <- c(1, 2, 4, 5, 6, 7, 8, 9, 11, 86, 56, 96) 
 
-monthly_fare_group_by_route <- fare_dta %>% 
+monthly_fare_group_by_route <- fare_dta_current_fy %>% 
   filter(
     general_route %in% valid_routes
   ) %>%
@@ -228,7 +322,7 @@ monthly_fare_group_by_route <- fare_dta %>%
 
 readr::write_csv(
   monthly_fare_group_by_route,
-  here("data/fares/fy26_fare_group_monthly_totals_by_route.csv")
+  here(paste0("data/fares/", current_fy, "_fare_group_monthly_totals_by_route.csv"))
 )
 
 ```
@@ -238,20 +332,19 @@ readr::write_csv(
 
 ## FARE GROUP totals by month
 
-fare_group_counts <- fare_dta %>%
-  count(fare_group, name = "count") %>%
-  mutate(pct = count / sum(count))
-
 fare_group_counts_by_month <- fare_dta %>%
-  count(year, month, fare_group, name = "count") %>%
+  count(year, month, month_date, fare_group, name = "count") %>%
   group_by(year, month) %>%
   mutate(pct = count / sum(count)) %>%
   ungroup()
 
-write_csv(fare_group_counts_by_month, here("data/fares/fy26_fare_group_monthly_totals.csv"))
+fare_group_counts_by_month %>%
+  mutate(month_date = as.character(month_date)) %>%
+  filter(month_date %in% current_fy_months) %>%
+  write_csv(here(paste0("data/fares/", current_fy, "_fare_group_monthly_totals.csv")))
 
 dw_export_fare_groups <- fare_group_counts_by_month %>%
-  mutate(month_year = make_date(year, month, 1)) %>%
+  rename(month_year = month_date) %>%
   select(-c(month, year, pct)) %>%
   pivot_wider(
     names_from = month_year,
@@ -271,7 +364,7 @@ dw_export_fare_groups <- fare_group_counts_by_month %>%
 
 write_csv(
   dw_export_fare_groups,
-  here("data-raw/fy26_fare_group_monthly_totals_DW.csv")
+  here("data-raw/fare_group_monthly_totals_DW.csv")
 )
 
 # Push to the datawrapper chart
@@ -289,11 +382,11 @@ if (publish_to_dw) {
 ## FARE TYPE
 
 fare_type_counts_by_month <- fare_dta %>%
-  count(year, month_full, fare_group, fare_type, name = "count") %>%
+  count(year, month_full, month_date, fare_group, fare_type, name = "count") %>%
   # Join in Mobile Fare Cap data
   left_join(
     .,
-    fy26_monthly_fare_cap_subtraction_totals,
+    monthly_fare_cap_subtraction_totals,
     by = c("year"="year", "month_full"="month_full", "fare_type"="subtract_from_col")
   ) %>%
   mutate(
@@ -301,10 +394,10 @@ fare_type_counts_by_month <- fare_dta %>%
   ) %>% 
   bind_rows(
     .,
-    fy26_monthly_mobile_fare_cap_totals %>% 
-      select(year, month_full, fare_group, fare_type, count = fare_cap_count)
+    monthly_mobile_fare_cap_totals %>% 
+      select(year, month_full, month_date, fare_group, fare_type, count = fare_cap_count)
   ) %>%
-  group_by(month_full, year) %>%
+  group_by(month_full, year, month_date) %>%
   mutate(pct = count / sum(count)) %>%
   ungroup() %>%
   select(-fare_cap_count) %>%
@@ -312,10 +405,12 @@ fare_type_counts_by_month <- fare_dta %>%
 
 fare_type_counts_by_month %>%
   mutate(
-    month = match(month_full, month.abb)
+    month = match(month_full, month.abb),
+    month_date = as.character(month_date)
   ) %>%
-  select(year, month, fare_group, fare_type, count, pct) %>%
-  write_csv(here("data-raw/fy26_fare_type_monthly_totals.csv"))
+  filter(month_date %in% current_fy_months) %>%
+  select(year, month, month_date, fare_group, fare_type, count, pct) %>%
+  write_csv(here(paste0("data-raw/", current_fy, "_fare_type_monthly_totals.csv")))
 
 ```
 
@@ -326,7 +421,7 @@ fare_type_counts_by_month %>%
 
 dw_export_partners <- fare_type_counts_by_month %>%
   filter(fare_group == "Sponsored Fare") %>%
-  mutate(month_year = make_date(year, match(month_full, month.abb), 1)) %>%
+  rename(month_year = month_date) %>%
   group_by(fare_type) %>%
   # Filter to only Sponsored Fare Types that, on average, 
   # represent at least 1% of monthly ridership
@@ -350,7 +445,7 @@ if (publish_to_dw) {
 
 write_csv(
   dw_export_partners,
-  here(paste0("data-raw/fy26_major_partner_monthly_totals_DW.csv"))
+  here(paste0("data-raw/major_partner_monthly_totals_DW.csv"))
 )
 
 ```
@@ -360,18 +455,21 @@ write_csv(
 
 ## CAPTURE METHOD
 
-fare_capture_method_monthly_totals <- fare_dta %>%
+fare_capture_method_monthly_totals <- fare_dta_current_fy %>%
   count(year, month, fare_capture_method, name = "count") %>%
   group_by(year, month) %>%
   mutate(pct = count / sum(count)) %>%
   ungroup()
 
 # Open data export
-write_csv(fare_capture_method_monthly_totals, here("data/fares/fy26_fare_capture_method_monthly_totals.csv"))
-
+write_csv(fare_capture_method_monthly_totals, here(paste0("data/fares/", current_fy, "_fare_capture_method_monthly_totals.csv")))
 
 # Now prepare export for DataWrapper
-dw_export_fare_capture_method <- fare_capture_method_monthly_totals %>%
+dw_export_fare_capture_method <- fare_dta %>%
+  count(year, month, fare_capture_method, name = "count") %>%
+  group_by(year, month) %>%
+  mutate(pct = count / sum(count)) %>%
+  ungroup() %>%
   mutate(month_year = make_date(year, month, 1)) %>%
   select(-c(month, year, pct)) %>%
   pivot_wider(
@@ -381,7 +479,7 @@ dw_export_fare_capture_method <- fare_capture_method_monthly_totals %>%
 
 write_csv(
   dw_export_fare_capture_method,
-  here("data-raw/fy26_fare_capture_method_monthly_totals_DW.csv")
+  here("data-raw/fare_capture_method_monthly_totals_DW.csv")
 )
 
 # Push to the Data-Wrapper chart
@@ -399,10 +497,10 @@ if (publish_to_dw) {
 ## FUNDING SOURCE
 
 fare_funding_source_monthly_totals <- fare_dta %>%
-  count(year, month_full, month, fare_type, fare_funding_source, name = "count") %>%
+  count(year, month_full, month, month_date, fare_type, fare_funding_source, name = "count") %>%
   left_join(
     .,
-    fy26_monthly_fare_cap_subtraction_totals,
+    monthly_fare_cap_subtraction_totals,
     by = c("year"="year", "month_full"="month_full", "fare_type"="subtract_from_col")
   ) %>%
   mutate(
@@ -412,14 +510,14 @@ fare_funding_source_monthly_totals <- fare_dta %>%
   # Then add in Mobile Fare Caps
   bind_rows(
     .,
-    fy26_monthly_mobile_fare_cap_totals %>% 
-      select(year, month_full, fare_type, count = fare_cap_count) %>%
+    monthly_mobile_fare_cap_totals %>% 
+      select(year, month_full, month_date, fare_type, count = fare_cap_count) %>%
       mutate(
         month = match(month_full, month.abb),
         fare_funding_source = "Fare Cap"
       )
   ) %>%
-  mutate(month_year = make_date(year, month, 1)) %>%
+  rename(month_year = month_date) %>%
   # This is where the Fare Funding Source values
   # get all summed together
   group_by(
@@ -431,12 +529,14 @@ fare_funding_source_monthly_totals <- fare_dta %>%
   ungroup() 
 
 # Open data export
-fare_funding_source_monthly_totals %>% 
+fare_funding_source_monthly_totals %>%
+  mutate(month_year = as.character(month_year)) %>%
+  filter(month_year %in% current_fy_months) %>%
   select(-month_year) %>%
   group_by(year, month) %>%
   mutate(pct = count / sum(count)) %>%
   ungroup() %>%
-  write_csv(here("data/fares/fy26_fare_funding_source_monthly_totals.csv"))
+  write_csv(here(paste0("data/fares/", current_fy, "_fare_funding_source_monthly_totals.csv")))
 
 # Prepare DataWrapper export
 dw_export_fare_funding_source <- fare_funding_source_monthly_totals %>%
@@ -448,7 +548,7 @@ dw_export_fare_funding_source <- fare_funding_source_monthly_totals %>%
   
 write_csv(
   dw_export_fare_funding_source,
-  here("data-raw/fy26_fare_funding_source_monthly_totals_DW.csv")
+  here("data-raw/fare_funding_source_monthly_totals_DW.csv")
 )
 
 # # Push to the Data-Wrapper chart
