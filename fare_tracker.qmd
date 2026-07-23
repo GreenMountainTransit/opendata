@@ -61,9 +61,9 @@ i_am("fare_tracker.qmd")
 
 ```{r, echo=FALSE, message=FALSE}
 
-publish_to_dw <- FALSE
+publish_to_dw <- TRUE
 
-sync_with_gdrive <- FALSE
+sync_with_gdrive <- TRUE
 
 ```
 
@@ -276,7 +276,7 @@ fare_dta <- all_dta_clean %>%
 ```
 
 
-```{r}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 current_fy <- last(reporting_months$fy)
 
@@ -341,6 +341,7 @@ fare_group_counts_by_month <- fare_dta %>%
 fare_group_counts_by_month %>%
   mutate(month_date = as.character(month_date)) %>%
   filter(month_date %in% current_fy_months) %>%
+  select(-month_date) %>%
   write_csv(here(paste0("data/fares/", current_fy, "_fare_group_monthly_totals.csv")))
 
 dw_export_fare_groups <- fare_group_counts_by_month %>%
@@ -521,7 +522,7 @@ fare_funding_source_monthly_totals <- fare_dta %>%
   # This is where the Fare Funding Source values
   # get all summed together
   group_by(
-    month_year, month, year, fare_funding_source
+    month_year, year, month, fare_funding_source
   ) %>% 
   summarise(
     count = sum(count, na.rm = TRUE)
