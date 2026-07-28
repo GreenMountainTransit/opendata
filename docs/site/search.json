@@ -32,7 +32,7 @@
     "href": "performance_metrics.html#missed-service",
     "title": "Performance Metrics",
     "section": "Missed Service",
-    "text": "Missed Service\nDropped runs represent scheduled trips that could not be operated as planned."
+    "text": "Missed Service\nDropped runs represent scheduled trips that could not be operated as planned.\nOn average, GMT operates over 13,000 runs each month. The ones that were not operated as scheduled are detailed below."
   },
   {
     "objectID": "performance_metrics.html#customer-feedback",
