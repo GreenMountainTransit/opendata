@@ -79,32 +79,90 @@ if (sync_with_gdrive) {
 
 ```{r, message=FALSE, echo=FALSE}
 
-current_fy <- 2026
-current_fy_urban_sirs_stats_fpath <- here("data/ridership/fy26_urban_ridership.csv")
+current_fy <- 2027
+current_fy_urban_sirs_stats_fpath <- here(
+  "data/ridership/fy27_urban_ridership.csv"
+)
 
-past_fy <- 2025
-past_fy_urban_sirs_stats_fpath <- here("data/ridership/fy25_urban_ridership.csv")
+previous_fy <- 2026
+previous_fy_urban_sirs_stats_fpath <- here(
+  "data/ridership/fy26_urban_ridership.csv"
+)
+
+previous_previous_fy <- 2025
+previous_previous_fy_urban_sirs_stats_fpath <- here(
+  "data/ridership/fy25_urban_ridership.csv"
+)
 
 if (sync_with_gdrive) {
   
-  current_fy_urban_gdrive <- drive_get(paste0("coredata/processed/fy26_urban_ridership.csv"))
-  past_fy_urban_gdrive <- drive_get(paste0("coredata/processed/fy25_urban_ridership.csv"))
+  current_fy_urban_gdrive <- drive_get(
+    paste0(
+      "coredata/processed/fy",
+      substr(current_fy, 3, 4),
+      "_urban_ridership.csv"
+    )
+  )
   
-  drive_download(current_fy_urban_gdrive, path = current_fy_urban_sirs_stats_fpath, overwrite = TRUE)
-  drive_download(past_fy_urban_gdrive, path = past_fy_urban_sirs_stats_fpath, overwrite = TRUE)
+  previous_fy_urban_gdrive <- drive_get(
+    paste0(
+      "coredata/processed/fy",
+      substr(previous_fy, 3, 4),
+      "_urban_ridership.csv"
+    )
+  )
+  
+  previous_previous_fy_urban_gdrive <- drive_get(
+    paste0(
+      "coredata/processed/fy",
+      substr(previous_previous_fy, 3, 4),
+      "_urban_ridership.csv"
+    )
+  )
+  
+  drive_download(
+    current_fy_urban_gdrive,
+    path = current_fy_urban_sirs_stats_fpath,
+    overwrite = TRUE
+  )
+  
+  drive_download(
+    previous_fy_urban_gdrive,
+    path = previous_fy_urban_sirs_stats_fpath,
+    overwrite = TRUE
+  )
+  
+  drive_download(
+    previous_previous_fy_urban_gdrive,
+    path = previous_previous_fy_urban_sirs_stats_fpath,
+    overwrite = TRUE
+  )
   
 }
 
-current_fy_urban_sirs_stats <- read_csv(current_fy_urban_sirs_stats_fpath) %>%
+current_fy_urban_sirs_stats <- read_csv(
+    current_fy_urban_sirs_stats_fpath
+  ) %>%
   mutate(route = as.character(route))
 
-past_fy_urban_sirs_stats <- read_csv(past_fy_urban_sirs_stats_fpath) %>%
+previous_fy_urban_sirs_stats <- read_csv(
+    previous_fy_urban_sirs_stats_fpath
+  ) %>%
   mutate(route = as.character(route))
 
-# Combine them together
+previous_previous_fy_urban_sirs_stats <- read_csv(
+    previous_previous_fy_urban_sirs_stats_fpath
+  ) %>%
+  mutate(route = as.character(route))
+
+# Combine all three fiscal years
 historic_gmt_ridership <- bind_rows(
-  past_fy_urban_sirs_stats %>% mutate(fiscal_year = past_fy),
-  current_fy_urban_sirs_stats %>% mutate(fiscal_year = current_fy)
+  previous_previous_fy_urban_sirs_stats %>%
+    mutate(fiscal_year = previous_previous_fy),
+  previous_fy_urban_sirs_stats %>%
+    mutate(fiscal_year = previous_fy),
+  current_fy_urban_sirs_stats %>%
+    mutate(fiscal_year = current_fy)
 )
 
 ```
@@ -271,7 +329,8 @@ save_plot(fig, here(paste0("export/gmt_ridership_per_vrh_over_time_all_routes.sv
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
-## Datawrapper charts
+## Datawrapper charts in the Performance Metrics Dashboard
+
 dw_dta <- totals_dta %>%
   mutate(
     month_num = match(month, month.abb),
