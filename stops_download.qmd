@@ -27,12 +27,12 @@ if (sync_with_gdrive) {
 
 ```{r, message=FALSE, echo=FALSE, warning=FALSE}
 
-fy26_boardings_by_stop_fpath <- here("data/stops/fy26_boardings_by_stop.csv")
+fy27_boardings_by_stop_fpath <- here("data/stops/fy27_boardings_by_stop.csv")
 
 if (sync_with_gdrive) {
   
-  fy26_boardings_by_stop_gdrive <- drive_get(paste0("coredata/processed/fy26_boardings_by_stop.csv"))
-  drive_download(fy26_boardings_by_stop_gdrive, path = fy26_boardings_by_stop_fpath, overwrite = TRUE)
+  fy27_boardings_by_stop_gdrive <- drive_get(paste0("coredata/processed/fy27_boardings_by_stop.csv"))
+  drive_download(fy27_boardings_by_stop_gdrive, path = fy27_boardings_by_stop_fpath, overwrite = TRUE)
 
 }
 
