@@ -29,6 +29,7 @@ Reported metrics include:
 |---|---|
 | FY25 Route totals by month | [CSV](data/ridership/fy25_urban_ridership.csv) |
 | FY26 Route totals by month | [CSV](data/ridership/fy26_urban_ridership.csv) |
+| FY27 Route totals by month | [CSV](data/ridership/fy27_urban_ridership.csv) |
 
 
 ## Fare Transactions
@@ -51,6 +52,10 @@ Fare transactions represent completed payments and may not correspond one-to-one
 | FY26 Fare group totals by month and route | [CSV](data/fares/fy26_fare_group_monthly_totals_by_route.csv) |
 | FY26 Fare funding source totals by month | [CSV](data/fares/fy26_fare_funding_source_monthly_totals.csv) |
 | FY26 Fare capture method totals by month | [CSV](data/fares/fy26_fare_capture_method_monthly_totals.csv) |
+| FY27 Fare group totals by month | [CSV](data/fares/fy27_fare_group_monthly_totals.csv) |
+| FY27 Fare group totals by month and route | [CSV](data/fares/fy27_fare_group_monthly_totals_by_route.csv) |
+| FY27 Fare funding source totals by month | [CSV](data/fares/fy27_fare_funding_source_monthly_totals.csv) |
+| FY27 Fare capture method totals by month | [CSV](data/fares/fy27_fare_capture_method_monthly_totals.csv) |
   
 <br/>
 Notes:
@@ -89,6 +94,7 @@ Important considerations:
 | Dataset | Download |
 |---|---|
 | FY26 boarding estimates by stop | [CSV](data/stops/fy26_boardings_by_stop.csv) |
+| FY27 boarding estimates by stop | [CSV](data/stops/fy27_boardings_by_stop.csv) |
 
 ## Data Limitations and Use
 
