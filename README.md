@@ -22,7 +22,7 @@ Fare transactions trends can be visualized in the <a href="https://GreenMountain
 
 ### Boarding Estimates by Stop
 
-Boarding estimates can be visualized in the <a href="https://GreenMountainTransit.github.io/opendata/stop_tracker.html" target="_blank">Boarding Estimates by Stop Dashboard</a>. Raw data files are available in the [`/data/stops/`](./data/stops/) directory.
+Boarding estimates can be visualized in the <a href="https://gmtransit.maps.arcgis.com/apps/dashboards/1e816fda88fe4a589ef6ec582dcccdf2#" target="_blank">Boarding Estimates by Stop Dashboard</a>. Raw data files are available in the [`/data/stops/`](./data/stops/) directory.
 
 ## Data Limitations and Terms of Use
 
