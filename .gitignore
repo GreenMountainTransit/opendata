@@ -54,8 +54,10 @@ Thumbs.db
 **/*.quarto_ipynb
 
 
-# Don't track more detailed data
-data-raw/
+# Ignore everything in these directories
+data-raw/*
+export/*
 
-# Ignore exports (from tracker qmd files)
-export/
+# But keep the placeholder files
+!data-raw/.gitkeep
+!export/.gitkeep
