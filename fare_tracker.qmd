@@ -71,7 +71,7 @@ sync_with_gdrive <- TRUE
 ```{r, echo=FALSE}
 
 # Most recent complete month
-latest_complete_month <- floor_date(today(), "month") - months(1)
+latest_complete_month <- ymd("2026-08-01")
 
 # Rolling 12 complete months
 reporting_months <- tibble(
