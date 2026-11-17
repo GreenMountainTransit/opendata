@@ -100,11 +100,25 @@ operated as scheduled are detailed below.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-cs_per_vh_per_month <- readr::read_csv(here::here("data/customer_service/customer_service_interactions.csv"))
+cs_per_vh_per_month <- readr::read_csv(
+  here::here(
+    "data/customer_service/customer_service_interactions.csv"
+  ),
+  show_col_types = FALSE
+)
+
+cs_complete_months <- cs_per_vh_per_month |>
+  dplyr::filter(
+    !is.na(cs_interactions),
+    !is.na(total_vrh)
+  )
 
 fy_to_date_interactions_per_1000_vrh <- scales::comma(
-  (sum(cs_per_vh_per_month$cs_interactions) / sum(cs_per_vh_per_month$total_vrh)) * 1000,
-  accuracy = .1
+  (
+    sum(cs_complete_months$cs_interactions) /
+      sum(cs_complete_months$total_vrh)
+  ) * 1000,
+  accuracy = 0.1
 )
 
 ```
