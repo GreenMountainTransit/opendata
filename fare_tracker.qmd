@@ -71,7 +71,7 @@ sync_with_gdrive <- TRUE
 ```{r, echo=FALSE}
 
 # Most recent complete month
-latest_complete_month <- ymd("2026-09-01")
+latest_complete_month <- ymd("2026-10-01")
 
 # Rolling 12 complete months
 reporting_months <- tibble(
@@ -450,8 +450,75 @@ write_csv(
 )
 
 ```
+```{r, echo=FALSE, message=FALSE}
 
+```{r, echo=FALSE, message=FALSE}
 
+## Public partner-program download
+## Includes every sponsored-fare program.
+## The Datawrapper chart above retains its 1% display threshold.
+
+partner_program_monthly_totals <- fare_type_counts_by_month |>
+  filter(
+    fare_group == "Sponsored Fare"
+  ) |>
+  semi_join(
+    reporting_months |>
+      filter(
+        fy == current_fy
+      ) |>
+      select(
+        month_date
+      ),
+    by = "month_date"
+  ) |>
+  gmtdata::get_fare_type_short_col() |>
+  transmute(
+    year,
+    month = lubridate::month(month_date),
+    month_date,
+    partner_program = fare_type_short,
+    count
+  ) |>
+  group_by(
+    year,
+    month,
+    month_date,
+    partner_program
+  ) |>
+  summarise(
+    count = sum(count, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  group_by(
+    year,
+    month,
+    month_date
+  ) |>
+  mutate(
+    pct = count / sum(count)
+  ) |>
+  ungroup() |>
+  arrange(
+    month_date,
+    partner_program
+  )
+
+partner_program_output <- here(
+  "data",
+  "fares",
+  paste0(
+    current_fy,
+    "_partner_program_monthly_totals.csv"
+  )
+)
+
+write_csv(
+  partner_program_monthly_totals,
+  partner_program_output
+)
+
+```
 ```{r, echo=FALSE, message=FALSE}
 
 ## CAPTURE METHOD

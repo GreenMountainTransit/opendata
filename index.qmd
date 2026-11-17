@@ -56,6 +56,7 @@ Fare transactions represent completed payments and may not correspond one-to-one
 | FY27 Fare group totals by month and route | [CSV](data/fares/fy27_fare_group_monthly_totals_by_route.csv) |
 | FY27 Fare funding source totals by month | [CSV](data/fares/fy27_fare_funding_source_monthly_totals.csv) |
 | FY27 Fare capture method totals by month | [CSV](data/fares/fy27_fare_capture_method_monthly_totals.csv) |
+| FY27 partner program transaction totals by month | [CSV](data/fares/fy27_partner_program_monthly_totals.csv) |
   
 <br/>
 Notes:
